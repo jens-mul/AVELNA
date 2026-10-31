@@ -11,15 +11,30 @@ jobs:
   safety:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.14']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: ${{ matrix.python-version }}
       - name: Compile Python source
         run: python -m compileall -q scripts tests
-      - name: Test offline preflight, alias integrity and budget ledger
-        run: python -m unittest discover -s tests -v
+      - name: Test no-spend handoff, project routing and resource hygiene
+        run: |
+          python - <<'PY'
+          import gc, sys, unittest, warnings
+          warnings.simplefilter('error', ResourceWarning)
+          unraisable = []
+          sys.unraisablehook = lambda event: unraisable.append(event.exc_type.__name__)
+          suite = unittest.defaultTestLoader.discover('tests')
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          gc.collect()
+          if unraisable:
+              print('Unraisable resource errors:', unraisable)
+          raise SystemExit(0 if result.wasSuccessful() and not unraisable else 1)
+          PY
       - name: Check JSON templates
         run: |
           python - <<'PY'

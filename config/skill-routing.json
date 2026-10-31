@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "scope": "project_only",
+  "installation": "read repo skill files through AGENTS.md; never copy into personal Hermes skills",
+  "project_skills": {
+    "avelna-orchestrator": {
+      "path": "skills/avelna-orchestrator/SKILL.md",
+      "shared_skills": [
+        "higgsfield-production-planning",
+        "higgsfield-cli-operations"
+      ]
+    },
+    "avelna-creative": {
+      "path": "skills/avelna-creative/SKILL.md",
+      "shared_skills": [
+        "higgsfield-production-planning",
+        "higgsfield-cli-operations",
+        "higgsfield-reference-continuity",
+        "higgsfield-ad-creative",
+        "higgsfield-4k-delivery"
+      ]
+    },
+    "avelna-growth": {
+      "path": "skills/avelna-growth/SKILL.md",
+      "shared_skills": [
+        "higgsfield-content-operations"
+      ]
+    },
+    "avelna-research": {
+      "path": "skills/avelna-research/SKILL.md",
+      "shared_skills": []
+    }
+  },
+  "missing_dependency_action": "BLOCKED_do_not_copy_install_or_reimplement_shared_skill"
+}

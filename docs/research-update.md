@@ -1,15 +1,21 @@
 # Onderzoeksupdate — 31 oktober 2026
 
-Deze aanvullende bevindingen zijn gecontroleerd via publieke primaire documentatie én de werkelijk geadverteerde capabilities van de gekoppelde Higgsfield-tools. Er zijn geen campagnes of generaties gestart. Mogelijkheden kunnen per account verschillen; bij uitvoering opnieuw ontdekken.
+Deze researchsnapshot bewaart broncontext; actuele [Higgsfield-contracten](higgsfield.md) en [runbook](runbook.md) bepalen de uitvoering. Geen provideractie of generatie door deze migratie.
 
-## Higgsfield / ChatGPT / Hermes
-- Via de gekoppelde Higgsfield-tools kunnen media in een project/folder worden geplaatst (`create_project`, `create_folder`, `media_upload`/`media_confirm`, `attach_project_asset`), bestaande assets worden teruggelezen en `create_reference_element` kan een herbruikbaar `prop` of `environment` maken uit een bevestigde image input/job. Alleen `completed`-elementen gebruiken.
-- De gebruiksvriendelijke referentie heet bijvoorbeeld `@AVELNA_BathStone_01`. Bij de verbonden toolgeneratie hoort daar in de daadwerkelijke prompt een `<<<UUID>>>` bij: de backend voegt vervolgens de Element-referentie toe en vertaalt naar een leesbare @-naam. Letterlijk @ zonder ID is géén gegarandeerde MCP-generatiemethode. Niet ieder model ondersteunt Elements; voor Kling 3.0 is bovendien een startafbeelding vereist volgens de actuele toolbeschrijving.
-- Canvas bewaart prompt-/generatienodes zonder dat de generatie wordt uitgevoerd. Uitvoeren via `canvas_run` kan credits kosten. Promptmasters worden daarnaast in deze repository geversioneerd; de gekoppelde canvas houdt de interactieve versie bij.
-- ChatGPT-beeldgeneratie besteedt niet automatisch Higgsfield-credits. Automatisch uploaden van de gegenereerde ChatGPT-uitvoer naar Higgsfield is **niet end-to-end geverifieerd**: een gebruikersbijlage heeft een eigen uploadroute; zelfgemaakte bestanden vanuit de Higgsfield sandbox volgen een andere presigned-uploadroute. Niemand mag een project-asset claimen zonder bevestigd media-ID + teruglezing.
-- De laatst uitgelezen privéworkspace had 10 credits, free plan, specifieke free-generation grants, een nog niet actieve free trial, géén AVELNA-project, elementen of brandkits. Dit is een momentopname, geen accountgarantie. Higgsfield zegt in algemene documentatie dat MCP-generatie credits kost; het huidige account kan specifieke uitzonderingen melden. Quote + saldo + exacte free-grant zijn bij iedere uitvoering leidend. In de algemene documentatie is geen native harde creditcap beschikbaar.
+## Higgsfield / ChatGPT / Hermes — historische research en huidige grens
+De oorspronkelijke research onderzocht provider-libraryorganisatie, herbruikbare referenties en interactieve promptopslag via MCP/UI. Dit onderbouwde het inhoudelijke besluit om echte masters, productreferenties en promptversies apart te beheren. Het is **geen actuele CLI-capability of uitvoeringsroute**. Oude account-/creditsmomentopnamen zeggen niets over CLI-auth, huidige entitlement of kosten.
 
-Primaire documenten:
+De huidige route is lokale master + exact menselijk hashakkoord + privémanifest + canonieke repoprompt + prepared CLI-handoffpacket. Geen native Elements, Canvas, sandboxupload of provider-UUID-syntax nodig. Alle Higgsfield remote operaties uitsluitend officiële CLI; geen MCP/API/browserfallback. Meta MCP blijft onaangetast.
+
+Lokaal bekeken: CLI v1.2.3 en generic/model-command help. Generic mediaflags `--image-references` en `--start-image` kunnen lokale paden auto-uploaden wanneer werkelijk gebruikt; dit is geen modelschema of geslaagde uploadtest. Live auth, modelschema, quote, grant en job-readback blijven BLOCKED. De synthetische demo doet geen netwerk-/CLI-call en bewijst geen remote productie of 4K.
+
+Bronnen voor CLI:
+- https://higgsfield.ai/cli
+- https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-access-higgsfield-via-cli
+- https://github.com/higgsfield-ai/cli
+
+Historische bronnen (niet gebruiken als huidige uitvoeringsinstructie):
+- [Issue #11](https://github.com/jens-mul/AVELNA/issues/11)
 - https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent
 - https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp
 - https://higgsfield.ai/creator-hub/help-center/tools/how-do-i-use-canvas

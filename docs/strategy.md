@@ -4,7 +4,7 @@ Source of truth: project context [#1](https://github.com/jens-mul/AVELNA/issues/
 
 ## 2026-10-31 decision update
 - **main is now explicitly authorized and initialized** with commit `adf4a588173f7fc149a2341bc5e6f534ce2a7d88`; this repo file set supersedes the earlier "empty repository" blocker in the issues.
-- ChatGPT + founder co-create and approve *master* visuals; Hermes consumes versioned approved masters from a private Higgsfield project as Elements and generates the permitted derivatives. See [Higgsfield](higgsfield.md).
+- ChatGPT + founder co-create and approve *master* visuals; Hermes consumes versioned, hash-approved local masters through a private manifest and prepares role-bound CLI media inputs; remote production remains separately gated. See [Higgsfield](higgsfield.md).
 - €200 remains the **total initial cash ceiling**, including product, tools, media and reserve. It is **not** an already-granted budget authority. Product and revenue assumptions stay hypotheses.
 - First sale is the validated rigid Bath Stone, followed by accessories only after the product passport and unit economics pass. We are not claiming to manufacture custom models or to have certified them.
 - Users personally control webshop implementation and physical fulfillment; Hermes should maximize automation everywhere else, but may not commit monetary, legal or security changes without protected grant.
@@ -106,7 +106,7 @@ Onderzoeksdatum: **31 oktober 2026**. Status: vastgelegde strategie, uitvoerings
 | #8 | Autonomie & beveiliging: Vaultwarden, e-mail, bevoegdheden, externe executor en transactieve budgetbewaking |
 | #9 | Implementatiepakket: AGENTS.md, configs, offline preflight/rekenfuncties en unit-tests als bestandsinhoud |
 | #10 | Webshopcontract, events, consent, acceptatiematrix, shadow-test, deployment en rollback |
-| #11 | Approved Assets & Prompts: ChatGPT-goedgekeurde beelden, Higgsfield project/folders, @Reference Elements, promptcanvas en Hermes-ID-resolutie |
+| #11 | Historisch Approved Assets & Prompts-besluit: eigenaar keurt exacte master goed; vroegere provider-libraryuitwerking vervangen door [lokale CLI-handoff](higgsfield.md) |
 
 ## Opdracht en gekozen richting
 Bouw een premium, AI-native badkamermerk. De eigenaar bouwt de webshop en verzorgt fulfillment. Hermes verzorgt product- en concurrentieonderzoek, creative productie, campagnevoorbereiding, meting, rapportage en het toegestane deel van optimalisatie. Gezamenlijk cashplafond: EUR 200; bestaande KVK en eigen webshopbouw vragen in dit plan geen extra cash.
@@ -115,7 +115,7 @@ Bouw een premium, AI-native badkamermerk. De eigenaar bouwt de webshop en verzor
 
 Architecturale editorial beelden, gecontroleerde productlaag, rustige camerabewegingen en consistente belichting. Geen verplichte iPhone-demonstratie, geen generieke dropship-UGC. Twee hero-composities, één korte motion-ad en één statische afgeleide; geen honderden generaties.
 
-Stack: bestaand Hermes + geïsoleerde AVELNA-uitvoering; officiële Higgsfield CLI voor Hermes of geverifieerde MCP; officiële Meta Ads MCP onderzoeken en daadwerkelijk aan het eigen account toetsen. Extra SaaS alleen na prijs- en bevoegdheidscontrole. De nieuwe techniek vermindert productiewerk, niet automatisch de mediakosten.
+Stack: bestaand Hermes + geïsoleerde AVELNA-uitvoering; uitsluitend officiële Higgsfield CLI voor alle Higgsfield remote stappen; officiële Meta Ads MCP onderzoeken en daadwerkelijk aan het eigen account toetsen. Extra SaaS alleen na prijs- en bevoegdheidscontrole. De nieuwe techniek vermindert productiewerk, niet automatisch de mediakosten.
 
 ## Bestaande besluiten expliciet behouden
 - Geen leveranciers benaderen of over MOQ's onderhandelen. Catalogusonderzoek mag wel.
@@ -135,12 +135,8 @@ Na een eenmalige afgebakende operatorvrijgave voert Hermes herhaalbare taken zel
 
 De researchagent heeft geen betaalcredentials. De uitvoerder werkt met beschermde scopes, reserveringen, idempotency en remote readbacks. Een promptlimiet is geen harde budgetgrens. Vaultwarden-toegang wordt beperkt tot de benodigde AVELNA-secrets zonder hun inhoud aan het model of GitHub te geven.
 
-## GitHub-status en harde randvoorwaarde
-Remote gecontroleerd: `jens-mul/AVELNA`, default-branchnaam `main`, branches `[]`, contents: `This repository is empty`. Er is geen bestaande base-SHA. De aangesloten connector heeft file/tree/commit/branch/issue-writes, maar create_branch vereist een bestaande commit; create_commit vereist een parent. De eigenaar staat wijzigingen op de default branch alleen expliciet toe.
-
-Daarom is **geen init-commit op main gemaakt**. Het volledige dossier staat nu in issues #3–#10. Dit is geen codecommit, PR of draaiende deployment. De bestaande issues #1–#2 zijn niet overschreven.
-
-Hermes: controleer de toestand opnieuw. Als inmiddels een geldige base bestaat: lees afspraken en maak `feat/avelna-autopilot` vanaf de geverifieerde SHA. Materialiseer dan de genoemde bestanden en implementeer de ontbrekende adapters/ledger op die branch. Anders: geen verzonnen ref en geen lokale GitHub-omweg; vraag uitsluitend toestemming voor één minimale initialisatiecommit. Alle ongeb lokkeerde voorbereiding gaat door.
+## GitHub-status en actuele werkwijze
+De repository is geïnitialiseerd; code, documentatie, prompts en vier projectskills bestaan. De historische initialisatiebeperking uit issue #3 is opgelost. Werk op de specifiek opgedragen featurebranch met echte refs; geen main-write, commit, push of deployment buiten de opdracht. De actieve featurebranch en bewijsstatus worden bij de oplevering gerapporteerd, niet als permanent productbesluit vastgelegd.
 
 ## Budget — reserveringen, geen ontvangen offertes of live uitgavemachtiging
 | Post | Maximum cash |
@@ -166,19 +162,17 @@ Een eventuele interessetest gebruikt maximaal EUR 25 **van** de mediapot; geen e
 8. Shadow-tests en foutscenario's aantoonbaar laten slagen. Daarna binnen grant uitvoeren, bewaken en uitzonderingen melden.
 
 ## Overdracht aan Hermes
-```text
-Lees via je aangesloten GitHub-tools jens-mul/AVELNA issues #1–#10 inclusief comments en actuele refs. Issue #3 is de index. Voer dit dossier uit vanaf DISCOVERY, zonder betaalde acties of externe verzendingen zolang de vereiste grant ontbreekt. Gebruik de bestaande technische omgeving, inventariseer echte versies en schemas en vraag ontbrekende rechten gebundeld, niet telkens opnieuw. Behoud het leveranciersverbod, de EUR 200-grens en de openbare-repo/secrets-scheiding. Maak een aparte branch vanaf een geverifieerde basis; initialiseer of wijzig main alleen na expliciete toestemming. Materialiseer de bestandsinhoud, implementeer de gespecificeerde adapters en ledger, voer tests uit en lever echte refs/logs/status. Installeer alleen de dedicated AVELNA-runtime, behoud de persoonlijke Hermes-omgeving en SSH, gebruik shadow mode en rollback vóór live-uitvoering. Rapporteer wat daadwerkelijk werkt en welke éénmalige operatoracties nog openstaan.
-```
+Lees [AGENTS](../AGENTS.md), actuele contracten en relevante repo-projectskill expliciet als bestand. Historische [issues #1–#11](https://github.com/jens-mul/AVELNA/issues) zijn context. Alle prompts blijven centraal in `prompts/`; generieke contracten in `config/`; echte assets/manifests/grants buiten git. Laad benodigde bestaande shared Higgsfield-skills op naam, niet kopiëren/installeren; ontbrekend = BLOCKED. Lever lokale bewijsuitkomsten en gegroepeerde blockers. Geen betaalde/externe actie zonder juiste scope en onafhankelijke grant.
 
 ## Definitie van klaar en huidige bewijsstatus
 | Onderdeel | Status in deze oplevering |
 |---|---|
-| Strategie, stijlsysteem, prompts en workflowcontracten | Vastgelegd in issues #3–#10 |
-| Configuraties, AGENTS.md, skillstarter en offline code/tests | Bestandsinhoud opgenomen, nog niet als files gecommit |
-| Provideradapters en harde budgetexecutor | Implementatiecontract gespecificeerd; nog te bouwen/testen |
-| Branch/ref/commit-SHA/PR | Niet aangemaakt: lege repository en main-regel |
-| Unit-/integratie-/CI-tests | Niet uitgevoerd |
-| Accounts op de Hermes-host gekoppeld | Niet uitgevoerd in deze sessie |
-| Campagnes, betaalde generaties, voorraadorders, leveranciersmail | Niet uitgevoerd in deze sessie |
+| Strategie, stijl, prompts, projectskills, offline code/tests | Bestaan als repositorybestanden; actuele testuitslagen apart rapporteren |
+| Lokale handoff | Synthetische demo/private prepared packet; geen netwerk of CLI-uitvoering |
+| CLI-capabilitybasis | v1.2.3 lokale generic/model-command help bekeken; mediaflags zijn geen modelschema |
+| Higgsfield auth/upload/model-schema/quote/grant/job-readback | BLOCKED; geen live CLI-succes of paid readiness bewezen |
+| Meta/shop/beveiligde betaalexecutor/deployment | Afzonderlijk te integreren en te bewijzen; repo-aanwezigheid is geen live-status |
+| 4K | Niet empirisch bewezen; eerste AVELNA-test blijft 1080p |
+| Campagnes, betaalde generaties, voorraadorders, leveranciersmail | Niet uitgevoerd door deze migratie |
 
 Een taak is pas technisch klaar na een teruggelezen artifact, relevante werkelijke testuitkomst, versie/ref of provider-ID en geverifieerde bevoegdheid. Documentatiegereed, geconfigureerd, getest en live zijn afzonderlijke statussen. Het doel '94% voorbereid' is geen reeds gemeten automatiseringspercentage.

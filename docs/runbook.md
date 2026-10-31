@@ -1,53 +1,50 @@
-# AVELNA Runbook — van main naar autonome marketing
+# AVELNA runbook — lokaal voorbereiden, remote geblokkeerd
 
-## Feitelijke status 31 oktober 2026
-GitHub main is door de eigenaar geautoriseerd en geïnitialiseerd. Onderzoeksdocs en offline veiligheidsbibliotheek zijn voorbereid. **Niet** geïnstalleerd: Hermes/Higgsfield/Meta koppeling op de doelhost, fysieke productcontrole, shopcontract of betaalexecutor. Geen deployment, ads of credits zijn door GitHub-commits gestart. Als deze status verandert, voeg echte refs, tests en account-probeverslagen toe.
+## Status en scope
+De repository, lokale scripts/tests en no-spend controlservice bestaan. Actuele lokale testuitkomsten moeten uit uitvoering komen, niet uit historische issues. Higgsfield CLI v1.2.3 en lokale generic/model-command help zijn bekeken; dit bewijst geen live CLI-auth, upload, modelschema, quote, grant of job-readback. Geen campagne, betaalde productie, deployment of bewezen 4K-resultaat volgt daaruit.
 
-## Operatie A — account- en toolinventarisatie (no spend)
-1. Lees de hoofdbestanden op main, de bestaande issuebesluiten en GitHub-workflowstatus.
-2. Gebruik bestaande, geïsoleerde Hermes-omgeving. Inventariseer CLI-versie/help, mcp/auth, Higgsfield workspace, project/folders/Elements, actuele saldo/quote, Meta account, mail scope, Vaultwarden resolver. Geen tokenwaarden loggen.
-3. Schrijf privé capability-manifest (provider, werkelijke versie, toolmanifesthash, accountscope, read_probe, betaalregels, bewijs).
-4. De verzamelde read-only toestand geeft nog geen toestemming om iets te kopen of te publiceren.
+## A — contracten en skills
+1. Lees [AGENTS](../AGENTS.md), [strategie](strategy.md), [creative](creative.md), [Higgsfield](higgsfield.md) en [security](security.md).
+2. Lees de passende repo-projectskill expliciet als bestand en volg [skill-routing.json](../config/skill-routing.json). Geen projectskill naar een persoonlijk profiel installeren.
+3. Laad benodigde bestaande shared Higgsfield-skills op naam. Ontbrekend = **BLOCKED**; niet kopiëren/installeren/overschrijven.
+4. Lees [asset-contract.json](../config/asset-contract.json). Bewaar echte media, manifests, approvals en grants buiten git.
 
-## Operatie B — master asset
-1. Werkelijke productinformatie en beeldrechten in productpaspoort.
-2. ChatGPT+eigenaar maken/keuren asset met ID + sha256.
-3. Open of maak één privé Higgsfield-project na de betreffende opdracht; folders volgens docs/library-operating.md.
-4. Uploadbridge testen; bevestigde ID teruglezen. Alleen approved exact productbeeld als `prop`, approved omgeving als `environment`. Het goedgekeurde `@naam` in privémanifest naar echte UUID mappen.
-5. Canonieke prompts in git; werkversies in Higgsfield Canvas-node, niet automatisch runnen.
-6. Hermes voert pas een kostenquotering + grantcheck uit voor generaties.
+## B — lokale synthetische end-to-end demo (geen credits)
+Vanuit de projectroot:
+```sh
+python3 -m unittest discover -s tests -v
+python3 -m scripts.asset_handoff --demo
+```
+De demo maakt/gebruikt synthetische lokale fixtures en doorloopt de lokale validator/handoff zonder netwerk of CLI-uitvoering. Controleer werkelijke exitstatus en packet: exacte prompttekst/hash, per rol assetpad/hash/CLI-mediaflag, providerblockers en geen uitvoerbare generate-opdracht. Demo-approval is fictief en verleent geen echte rechten of betaalmachtiging.
 
-## Operatie C — commerce
-1. Eigenaar bouwt de productpagina en privacyvriendelijke checkout.
-2. Integreer alleen de minimale catalogus/health/metrics interface uit docs/webshop.md of een werkelijk geselecteerde backend.
-3. Controleer testbetalingen, cookie-toestemming, dubbele webhooks, refunds en actuele voorraad. Reële klanten tellen pas bij betaalde orders.
-4. Bij voorraad 0, mismatch, oude snapshot of checkoutfout: geen nieuwe ad-activatie; actieve eigen campagnes indien binnen bevoegdheid pauzeren.
+## C — eigen private bestanden voorbereiden
+Onderstaande paden zijn uitsluitend placeholders; vervang ze lokaal, publiceer echte paden/packet niet:
+```sh
+python3 -m scripts.asset_handoff --manifest /PRIVATE/manifest.json --asset-root /PRIVATE/assets
+```
+Standaard stdout; behandel ook terminal-/agentlogs als privé. Gebruik voor echte inputs bij voorkeur `--output /PRIVATE/handoff.json`: het packet wordt exclusief met 0600 aangemaakt en stdout bevat alleen een geredigeerde status. Een bestaand outputbestand wordt niet overschreven. Geen publiek tracked doel, issues of CI-artifacts. De asset-root begrenst bronpaden; gewijzigde hash, ontbrekende rechten/approval of ongeldig pad moet worden geweigerd volgens het centrale contract.
 
-## Operatie D — campagne
-1. Maak assetpakket (bevestigde master, 12sec motion, static 4:5, prijs en CTA) en budgetvoorstel.
-2. Maak een native paused/draft-campagne uitsluitend wanneer geautoriseerd en daadwerkelijke Meta-tool dit ondersteunt. Lees providerobject terug.
-3. Human review: echte SKU, claims, juridische/retourinfo, account, bereik, looptijd en maximumbedrag. Operator geeft echte grant, platform kan extra expliciete publicatiebevestiging vragen.
-4. Shadow: no-spend, fake payments, beperkingstests. Dan pas eenmalige limited live run.
-5. Eén dagelijkse samenvatting; budget, spend, nieuwe betaalde klanten en bijdrage; geen automatische verhoging.
+Dit is uitsluitend een **prepared packet**, geen upload en geen uitvoerbare generate-opdracht. Exacte prompttekst/hash en mediaflag zijn lokale bindingen; de flags `--image-references`/`--start-image` zijn slechts in v1.2.3 generic help bevestigd. Hun echte gebruik kan paden auto-uploaden, ook bij quotering. Voer geen providercommando uit als onderdeel van deze lokale controle.
 
-## Required acceptance
-- [ ] Product/beeldrechten/brand/claim review
-- [ ] Werkende Higgsfield-upload + private Element-readback
-- [ ] Prompt Canvas opgeslagen zonder kredietkosten
-- [ ] Alias vervangen door actuele element-ID in een dry-run
-- [ ] Tools getest met kleinste nodige scopes; secrets blijven buiten agentcontext
-- [ ] Concurrentenresearch met echte bronlinks, onbekend als null
-- [ ] Shop/events/consent tests
-- [ ] Budgetconcurrency/idempotency, grant expiry en timeout/reconciliation tests
-- [ ] Campagnedraft/paused en preview/readback
-- [ ] Native accountgrenzen en operatorgrant
-- [ ] Deployment-health + rollback via aparte AVELNA-service
+## D — latere providergates (nu BLOCKED)
+Alle Higgsfield remote stappen uitsluitend via officiële CLI volgens `higgsfield-cli-operations`: echte auth/workspace/accountscope, modelspecifiek schema/mode, rechten en uploadtoestemming, actuele quote, onafhankelijke grant, budgetreservering en echte job-/kostenreadbacks. Bij ontbrekende capability stoppen, geen MCP/API/browserfallback. Timeout is onzeker tot reconciliatie; nooit blind opnieuw genereren.
+
+Eerst 1080p-pilot/product-QA; 4K pas na afzonderlijke behoefte/route/budget/inspectie. De €200-totaalgrens en het leveranciersverbod blijven gelden.
+
+## E — webshop en Meta (ongewijzigde route)
+1. Eigenaars bouwen checkout/fulfillment; integreer [webshopcontract](webshop.md) pas met echte scopes.
+2. Test synthetische betalingen, consent, dubbele events, refunds en voorraad. Bij voorraad/checkoutfout geen nieuwe activering; eigen campagnes alleen binnen grant pauzeren en teruglezen.
+3. Meta's officiële Ads MCP blijft de onderzoeks-/integratieroute. Native draft/paused/preview/publicatiebevestiging werkelijk verifiëren, niet omzeilen.
+4. Review bundelt SKU, rechten, masterhash, aanbod, account, periode, cash-/creditcaps en testbewijs. Geen automatische activering uit een packet.
+
+## Acceptatie vóór live
+- [ ] Echte SKU, veiligheid, beeldrechten, naamrecht en claims beoordeeld.
+- [ ] Lokale negatieve/positieve handofftests en exacte hashes/rollen gecontroleerd.
+- [ ] Echte CLI-auth, modelschema, upload, quote en provider-readbacks bewezen.
+- [ ] Onafhankelijke grant, credentialscheiding, concurrency/idempotency en timeoutreconciliatie getest.
+- [ ] Shop/consent/events en Meta paused/draft/preview/accountgrenzen bevestigd.
+- [ ] Echte output inhoudelijk, technisch en audio beoordeeld; geen 4K-claim uit alleen dimensies.
+- [ ] Afzonderlijk geautoriseerde deployment/health/rollback en beperkte livevrijgave.
 
 ## Deployment en herstel
-De repo is een **plan+offline toolkit**; er is bewust nog geen bestaande AVELNA-productieservice om af te schalen. Een werkend 'download -> build -> old off -> new on'-blok wordt pas hostspecifiek wanneer service, runtime, persistente state en healthchecks bekend zijn. Geen willekeurige `docker compose down`, reboot, globale Hermes-gateway-stop of SSH-afsluitende `exit 1`. Bouw eerst staging; verifieer health; switch alleen de gerichte AVELNA-service; behoud laatste werkende release en rollback.
-
-Wanneer de eigenaar later een daadwerkelijke dienst implementeert, moet het bijbehorende deploymentcommit een **bestaand** `deploy/upgrade` entrypoint met geteste rollback opnemen; pas dan één commando publiceren. GitHub zelf online betekent niet dat er een marketingdaemon draait.
-
-## Implemented no-spend control service
-
-`scripts/control_server.py` is a loopback-only health endpoint. `deploy/upgrade.sh` downloads and verifies main, replaces ONLY the dedicated AVELNA control user-service after tests, and attempts rollback on health failure. Full Hermes/Higgsfield/Meta runtime remains separate and uninstalled. See `deploy/README.md`.
+[deploy/upgrade.sh](../deploy/upgrade.sh) en [deploy/README.md](../deploy/README.md) bestaan voor uitsluitend de loopback no-spend controlservice. Dit document voert ze niet uit en bewijst geen geïnstalleerde hostservice. Een betaalde Hermes/Higgsfield/Meta-runtime blijft een aparte beveiligde integratie. Bouw/test vóór vervanging van uitsluitend de dedicated AVELNA-service; bewaar vorige release/private state en rollback. Persoonlijke Hermes/SSH, andere containers en gateways nooit stoppen als shortcut.

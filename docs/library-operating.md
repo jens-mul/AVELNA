@@ -1,51 +1,31 @@
-# Asset approval & library — uitvoeringscontract
+# Asset approval & lokale library
 
-## Twee soorten beeld (niet verwisselen)
-**Concept-master:** AI-scène om esthetiek te beslissen; hoeft geen exact fabrieksproduct te tonen. Alleen interne moodboards/campagnevoorbereiding totdat de vorm bevestigd is.
-**Product-locked master:** combinatie met werkelijke, toegestane productreferenties, correct geometrisch en kleurgetrouw. Kan na rechten-/claim-/productgoedkeuring voor advertenties dienen.
+## Twee soorten beeld
+**Concept-master:** AI-scène voor esthetische keuzes, geen bewijs van een echt fabrieksproduct. Alleen interne voorbereiding zolang SKU/vorm niet vaststaat.
 
-## Asset-states
-`draft -> candidate -> owner_approved -> verified_upload -> element_completed -> production_enabled -> archived`.
+**Product-locked master:** werkelijk toegestane SKU-referenties, geometrie en kleur gecontroleerd. Pas na expliciete product-, rechten- en claimreview geschikt voor een commerciële toepassing.
 
-`owner_approved` vergt expliciet menselijk akkoord op exacte versie+sha256. Generatieve output krijgt niet automatisch dit akkoord. `verified_upload` vereist media-ID en zichtbare, teruggelezen folderplaatsing. `element_completed` vereist echte UUID en native status. Een `@...`-naam is slechts een mensvriendelijke alias.
+## Centrale contracten, geen tweede schema
+Lees [config/asset-contract.json](../config/asset-contract.json), [Higgsfield-handoff](higgsfield.md) en [prompts/](../prompts/). De JSON is leidend voor exacte veldnamen. Geen provider-UUID-resolutie, native Element-status of Canvas-opslag vereist. De historische [issue #11](https://github.com/jens-mul/AVELNA/issues/11) blijft besluitcontext, niet de actuele uitvoeringsinstructie.
 
-## Geplande privéfolders
-`00_source_reference`: echte fabriek/SKU-foto's en maten met gebruiksrechten.
-`10_candidates`: AI-concepten; nooit direct voor betaalde commerciële claims.
-`20_approved_masters`: exact goedgekeurde masterbeelden.
-`30_creative_outputs`: afgeleide statics/videos per campaign_id.
-`40_archived_versions`: vervangen assets en prompts.
+## Privéopslag
+Bewaar echte assets, manifests, rechtenbewijs, approvals, paden, accountbinding, grants en jobresultaten buiten de openbare repo. Een genegeerde lokale outputmap is alleen een vangnet; geen private bestanden publiceren via connectorwrites, logs, CI-artifacts of issues.
 
-Folders hoeven niet te worden aangemaakt vóór een gebruikersopdracht voor library-inrichting. Geen auto-publicatie naar Higgsfield Cinema/community.
+Eventuele lokale organisatie: `00_source_reference`, `10_candidates`, `20_approved_masters`, `30_creative_outputs`, `40_archived_versions`. Dit zijn lokale private categorieën, geen aangemaakte Higgsfield-projectfolders. Geen automatische communitypublicatie.
 
-## Gescheiden gegevens
-- GitHub: publieke merkregels, prompttemplates, schema's en synthetische voorbeelden.
-- Higgsfield privé: daadwerkelijke uploads/jobs/Elements/canvas.
-- Private Hermes-runtime: element-UUID's, workspace/project/folder-ID's, cryptografische contenthash, rechtenbewijs, akkoord en accountbinding.
-- Geen credentials, pre-signed URLs of klantdata in publieke git.
+## Review en wijzigingen
+1. Bepaal echte SKU en rol: productwaarheid, stijl/omgeving of goedgekeurd startbeeld zijn niet uitwisselbaar.
+2. Bereken SHA-256 uit de echte bytes; controleer pad binnen de toegestane private asset-root en contractvelden met `scripts/asset_registry.py`.
+3. Kandidaat blijft kandidaat totdat de eigenaar expliciet de exacte hash/versie en het gebruik goedkeurt. Validatie van approvalvelden is geen onafhankelijke grantverificatie.
+4. Maak lokaal het prepared packet: exacte prompttekst + hash en per rol assetpad + hash + CLI-mediaflag. Zie [runbook](runbook.md) voor de twee modes.
+5. Veranderde assetbytes, SKU, rechten, claim, aanbod of promptversie vereisen review van afhankelijke besluiten. Archiveer vorige geaccepteerde masters; overschrijf ze niet stilzwijgend.
+6. Nieuwe generaties starten weer als kandidaat en krijgen eigen QA/provenance. Een succesvolle upload maakt iets niet goedgekeurd.
 
-## Alias-resolutie in Hermes
-1. Bepaal de werkelijke `SKU` en controleer de product-lock.
-2. Lees privé-manifest: alias, echte `reference_element_id`, hash, rights, owner-approved, usage limits, current Element-status.
-3. Lees live supported models of het gevalideerde capability-manifest; gebruik geen Element in een model dat het negeert.
-4. Zet in de werkelijke MCP-prompt alle geldige `@AVELNA_...` aliases om naar `<<<UUID>>>`; geen blind global string replace van onbekende tags.
-5. Check actuele quote en grant; verifieer dat outputs in de juiste map terechtkomen.
-6. Re-read de job, credits, output en asset-QA; noteer de nieuwe versie. Nieuwe creatieve uitvoering vervangt nooit automatisch het approved master.
+## Prompt en uploadgrens
+Het private packet bevat ook product-SKU en een SHA-256 van de canoniek geserialiseerde invoermanifestgegevens voor herleidbaarheid. Dit is geen onafhankelijke goedkeuring of handtekening. Bytes/hash en extensie worden gecontroleerd, niet decodeerbaarheid of visuele productjuistheid.
+Alle promptmasters staan in git onder `prompts/`; geen tekstduplicaten in provider-UI of projectskills. Het packet fixeert de gelezen exacte tekst/hash en de inputrollen. Geen aliasinjectie in prompttekst of uitvoerbare generate-opdracht.
 
-`scripts/asset_registry.py` is een offline validatie-/aliasresolver; het legt geen verbinding met Higgsfield en verleent geen betaalrechten.
+Een ChatGPT-output is eerst een lokaal ontvangen bestand, niet automatisch een providerasset. CLI v1.2.3 generic help beschrijft mediaflags `--image-references`/`--start-image` die paden automatisch kunnen uploaden bij werkelijk gebruik. De lokale handoff uploadt niets. Modelspecificatie, auth, toestemming voor upload, quote, grant en job-readback blijven afzonderlijke **BLOCKED** providerstappen tot echt bewezen.
 
-## Promptversies
-Een canonieke prompt bevat `id`, semantische versie, modelrol, expliciete productreferentie, positieve en negatieve constraints, aspecten/duurstijlen en bijbehorend goedgekeurd asset-hash. Canvas houdt de creatieve graph aan; GitHub houdt de tekstgeschiedenis aan. Iedere gegenereerde advertentie wordt herleidbaar naar beide.
-
-## Acceptatie (nog niet gedraaid)
-- Een correcte productreferentie geüpload en in private folder teruggelezen.
-- Een `prop` Element met status completed teruggelezen.
-- Een Canvas-node met prompt gemaakt zonder `run`, creditsaldo vóór/na vergeleken.
-- Een alias-resolver dry-run met echte UUID en één ondersteund model.
-- Een bewust gewijzigd asset-hash of ongeverifieerde rechten worden geweigerd.
-- Een betaald experiment pas na aparte machtiging, budgetquote en stoppolicy.
-
-## Uploadbrug: geen valse zekerheid
-Connected ChatGPT image creation ≠ automatically accessible Higgsfield media ID.
-Higgsfield's `media_upload_and_confirm` accepteert alleen een user-provided ChatGPT attachment; een ChatGPT-genereerd outputfile kan niet zonder bewezen route worden doorgestuurd. De andere route `media_upload -> sandbox_exec PUT -> media_confirm` geldt voor bestanden die in de Higgsfield-sandbox zijn gemaakt, niet zomaar elke lokale ChatGPT-path.
-De implementatie moet één werkelijk eind-tot-eind geslaagde bridge-test doen, of de gebruiker laat een goedgekeurd bestand als bijlage toevoegen; pas dan de pipeline als automatisch geverifieerd markeren.
+## Acceptatie
+Test lokaal gewijzigde hashes, padontsnapping/symlinks, ontbrekende rechten of approval en verkeerde rolbinding. Een synthetische positieve demo bewijst geen productwaarheid, remote upload, betaalrecht of echte CLI-generatie. €200 totaal, geen leverancierscontact; eerste productieproef 1080p, geen onbewezen 4K-claim.

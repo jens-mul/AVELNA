@@ -67,38 +67,20 @@ Macro, randafwerking en oppervlak. Een grafische absorptie-uitleg kan als illust
 6. Monteer, plaats tekst/prijs/logo en exporteer alle crops lokaal met bestaande tooling. Geen nieuwe generatie voor alleen nieuwe typografie of een andere CTA.
 7. Hash bronbeelden en exports; leg model-ID, instellingen, referenties, kosten, rechten, review en campagnestatus vast.
 
-Higgsfield documenteert image/video, reference Elements, upscaling en assetbeheer. De officiële handleiding wijst Hermes op de CLI; credits gelden ook buiten de website. Bron: https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent . Exacte upload-/generatiecommando's pas gebruiken na lokale `--help` of MCP-discovery; niet raden.
+Higgsfield-uitvoering is uitsluitend via de officiële CLI; zie [Higgsfield-contract](higgsfield.md). Geen MCP-discovery of provider-UI-fallback. Lokale help is geen model-/accountbewijs.
 
-## 6. Product-lock prompt (template, niet uitvoeren met ontbrekende referentie)
-```text
-Create an editorial bathroom campaign composition for AVELNA.
-Use the uploaded and rights-cleared product reference {product_reference_id} as the exact product, not as loose inspiration.
-Preserve its silhouette, edge profile, thickness, surface pattern, actual colour and dimensions relative to the room.
-Set: a believable compact contemporary bathroom, matte chalk plaster, warm neutral floor, soft large-window side light from upper left, restrained architectural styling.
-Composition: the bath mat is immediately recognisable and occupies roughly one third of the frame. Leave quiet space for later typography. Natural contact shadow, straight architectural lines.
-Camera look: 50 mm equivalent, controlled perspective, subtle texture, no excessive blur on the product.
-Generate no text, price, logo, labels, certifications or people. Do not add grooves, marbling, bevels, accessories, anti-slip features or water-performance effects that are absent from the source.
-Output: {aspect_ratio}. This is an advertising set, not evidence of material or performance.
-If the product cannot be preserved, generate the environment without it and return it for deterministic product compositing.
-```
+## 6. Centrale productieprompts
+Alle canonieke teksten staan in [prompts/](../prompts/): [editorial-master](../prompts/editorial-master.md), [motion-master](../prompts/motion-master.md), [static-ad](../prompts/static-ad.md) en [creative-critic](../prompts/creative-critic.md). Deze merkmodule dupliceert ze niet.
 
-## 7. Motion prompt
-```text
-Animate the approved AVELNA hero composition {approved_frame_id} as a restrained editorial shot.
-Duration {verified_model_duration}. Slow lateral camera drift; stable floor geometry and soft natural light.
-The product must remain rigid and unchanged in outline, thickness, colour, texture, placement and scale. No bending, morphing, appearing grooves, changing room geometry, floating edges or new reflections.
-No water absorption simulation, no hands, no people, no text, no voice and no copyrighted music.
-Return the clean clip for external assembly and typography.
-```
+## 7. Uitvoering en handoff
+Lees [creative](creative.md) en [assetbeheer](library-operating.md). Een prepared packet fixeert exacte prompttekst/hash en rolgebonden assetpad/hash/mediaflag; het is geen uitvoerbaar generate-command, quote of grant.
 
 ## 8. Assetcontract en QA
-Ieder asset krijgt `asset_id`, `sku`, `concept_id`, `format`, `source_hashes`, `rights_status`, `model_id`, `cost_quote_id`, `actual_credits`, `created_at`, `copy_version`, `offer_version`, `qa_status`, `approved_by`, `output_sha256`.
+Het generieke assetcontract staat uitsluitend in [config/asset-contract.json](../config/asset-contract.json). Leg echte bronhashes, rechten, exact versieakkoord en later echte provider-/kosten-/QA-provenance vast in private manifests/ledgers; geen tweede veldschema in deze module.
 
 Hard reject: verkeerde SKU/geometrie, ongeautoriseerde beelden, fictieve prijs/voorraad, niet-goedgekeurde claim, verkeerde CTA-modus, onleesbare tekst, watermerk, niet-gecontroleerde muziek. Alleen daarna visuele beoordeling op rust, productherkenning, licht en consistentie. Een visiemodel kan fouten vinden maar bewijst productidentiteit niet; de eerste master blijft een korte menselijke review.
 
 Wijzigingen aan prijs, product of claim maken bestaande goedkeuring ongeldig. Alleen crops/ondertitelvarianten binnen het goedgekeurde asset- en aanbodmanifest mogen later automatisch worden gepubliceerd.
 
-## Te materialiseren
-`docs/brand.md`, `docs/creative.md`, `config/brand.tokens.json`, `prompts/hero.txt`, `prompts/motion.txt`, `schemas/asset.schema.json`, `skills/avelna-creative/SKILL.md`.
-
-Acceptatie: twee productgetrouwe hero's, één 12s-master, één 4:5-static, placement-previews, bronrechtenregister en reproduceerbaar assetmanifest. Nog geen van deze beelden is met dit issue geproduceerd.
+## Acceptatie van echte productie
+Twee productgetrouwe hero's, één 12s-master, één 4:5-static, placement-previews, bronrechtenregister en reproduceerbaar privémanifest. Repositorybestanden bestaan; dit is een outputdoel, geen claim dat beelden zijn geproduceerd. De eerste test blijft 1080p; geen bewezen 4K-resultaat.

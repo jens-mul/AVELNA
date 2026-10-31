@@ -113,7 +113,7 @@ Bron: https://higgsfield.ai/ad-multiplier .
 | Bron | Onderbouwt | Nog te controleren bij installatie |
 |---|---|---|
 | https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent | Officiële Hermes-CLI-route, OAuth, referenties, credits, ontbreken native creditcap | Geïnstalleerde versie, betaald account, werkelijke tool/command schemas en beschikbare modellen |
-| https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp | Officieel MCP-endpoint, automatisering gebruikt credits | Beschikbaarheid van gekozen operatie voor dit account |
+| https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp | Historische integratieresearch, geen actuele uitvoeringsroute | Higgsfield is nu uitsluitend CLI; zie [actueel contract](higgsfield.md) |
 | https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp | MCP-config, discovery en toolfiltering | Werkelijke Hermes-versie en schema; documentatie noemt soms andere namen |
 | https://hermes-agent.nousresearch.com/docs/user-guide/profiles | Gescheiden config/state per profile | Hosting, identiteit en OS-isolatie |
 | https://hermes-agent.nousresearch.com/docs/user-guide/features/cron | Planning, tijdzones, script-only jobs | Werkelijke cron-toolnaam en CLI-flags |

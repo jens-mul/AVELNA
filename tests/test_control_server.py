@@ -32,7 +32,8 @@ class ControlServerTests(unittest.TestCase):
                     self.assertEqual(payload["service"], "avelna-control")
                 with self.assertRaises(HTTPError) as cm:
                     urlopen(base + "/invalid", timeout=3)
-                self.assertEqual(cm.exception.code, 404)
+                with cm.exception as response:
+                    self.assertEqual(response.code, 404)
             finally:
                 server.shutdown()
                 server.server_close()

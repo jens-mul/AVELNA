@@ -1,14 +1,14 @@
 ---
 name: avelna-orchestrator
-description: Coordinate AVELNA branded asset production, data-backed growth and operations in prepare-only mode until independent authorization.
+description: Coordinate AVELNA project preparation via repo contracts, existing shared skills and a blocked-until-authorized handoff.
 ---
-# AVELNA orchestrator
-Read `AGENTS.md` plus current private capability/approval manifest. Route only relevant documents per task. Use connected GitHub tools and real refs.
-1. Discover installed provider tool schemas, current account scopes, model pricing, asset and ad states; never invent a successful upload, tool, cost or campaign.
-2. Determine blockers: SKU, rights, brand name, actual landed cost, Higgsfield library, webshop checkout, tracking permission.
-3. For visual concept work use `skills/avelna-creative`. For competitor research `skills/avelna-research`. For spend/readiness `skills/avelna-growth`.
-4. The public repo is not a secrets store. Vaultwarden credentials and grants reside in an independently protected executor.
-5. Do unblocked, no-spend tasks without constant questions. Bundle the next necessary human approval at one fixed stage.
-6. Supplier outreach forbidden. No paid ads, generation, new subscription or preorders by default.
-7. Verify every write remotely. Read back job IDs, folder placements, budgets, campaign status and test results.
-8. Finish with done/blocked/pending tasks, evidence, time and cost.
+# Avelna Orchestrator
+
+1. Read `AGENTS.md`, `config/asset-contract.json`, `config/skill-routing.json`, `docs/runbook.md` and relevant private evidence. The public repo holds all canonical prompts/generic contracts, never real assets/manifests/grants.
+2. Route by explicit file-read: `skills/avelna-research/SKILL.md`, `skills/avelna-creative/SKILL.md`, `skills/avelna-growth/SKILL.md`. These four projectskills stay in this repo, never install them into personal/profile skills.
+3. Load existing shared skills by name when relevant: `higgsfield-production-planning`, `higgsfield-cli-operations`, `higgsfield-reference-continuity`, `higgsfield-ad-creative`, `higgsfield-content-operations`, `higgsfield-4k-delivery`. Missing required shared skill = BLOCKED; do not copy/install/overwrite personal skills.
+4. Higgsfield remote operations are official CLI-only, including reads/uploads/quotes/status/upscale. No Higgsfield MCP/direct API/browser/sandbox fallback. Meta Ads MCP is unchanged. Generic v1.2.3 help is not authentication/model-schema/upload evidence.
+5. Continue local no-spend work. `python3 -m scripts.asset_handoff --demo` uses synthetic fixtures without network or CLI execution. A private prepared packet binds exact prompt text/hash and per-role asset path/hash/mediaflag; it contains no executable generate command.
+6. Report provider model-schema/quote/grant/job-readback as BLOCKED until independently verified. Do not claim successful live CLI-auth, paid readiness or proven 4K. First AVELNA test remains 1080p.
+7. Preserve €200 total, supplier-outreach prohibition, exact SKU/rights/approval gates and personal Hermes/SSH. Never self-approve grants. No paid action, publication, commit/push/deploy outside scope.
+8. Finish with actual local artifacts/tests, done/blocked/pending and real costs; unknown provider outcomes require reconciliation before retries.

@@ -7,6 +7,7 @@ Do not grant this library direct provider credentials.
 from __future__ import annotations
 
 import sqlite3
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
 
@@ -43,10 +44,15 @@ class DryRunLedger:
                 "actual_cents INTEGER NOT NULL DEFAULT 0)"
             )
 
+    @contextmanager
     def _db(self):
         db = sqlite3.connect(self.path, timeout=15, isolation_level=None)
-        db.execute("PRAGMA busy_timeout = 15000")
-        return db
+        try:
+            with db:
+                db.execute("PRAGMA busy_timeout = 15000")
+                yield db
+        finally:
+            db.close()
 
     def reserve_simulated(self, key: str, bucket: str, max_cents: int) -> dict[str, Any]:
         """For testing only: reserve max cost; does not authorize external spending."""

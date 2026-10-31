@@ -1,22 +1,24 @@
 {
-  "schema_version": 1,
-  "alias": "@AVELNA_BathStone_01",
-  "kind": "prop",
-  "status": "awaiting_product_verification",
+  "schema_version": 2,
+  "purpose": "production_preparation",
   "product_sku": null,
-  "source_hash_sha256": null,
-  "source_media_id": null,
-  "reference_element_id": null,
-  "element_status": "not_created",
-  "project_id": null,
-  "folder_id": null,
-  "rights_status": "unverified",
-  "product_verified": false,
-  "approved_by": null,
-  "approved_at": null,
-  "approved_for_paid_ads": false,
-  "prompt_id": "AVELNA/hero/editorial/v1",
-  "prompt_sha256": null,
-  "usable_models": [],
-  "notes": "PRIVATE RUNTIME FILE MUST HOLD REAL UUIDS; THIS PUBLIC FILE IS A NULL TEMPLATE"
+  "prompt": {
+    "path": "prompts/editorial-master.md",
+    "sha256": null
+  },
+  "assets": [
+    {
+      "alias": "@AVELNA_BathStone_01",
+      "path": null,
+      "source_hash_sha256": null,
+      "role": "product_reference",
+      "status": "candidate",
+      "rights_status": "unverified",
+      "product_verified": false,
+      "approved_by": null,
+      "approved_at": null,
+      "synthetic": false
+    }
+  ],
+  "note": "BLOCKED NULL TEMPLATE, not a product/master approval, grant, provider upload or live CLI capability proof."
 }

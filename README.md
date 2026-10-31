@@ -1,46 +1,40 @@
 # AVELNA — AI-Native Brand & Growth System
 
-**Version:** 1.0 — 31 October 2026  
-**Owners:** two founders, Netherlands  
-**Status:** documentation and code prepared; no live campaign or paid integration implied.  
-**Launch cash ceiling:** **€200 total** (not an authorization to spend).
+**Architectuur:** CLI-first, prepare-only. **Higgsfield:** uitsluitend officiële CLI.
+**Lancering:** Nederland, twee eigenaars; **€200 totaal**, geen uitgavemachtiging.
 
-AVELNA is an architecturally minimal, premium bathroom essentials brand. The first validated sale is a single real, hard diatomite Bath Stone SKU; subsequent accessories remain in the catalogue research pipeline.
+AVELNA bouwt een architecturaal, premium badkamermerk. De eerste verkooptest richt zich op één echte, geverifieerde harde Bath Stone-SKU; accessoires blijven onderzoek totdat hun eigen feiten en leverbaarheid vaststaan.
 
-## Start here
+## Begin hier
+1. [AGENTS.md](AGENTS.md) — bevoegdheden en expliciete projectskill-routing.
+2. [Strategie](docs/strategy.md), [merk](docs/brand.md) en [product-QA](docs/product-qa.md).
+3. [Creative](docs/creative.md) — plan, product-lock, 1080p-firsttest en QA.
+4. [Higgsfield CLI-handoff](docs/higgsfield.md) en [assetbeheer](docs/library-operating.md).
+5. [Concurrenten](docs/competitors.md), [growth](docs/growth.md) en [webshop](docs/webshop.md).
+6. [Hermes-architectuur](docs/hermes.md), [security](docs/security.md), [runbook](docs/runbook.md) en [implementatie](docs/implementer-notes.md).
 
-1. **[Agent operating agreement](AGENTS.md)** — permissions, safety, boundaries.
-2. **[Strategy and rollout](docs/strategy.md)** — business positioning, product validation, operating roadmap.
-3. **[Brand bible](docs/brand.md)** — Quiet Architecture visual system, tone, palette.
-4. **[Creative production](docs/creative.md)** — approved ChatGPT → Higgsfield → Hermes pipeline and production QA.
-5. **[Higgsfield library handoff](docs/higgsfield.md)** — asset folders, Elements, alias resolution and prompt persistence.
-6. **[Competitor intelligence](docs/competitors.md)** — source-backed research, repeatable competitor sweep, creative hypotheses.
-7. **[Paid growth playbook](docs/growth.md)** — direct-sale and waitlist modes, CPC/CAC economics, conversion.
-8. **[Hermes automation](docs/hermes.md)** — discovery, isolated profile, skills and scheduler.
-9. **[Security & cost controls](docs/security.md)** — bounded execution, Vaultwarden, provider reconciliation.
-10. **[Webshop integration](docs/webshop.md)** — data contract, consent, purchase events and health.
-11. **[Runbook](docs/runbook.md)** — bootstrap, acceptance gates, deployment/rollback and handoff.
+## Centrale bron en private uitvoering
+- Alle canonieke prompts staan in [`prompts/`](prompts/); merkregels in [`config/brand.tokens.json`](config/brand.tokens.json).
+- [`config/asset-contract.json`](config/asset-contract.json) definieert het generieke assetcontract; [`config/skill-routing.json`](config/skill-routing.json) de project-/shared-skillrouting.
+- De vier projectskills onder [`skills/`](skills/) worden uitsluitend expliciet als bestand gelezen via AGENTS, niet persoonlijk geïnstalleerd. Bestaande gedeelde Higgsfield-skills worden op naam geladen; ontbreekt er één die nodig is, dan is die taak **BLOCKED**. Niet kopiëren of overschrijven.
+- Echte assets, manifests, paden, rechtenbewijzen, account-ID's en grants blijven buiten de openbare repo. Lokale packetoutput is privé, ook wanneer die geen credentials bevat.
 
-Configuration examples are under `config/`; prompt templates under `prompts/`; pure, no-network validation library under `scripts/` with tests under `tests/`. All examples are dry-run only.
+## Lokale no-spend verificatie
+Vanuit de projectroot:
+```sh
+python3 -m unittest discover -s tests -v
+python3 -m scripts.asset_handoff --demo
+```
+De demo gebruikt synthetische lokale fixtures en doorloopt de handoff zonder netwerk of Higgsfield CLI-uitvoering. Het packet bevat exacte prompttekst + hash en per rol een assetpad + hash + generieke CLI-mediaflag, **geen uitvoerbare generate-opdracht**. Eigen bestanden voorbereiden: zie het [runbook](docs/runbook.md). `--output` is optioneel en alleen voor private/ignored output; bij opslaan verschijnt uitsluitend een geredigeerde status op stdout. Zonder `--output` is de volledige packetoutput privé te behandelen.
 
-## Current status
+Het uitgevoerde lokale test-/dry-runbewijs staat in [verification.md](docs/verification.md).
 
-- Earlier research and decision history remain in [GitHub issues #1–#11](https://github.com/jens-mul/AVELNA/issues).
-- Exact manufacturer SKU, approved rights, actual cost and regulatory readiness have **not** been confirmed.
-- ChatGPT can ideate masters; uploading a ChatGPT-generated file into Higgsfield and attaching it to a project is **not yet tested end to end**.
-- Higgsfield library, Elements and prompt canvas are supported by the connected tool surface but are **not created merely by this commit**.
-- No Meta campaign, live spend, Hermes deployment, checkout integration or external communication is performed by repository changes.
+## Bewijsgrens en status
+Repo, scripts, tests en documentatie bestaan; oude issueblokkades over initialisatie gelden niet meer. De CLI v1.2.3 en lokale generic/model-command help zijn bekeken. Generic help toont `--image-references` en `--start-image`; lokale paden kunnen bij werkelijk CLI-gebruik automatisch uploaden. Dat is **geen** bewijs van live CLI-auth, een modelspecifiek schema, upload, quote, grant, job-readback of paid readiness. Die providerstappen blijven **BLOCKED**. Geen 4K-resultaat bewezen; de eerste AVELNA-test blijft 1080p.
 
-## Owner workflow
+Geen provideractie, campagne, deployment, inkoop of leverancierscontact volgt uit een repowijziging. Exacte SKU, rechten, naamrecht, veiligheid, kostprijs en shop-readiness vereisen afzonderlijk bewijs. Eigenaars bouwen de shop, keuren product/aanbod/master goed en verzorgen fulfillment.
 
-You build the webshop and fulfill orders. Together with ChatGPT you choose/approve the visual master. The Hermes agent receives *only approved assets*, reconstructs the product and prompt references through a private manifest, creates media when authorized, prepares/distributes ads within a fixed grant, and reports exceptions.
+## Historie en deployment
+[Issues #1–#11](https://github.com/jens-mul/AVELNA/issues) bewaren de besluitgeschiedenis; huidige repo-contracten zijn leidend. Het vroegere Higgsfield MCP/library-ontwerp is geen uitvoeringsroute. CLI-only geldt **alleen Higgsfield**; Meta's officiële Ads MCP blijft ongewijzigd.
 
-**Safety rule:** no one, including an AI agent, gets to infer a €200 spending grant from these documents. Provider costs, quotas, capabilities and permissions must be checked in the actual account before starting paid jobs.
-
-## Research notes
-
-See [source register](research/sources.md). Primary documentation, especially Higgsfield and Hermes, changes over time; reread actual remote tool schemas before implementation.
-
-## One-command control-service upgrade
-
-See [deploy/README.md](deploy/README.md) for the GitHub-main downloader, build/tests, old dedicated AVELNA service replacement, health and rollback. This only runs the **no-spend control health service**, not paid Hermes automation.
+Het [no-spend control-service upgradepad](deploy/README.md) bestaat, maar is geen live marketingruntime of toestemming om te deployen. Behoud persoonlijke Hermes/SSH en rollback. [Bronregister](research/sources.md).

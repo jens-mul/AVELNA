@@ -1,81 +1,33 @@
-> Source: [GitHub issue #11](https://github.com/jens-mul/AVELNA/issues/11). This is the chosen and tool-discovered workflow. **No Higgsfield project/Elements or generation was created by this repository commit.**
+# Higgsfield — CLI-only handoffcontract
 
-# AVELNA — Approved Assets & Prompts Pipeline v1.0
+Historische bron: [issue #11](https://github.com/jens-mul/AVELNA/issues/11). Het besluit blijft: eigenaar + ChatGPT kiezen een master, Hermes gebruikt alleen exact goedgekeurde referenties en bewaart promptversies. De eerdere MCP/library-, Elements-, Canvas- en sandbox-uitwerking is vervangen door een lokale, versievaste CLI-handoff; zij is geen actuele capability of vereiste.
 
-Dit is het ontwerp voor de vervolgworkflow **ChatGPT + eigenaar -> goedgekeurde visuele master -> Higgsfield library + Reference Elements -> Hermes video-/ad-productie**. Status op 31 oktober 2026: toolcapaciteiten gecontroleerd, **geen beelden gegenereerd, geen credits verbruikt, geen nieuwe Higgsfield-projecten/elements/brandkits gemaakt**. De gekoppelde private workspace toont bij AVELNA-projectzoekopdracht 0 resultaten, 0 Reference Elements en 0 Marketing Studio brandkits.
+## Bindende route
+CLI-first projectarchitectuur; **CLI-only voor alle Higgsfield remote acties**, inclusief account/catalogus lezen, uploads, training, generatie, jobstatus en upscale. Gebruik uitsluitend de officiële `higgsfield` executable en laad `higgsfield-cli-operations`. Geen Higgsfield MCP, directe API, browsergeneratie of cloud-shellfallback. Ontbrekende CLI-capability betekent **BLOCKED**, niet een routewissel. Lokale planning, validatie, montage en QA blijven toegestaan. Meta Ads MCP verandert niet.
 
-## Confirmed Higgsfield capabilities
+## Wat lokaal bekend is
+CLI **v1.2.3** en lokale generic/model-command help zijn bekeken. De generieke mediaflags `--image-references` en `--start-image` zijn waargenomen; lokale paden worden bij daadwerkelijk CLI-gebruik automatisch geüpload. Een flag uit generic help bewijst geen geschiktheid voor een bepaald model/mode, accountrechten of kosten. Modelspecificatie, actuele quote, onafhankelijke grant en job-readback blijven **BLOCKED**. Geen geslaagde live CLI-auth of remote upload claimen.
 
-- `create_project`, `create_folder`, `list_project_assets`, `attach_project_asset` laten een private media library met concrete project-, folder-, upload- en generation-ID's beheren.
-- `media_upload` + `media_confirm` ondersteunen presigned upload van bestanden vanuit **Higgsfield sandbox_exec**; `media_upload_and_confirm` is nadrukkelijk **alleen voor een door de gebruiker in ChatGPT aangeleverde bijlage**.
-- `create_reference_element` maakt een herbruikbaar **prop**, **environment** of **character** uit een daadwerkelijk bevestigde image-upload of voltooide Higgsfield-image-job. Alleen status `completed` is bruikbaar.
-- Via `show_reference_elements` kan Hermes de namen en echte UUID's teruglezen.
-- De gebruiker kan een element beschrijven als `@AVELNA_BathStone_01`. In de **MCP generatie-aanroep werkt die letterlijke @naam niet**. Daar moet `<<<element_uuid>>>` in `params.prompt` staan; Higgsfield injecteert de referentie en zet dit intern om naar `@element_name`. De ondersteunde modellen moeten bij runtime uit het modelcatalogus worden gecontroleerd. In de huidige tools ondersteunt dit o.a. Nano Banana 2/Pro, GPT Image 2, Seedream 4.5 / 5 lite / Cinema Studio Image en geselecteerde video-modellen. Kling 3.0 vereist óók een start frame; Elements vervangen dat niet.
-- `canvas_create` + `canvas_add` kunnen prompts bewaren in generation nodes, **zonder generatie-credits**; `canvas_run` is een aparte betaalde/genererende actie. Ook tekstnodes kunnen prompts bevatten.
-- `get_project_asset_prompt` kan bij bestaande generation placements de promptdetails teruglezen.
-- Marketing Studio ondersteunt brand kits. Een `@...`-Element is geen prompt-library alias; promptversies moeten onafhankelijk worden beheerd.
+Een quote met een lokaal mediapad kan al uploaden. Ook zonder generatie vereist dat rechten, privacytoestemming en een expliciete remote opdracht. Deze migratie en lokale demo doen **geen** CLI-uitvoering of providerrequest.
 
-## Designbesluit voor AVELNA
+## Centrale contracten
+- [Assetcontract](../config/asset-contract.json): generieke velden, rollen, hashes en approvalvoorwaarden.
+- [Skillrouting](../config/skill-routing.json): projectgebonden routers en vereiste bestaande shared skills.
+- [Prompts](../prompts/): de enige canonieke promptteksten; geen tweede promptlibrary in documentatie of provider-UI.
+- [Assetbeheer](library-operating.md): private bestanden, versiebeheer en review.
 
-Richt **één** private Higgsfield media-projectstructuur in wanneer de eigenaar dat expliciet vraagt:
-- `00_source_reference`: echte en rechten-gecontroleerde SKU-aanzichten, maten, onderzijde.
-- `10_candidates`: conceptbeelden die nog niet zijn goedgekeurd.
-- `20_approved_masters`: goedgekeurde hero/master beelden.
-- `30_creative_outputs`: Higgsfield video en static afgeleiden.
-- `40_archived_versions`: vervangen, niet meer actieve masters.
+`scripts/asset_registry.py` valideert lokaal SHA/path/approval; het is geen provideradapter en vertaalt geen aliassen naar provider-UUID-syntax. Een leesbare alias is een lokale registratiesleutel, geen mediaflag of modelinput.
 
-Brandtokens en de canonieke prompttemplates leven versiebeheerbaar in GitHub (documentatie staat voorlopig in #4, #9 en deze issue wegens lege repo). Higgsfield canvas bewaart werkprompts en generatieknopen voor creatieve inspectie. Elke prompt `prompt_id` verwijst naar versie/hash en toegestane productreferentie; niet alleen vrije tekst bij een beeld.
+`scripts/asset_handoff.py` levert een **prepared packet**, geen uitvoerbare generate-opdracht. Het legt de exacte prompttekst en SHA-256 vast, plus rolgebonden lokale assetpaden, hashes en generic-help-mediaflags. Model/mode/parametercompatibiliteit, quote, grant en job-readback worden niet uit deze binding afgeleid. Een geldige lokale binding is nog geen toestemming voor upload of betaalde productie.
 
-### Voorgestelde namen
-- `@AVELNA_BathStone_01` — categorie `prop`; pas aanmaken als exact product bevestigd en beeldrechten bekend zijn.
-- `@AVELNA_QuietBath_01` — categorie `environment`; een goedgekeurde, consistente virtuele badkamer.
-- `@AVELNA_HeroMaster_01` — interne manifestalias voor een goedgekeurde master-asset, **niet automatisch een native Reference Element**.
-- `AVELNA/hero/editorial/v1` — promptversie in GitHub + Higgsfield canvas; **niet native @-aanroepbaar**.
+## Werkvolgorde
+1. Lees [creative](creative.md), plan en echte productfeiten; ontbrekende rechten/SKU blijven blocker.
+2. Bewaar ontvangen master en echte productreferenties buiten git; leg rol, pad, SHA en rechten vast in een privémanifest volgens het centrale contract.
+3. Menselijk akkoord bindt exacte versie/hash en gebruik; nieuwe output erft geen akkoord.
+4. Voer eerst de synthetische demo of lokale manifestvalidatie uit volgens het [runbook](runbook.md).
+5. Review packet en blockers; publiceer geen private stdout of bestanden in issues/CI-artifacts.
+6. Alleen in een later expliciet geautoriseerd traject: via CLI account/model-schema en quote verifiëren, onafhankelijke grant en budgetreservering controleren; daarna pas upload/generatie.
+7. Echte jobstatus, kosten en gedownloade output apart teruglezen; inhoud/metadata beoordelen. Timeout blijft onzeker tot reconciliatie; geen blinde retry.
 
-### Voorbeeld manifest: ID's komen UIT ECHTE TOOLRESULTATEN, nooit verzinnen
-```json
-{
-  "alias": "@AVELNA_BathStone_01",
-  "kind": "prop",
-  "status": "awaiting_product_verification",
-  "reference_element_id": null,
-  "project_id": null,
-  "folder_id": null,
-  "source_media_id": null,
-  "approved_asset_sha256": null,
-  "product_sku": null,
-  "rights_status": "unverified",
-  "approved_by": null,
-  "approved_at": null,
-  "prompt_id": "AVELNA/hero/editorial/v1",
-  "prompt_sha256": null
-}
-```
-
-## Levenscyclus van één master
-
-1. **Brief**: ChatGPT en eigenaar bepalen concept, gemeten/geverifieerde productfeiten, kleursysteem en gebruiksrechten.
-2. **Genereren**: bij voorkeur een geschikte ChatGPT-beeldgenerator voor concepten zonder Higgsfield-credits; die output verschijnt NIET vanzelf in Higgsfield. Higgsfield-generaties worden alleen met expliciete creditmachtiging gestart. Een ChatGPT-gegenereerd bestand moet langs een echt werkende en geverifieerde uploadbridge; **deze bridge is nog niet end-to-end getest**. Als fallback kan de gebruiker een eigen goedgekeurde afbeelding opnieuw als ChatGPT-bijlage toevoegen, waarna de attachment-uploader daarvoor beschikbaar is.
-3. **Review**: status `candidate`; eigenaar geeft expliciet akkoord op exacte afbeelding/versie. Een goedgekeurd AI-concept is nog geen juiste productreferentie voor een niet geverifieerde SKU.
-4. **Library**: bevestigd image-job of upload aan de juiste projectfolder koppelen; bevestigde IDs, SHA en rechten vastleggen; remote teruglezen.
-5. **Element**: voor een exact product of herbruikbare omgeving een reference element maken uit de bevestigde afbeelding, status `completed` afwachten. Bewaar de geretourneerde echte UUID met de leesbare alias.
-6. **Prompt**: de exacte tekst inclusief negative constraints en asset-/model-/versie-ID opslaan in een Higgsfield canvas generation node (alleen opslaan, **niet** runnen), en als versiebeheerbare tekst in GitHub.
-7. **Hermes consumeert**: leest manifest, verifieert SKU, reference status, goedkeuring en rechten; vervangt alias via lookup door `<<<UUID>>>` binnen generation prompt voor ondersteund model, schat kosten en vraagt/controleert budgetgrant vóór generatie.
-8. **Na output**: controle op geometrie, kleuren, claims en versie; geen automatische vervanging van goedgekeurde master door een nieuwe generatie. Afgekeurde assets mogen niet als Referentie-Element in een betaalde campagne verschijnen.
-
-## Veiligheid en kosten
-
-- Uploaden/plaatsen/bewaren van media moet niet gelijkgesteld worden aan gratis **generatie**. Eerst prijzen checken; wanneer een mutate onverwacht kosten meldt, stoppen en toestemming vragen.
-- De enige onderzochte workspace heeft 10 credits en specifieke free_gen vouchers; die vouchers zijn niet algemene gratis still-image generaties. Geen credituitgaven tijdens dit ontwerp.
-- Geen publieke Cinema-publicatie; project standaard privé.
-- De repo is openbaar: houd beeldrechtenbestanden, private thumbnails, echte accountidentifiers, geheime URLs en klantenbestand buiten GitHub. Een publiek aliaslabel kan wel; opslaglocaties en UUIDs kunnen in een privé operationeel manifest.
-- Alles uit #1–#10 blijft gelden, vooral SKU-verificatie, budgetgrenzen, geen leverancier-outreach en gescheiden goedkeuring van uitgaven.
-
-## Acceptatie door Hermes
-
-1. Eén zichtbaar AVELNA-project in de correcte workspace, na expliciete projectaanmaakopdracht.
-2. Eén opgevraagd en teruggelezen geüpload goedgekeurd beeld in `20_approved_masters`.
-3. Een `completed` Reference Element met werkelijke ID en `@...`-naam.
-4. Een canvas met promptversie en generation node die **niet** is gerund; saldo vóór/na controleren.
-5. Een dry-run waarin Hermes de alias naar `<<<UUID>>>` vertaalt, maar géén creditjob start.
-6. Later pas een gelimiteerde, expliciet geautoriseerde generation job, met prijscontrole en remote readback.
+## Acceptatiegrens
+Lokaal gereed: exacte bronhashes, padbegrenzing, rechten-/approvalcontrole, reproduceerbare prompttekst en expliciete rolbinding. De demo bewijst alleen de lokale synthetische keten. Remote gereed vereist echte CLI-auth, modelschema, quote, grant, reservering en readbacks. Die zijn niet bewezen. Geen 4K-productie als setupcheck; AVELNA begint met 1080p binnen de €200-totaalgrens en het leveranciersverbod.

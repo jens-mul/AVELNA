@@ -106,4 +106,4 @@ Besluit: voortzetten binnen grant / pauzeren / één expliciete uitzondering
 ```
 
 ## Acceptatie
-Een offerte- en productgebonden kostprijs, één versie van aanbod/CTA, een campagne als draft/paused met previews, eventtest zonder echte klantbetaling, en operatorgrant vóór activering. Te materialiseren: `docs/growth.md`, `config/offer.example.json`, `schemas/campaign.schema.json`, `skills/avelna-growth/SKILL.md`.
+Een offerte- en productgebonden kostprijs, één versie van aanbod/CTA, een campagne als draft/paused met previews, eventtest zonder echte klantbetaling, en operatorgrant vóór activering. Gebruik de bestaande `config/offer.example.json` en projectskill `skills/avelna-growth/SKILL.md`; een productiespecifiek campagnecontract vereist nog geverifieerde Meta-schemas. Higgsfield-inputs volgen het centrale [assetcontract](../config/asset-contract.json) en de [CLI-handoff](higgsfield.md); de eerste AVELNA-test blijft 1080p.

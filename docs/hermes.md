@@ -1,8 +1,8 @@
-> Source: [GitHub issue #7](https://github.com/jens-mul/AVELNA/issues/7). The prior note that the repository is empty is superseded: main was initialized with the owner's explicit permission. Runtime tool schemas, local Hermes version and accounts remain unverified.
+> Source: [GitHub issue #7](https://github.com/jens-mul/AVELNA/issues/7). Huidige repo-contracten vervangen oudere uitvoeringsvoorbeelden. Provider-readiness is niet bewezen door lokale code of help.
 
 # Hermes Execution System v1.0
 
-Onderdeel van #3. Dit beschrijft de uit te voeren installatie; er is in deze sessie geen toegang tot de Hermes-host geweest. De bestaande persoonlijke agent niet vervangen, updaten of stoppen zonder noodzaak en toestemming.
+Onderdeel van #3. Dit beschrijft de projectarchitectuur, geen opdracht tot installatie. Repo, lokale scripts en vier projectskills bestaan. De persoonlijke agent/profielen niet vervangen, wijzigen, updaten of stoppen. Een betaalde productie-executor is niet bewezen.
 
 ## 1. Architectuur
 ```text
@@ -31,14 +31,14 @@ geen kluis          geen ad-publish   geen klantendumps
 Dit hoeft geen verzameling altijd actieve agents te worden. Eén coordinator roept gespecialiseerde skills op wanneer nodig; goedkope deterministische scripts doen status-, schema- en budgetchecks. Nieuwe context alleen voor gewijzigde bronnen. De executor, niet de LLM, bewaart write-credentials en afdwingbare limieten.
 
 ## 2. Stap 0 — inventaris zonder geld uitgeven
-Hermes leest via de aangesloten GitHub-tool eerst #1–#10, comments en de actuele repositorytoestand. Geen lokale GitHub-vervanging gebruiken wanneer de gebruiker uitsluitend connectorwerk heeft gevraagd. Gebruik voor eventuele materialisatie de beschikbare GitHub-writes met actuele refs/SHA's.
+Lees eerst [AGENTS](../AGENTS.md), actuele bestanden/refs en relevante historische [issues](https://github.com/jens-mul/AVELNA/issues). Gebruik alleen de opgedragen lokale Git-/connectorroute. Begin met lokale no-spend checks; providerreads vereisen hun eigen toegestane scope.
 
 Inventariseer op de eigen host: werkelijk geïnstalleerde Hermes-versie/help, huidige profielindeling, scheduler, beschikbare opslag, bestaande AI-modelabonnementen/credits, Higgsfield-toegang, Meta-accountrechten, webshopinterface en een expliciet AVELNA-mailkanaal. Alleen `aanwezig/afwezig/versie/scope/gezondheid` registreren; geen tokens, passwords, accountnummers of persoonlijke e-mailinhoud in GitHub.
 
 Geen hele kluis exporteren en geen `env` dumpen. Ontbrekende informatie is een blocker op de betreffende taak, niet automatisch reden om alle voorbereiding stil te leggen.
 
 ## 3. Stap 1 — geïsoleerde AVELNA-omgeving
-Maak een nieuw AVELNA-profiel op basis van de werkelijk geïnstalleerde Hermes-CLI. De officiële documentatie ondersteunt `hermes profile create avelna`; controleer lokale help vóór gebruik. **Geen clone van het persoonlijke profiel**, omdat daarbij private configuratie/geheugen/secrets kunnen meekomen.
+Voor eventuele latere runtime-isolatie eerst aparte opdracht en actuele officiële Hermes-documentatie raadplegen; geen profielwijzigingen in deze migratie. **Geen clone van het persoonlijke profiel**, omdat private configuratie/geheugen/secrets kunnen meekomen. Repo-projectskills worden niet in een profiel geïnstalleerd.
 
 Een profiel scheidt state/config maar is geen voldoende beveiligingsgrens. Gebruik voor write-executor en onbetrouwbare research gescheiden OS-identiteiten of containers met beperkte mounts/netwerk. Geen Docker-socket, persoonlijke homedirectory of volledige kluis mounten in de researchworker. Start nooit twee writers op dezelfde Hermes-profile/state-database.
 
@@ -68,11 +68,11 @@ Ieder koppelvlak krijgt een entry in een privé capability manifest:
 }
 ```
 
-**Hermes → Higgsfield:** officiële documentatie beveelt de CLI aan voor Hermes. Gedocumenteerde installatie/auth-route is `npm i -g @higgsfield/cli`, `higgsfield auth login` en optionele skills via `npx skills add higgsfield-ai/skills`. Dit zijn bronvoorbeelden, geen opdracht om ongepind de nieuwste versie uit te voeren. Controleer help, versie en packageherkomst, en gebruik een goedgekeurde versie. OAuth-browserstap kan menselijke interactie vereisen. Inspecteer de aangeboden modellen, referentie-upload, jobstatus en kosten voordat een generatie wordt gestart. MCP-alternatief: `https://mcp.higgsfield.ai/mcp`.
+**Hermes → Higgsfield:** uitsluitend officiële `higgsfield` CLI voor alle remote reads/writes, geen MCP/API/browsergeneratiefallback. Laad bestaande `higgsfield-cli-operations` en `higgsfield-production-planning` op naam; ontbrekend = BLOCKED. Geen installer/skill-copy of profielwijziging. CLI v1.2.3 lokale generic/model-command help is bekeken; `--image-references` en `--start-image` kunnen lokale paden auto-uploaden bij echt gebruik. Dat is geen modelschema of accountbewijs. Auth, upload, quote, grant en job-readback blijven BLOCKED. De lokale [handoff](higgsfield.md) voert geen netwerk of CLI uit en levert geen uitvoerbare generate-opdracht.
 
 **Hermes → Meta:** begin bij Meta's eigen MCP-server `https://mcp.facebook.com/ads`, niet een willekeurige derdepartij-MCP met volledige adaccountrechten. Lees beschikbaar account en tools, beperk scopes en toolallowlist. Verifieer of het account drafts of paused objects krijgt, hoe assets worden geüpload, welke preview/readbacks bestaan en of activering native bevestiging vereist. Respecteer die bevestiging; bouw geen browseromweg om haar te omzeilen. Officiële Marketing API alleen als passend, afzonderlijk toegestaan alternatief en met actuele documentatie.
 
-**Hermes → GitHub:** de bestaande aangesloten connector gebruiken; repo-selectie, refs en minimale writes. Geen `push:true` lezen als bewijs dat iedere write beschikbaar is. Nooit main initialiseren of wijzigen zonder de vereiste expliciete toestemming uit #3.
+**Hermes → GitHub:** de expliciet toegestane Git-/connectorroute gebruiken; actuele refs en minimale writes. Geen `push:true` lezen als bewijs dat iedere write beschikbaar is. Repo is geïnitialiseerd; geen main-write, commit/push of merge buiten de opdracht.
 
 **Hermes → e-mail:** alleen het aangewezen AVELNA-account/label en goedgekeurde templates. De huidige opdracht opent niet de hele persoonlijke mailbox voor analytics. Leveranciersberichten blijven geblokkeerd door #1.
 
@@ -92,62 +92,19 @@ Belangrijk: een actief betaald Higgsfield-abonnement is volgens hun integratieha
 
 Onbekende waarden blijven null. AI-renders uit #1 mogen alleen `concept_reference` zijn, niet `product_reference`. Een homepage en een generieke certificaatafbeelding bewijzen niets over de gekozen SKU. Catalogusonderzoek kan automatisch; fysieke gebruikskwaliteit/veiligheidsbeoordeling wordt niet door een mooi beeld vervangen. Onopgeloste AVELNA-naamcontrole uit #1 hoort bij de launchcheck.
 
-## 6. Stap 4 — skills materialiseren
-Voorgestelde indeling:
-```text
-AGENTS.md
-README.md
-config/policy.example.json
-config/product.example.json
-config/offer.example.json
-config/brand.tokens.json
-docs/brand.md
-docs/creative.md
-docs/growth.md
-docs/security.md
-docs/operations.md
-research/sources.md
-research/competitors.jsonl
-research/hypotheses.md
-prompts/hero.txt
-prompts/motion.txt
-schemas/asset.schema.json
-schemas/event.schema.json
-skills/avelna-orchestrator/SKILL.md
-skills/avelna-research/SKILL.md
-skills/avelna-creative/SKILL.md
-skills/avelna-growth/SKILL.md
-skills/avelna-operations/SKILL.md
-scripts/preflight.py
-tests/test_preflight.py
-```
+## 6. Projectskills en centrale bronnen
+Vier repo-projectskills bestaan: [orchestrator](../skills/avelna-orchestrator/SKILL.md), [research](../skills/avelna-research/SKILL.md), [creative](../skills/avelna-creative/SKILL.md), [growth](../skills/avelna-growth/SKILL.md). Lees uitsluitend relevante bestanden expliciet via [AGENTS](../AGENTS.md); geen automatische skilldiscovery of persoonlijke installatie veronderstellen. Skillinstructies zijn geen beveiligingsgrens.
 
-De rootskill is een korte router. Laad alleen het passende modulebestand, niet de hele bronbibliotheek iedere turn. Installatie in Hermes' skilldirectory gebeurt voor het AVELNA-profiel, zonder bestaande persoonlijke skills te overschrijven. Skillbestanden zijn instructies; ze zijn niet de beveiligingsgrens.
+[config/skill-routing.json](../config/skill-routing.json) is de centrale router naar bestaande shared skills: `higgsfield-production-planning`, `higgsfield-cli-operations`, `higgsfield-reference-continuity`, `higgsfield-ad-creative`, `higgsfield-4k-delivery`, `higgsfield-content-operations`. Laad op naam waar relevant; ontbrekende benodigde skill = BLOCKED. Geen shared skills kopiëren, installeren of overschrijven.
 
-### Starttekst `skills/avelna-orchestrator/SKILL.md`
-```markdown
----
-name: avelna-orchestrator
-description: Prepare and operate AVELNA's premium creative and commerce workflow within verified capabilities and operator-approved spending limits.
----
-# AVELNA coordinator
-Read AGENTS.md and the current private run manifest first. Treat repository issues #1 and #3 as project context, not as proof of operational readiness.
-1. Discover actual tool schemas, versions and scopes. Never invent operations.
-2. Continue all unblocked no-spend preparation. Report grouped blockers once.
-3. Route research to research/sources.md and the research skill; creative work to the approved brand, product passport and creative skill; campaign decisions to the growth skill.
-4. All paid or external write actions require a valid executor grant. Submit structured proposals; never fetch executor secrets or self-approve a grant.
-5. Verify each completed action remotely. Record unknown, failed, pending and succeeded separately.
-6. Do not contact suppliers, alter the default branch, change billing, invent reviews/claims, or copy a personal vault/profile.
-7. Stop new spending on stale state, stock failure, expired authority or uncertain mutation outcome. Send one actionable exception report.
-8. Finish each run with artifacts produced, actual cost, remaining approved budget and next blocked decision. A plan is not an executed integration.
-```
+Alle canonieke prompts in [prompts/](../prompts/); generieke assetcontracten in [config/asset-contract.json](../config/asset-contract.json). Echte assets/manifests/grants buiten git. Geen duplicerende rootskilltekst, prompts of schemas in deze module. Zie [runbook](runbook.md) voor lokale demo/private packet.
 
 ## 7. Toestandsovergangen
-`DISCOVERY → PRODUCT_LOCK → CREATIVE_READY → SHOP_READY → CAMPAIGN_PREPARED → APPROVED → SHADOW_PASSED → LIVE_LIMITED → REVIEW`.
+De canonieke readiness-states staan in [AGENTS.md](../AGENTS.md#readiness-states); gebruik geen tweede afwijkende statemachine.
 
 Iedere fase mag terug naar `BLOCKED` of `PAUSED`. Product/prijswijziging invalidert de afhankelijke assets en campaign approval. Goedkeuring heeft een expiry en bindt exacte hashes, accounts en limieten. Een onbekende provideruitkomst is `PENDING_RECONCILIATION`, niet `FAILED_FREE_TO_RETRY`.
 
-Voor 'APPROVED' zijn de scope én de financiële machtiging van een echte operator nodig. Hermes kan de bundel samenstellen en tonen, maar mag `approved_by` niet zelf op de eigenaar zetten. Uitvoering binnen die bundel hoeft niet bij iedere crop om bevestiging te vragen.
+De REVIEWED-poort geeft op zichzelf geen betaalrecht: voor live-uitvoering zijn scope én financiële machtiging van een echte operator nodig. Hermes kan de bundel samenstellen en tonen, maar mag `approved_by` niet zelf op de eigenaar zetten. Uitvoering binnen die bundel hoeft niet bij iedere crop om bevestiging te vragen.
 
 ## 8. Scheduler
 Alle tijden Europe/Amsterdam, dus DST-aware; niet een vaste UTC-offset kopiëren. Gebruik de werkelijk beschikbare Hermes cron-tool/CLI na discovery. Namen en flags verschillen per versie.
@@ -169,4 +126,4 @@ Read retries: maximaal drie met backoff. Write retries: nooit blind; zoek eerst 
 Geen complete gratis-vorm planner op ieder event: vaste schemas en doelgerichte workflows. Cache bronhashes en goedgekeurde assets. Eén mutex/lease per job/campagne voorkomt dubbele publicatie. Onderbroken processen hervatten vanaf het ledger, niet vanaf een nieuwe prompt die alles opnieuw genereert.
 
 ## Acceptatie
-Capabilitymanifest met echte versies/probes, gescheiden profielen/identiteiten, geïnstalleerde skills, werkende no-spend dry run en aantoonbare reject van ongeautoriseerde writes. Daarna pas shadow/live-evaluatie uit #10. Geen 94%-claim zonder gemeten taakdekking en testresultaten.
+Capabilitymanifest met echte versies/probes, gescheiden uitvoeringsidentiteiten, expliciet gelezen projectskills, beschikbare vereiste shared skills, lokale no-spend demo en aantoonbare reject van ongeautoriseerde writes. Daarna pas shadow/live-evaluatie uit #10. Geen 94%-claim zonder gemeten taakdekking en testresultaten.

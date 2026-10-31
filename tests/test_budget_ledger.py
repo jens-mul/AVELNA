@@ -1,3 +1,4 @@
+import sqlite3
 import tempfile
 import unittest
 from concurrent.futures import ThreadPoolExecutor
@@ -12,6 +13,35 @@ class LedgerTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.db = Path(self.tmp.name) / "test.sqlite"
         self.ledger = DryRunLedger(self.db)
+
+    def test_db_context_closes_connection_on_every_exit(self):
+        for fail in (False, True):
+            with self.subTest(fail=fail):
+                db = None
+                try:
+                    try:
+                        with self.ledger._db() as db:
+                            db.execute("BEGIN IMMEDIATE")
+                            db.execute(
+                                "INSERT INTO reservations VALUES (?, 'ai', 1, 'pending', 0)",
+                                (f"context-{fail}",),
+                            )
+                            if fail:
+                                raise RuntimeError("abort transaction")
+                    except RuntimeError as error:
+                        self.assertEqual(str(error), "abort transaction")
+                    assert db is not None
+                    with self.assertRaisesRegex(sqlite3.ProgrammingError, "closed"):
+                        db.execute("SELECT 1")
+                    with self.ledger._db() as check:
+                        count = check.execute(
+                            "SELECT COUNT(*) FROM reservations WHERE idempotency_key=?",
+                            (f"context-{fail}",),
+                        ).fetchone()[0]
+                    self.assertEqual(count, 0 if fail else 1)
+                finally:
+                    if db is not None:
+                        db.close()
 
     def test_reservation_and_settlement(self):
         self.ledger.reserve_simulated("task1", "ai", 1000)

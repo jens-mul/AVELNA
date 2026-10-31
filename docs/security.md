@@ -4,6 +4,13 @@
 
 Onderdeel van #3 en #7. Doel: weinig dagelijkse handelingen voor de eigenaar, zonder dat één agent met persoonlijke kluis, browser, shell en betaalrechten onbeperkt alles kan veranderen. Toegang hebben is niet hetzelfde als toestemming voor iedere actie.
 
+## Uitvoerings- en datagrens
+Higgsfield remote operaties uitsluitend via de officiële CLI, inclusief reads/uploads/quotes/status/upscale. Geen MCP, directe API of browsergeneratiefallback; ontbrekende CLI-capability = BLOCKED. Dit verandert Meta Ads MCP niet. Generieke CLI-mediaflags bewijzen geen modelspecifiek schema; lokaal-padgebruik kan al uploaden, ook bij een kostenquote, en vereist vooraf rechten/privacytoestemming.
+
+Centrale publieke contracten: [asset-contract.json](../config/asset-contract.json), [skill-routing.json](../config/skill-routing.json) en [prompts/](../prompts/). Echte assets, manifests, paden, grants en packets blijven privé buiten git; standaard stdout is niet automatisch veilig voor openbare logs. Optionele `--output` alleen privé/ignored. De lokale demo voert geen netwerk of CLI uit, bevat geen uitvoerbare generate-opdracht en verleent geen betaalrecht. Lokale approvalveldvalidatie is niet onafhankelijke grantverificatie.
+
+Projectskills alleen expliciet als repo-bestand lezen; geen persoonlijke installatie of shared-skillkopieën. Ontbrekende vereiste shared skill = BLOCKED.
+
 ## 1. Autonomiematrix
 | Actie | Tijdens voorbereiding | Na afgebakende operatorgrant |
 |---|---|---|

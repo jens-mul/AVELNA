@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "higgsfield_transport": "cli",
+  "mcp_fallback": false,
+  "direct_api_fallback": false,
+  "browser_generation_fallback": false,
+  "purpose_values": [
+    "synthetic_dry_run",
+    "production_preparation"
+  ],
+  "max_asset_bytes": 25000000,
+  "allowed_extensions": [
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp"
+  ],
+  "roles": {
+    "product_reference": "--image-references",
+    "environment_reference": "--image-references",
+    "start_frame": "--start-image",
+    "end_frame": "--end-image"
+  },
+  "required_asset_fields": [
+    "alias",
+    "path",
+    "source_hash_sha256",
+    "role",
+    "status",
+    "rights_status",
+    "product_verified",
+    "approved_by",
+    "approved_at",
+    "synthetic"
+  ],
+  "required_prompt_fields": [
+    "path",
+    "sha256"
+  ],
+  "approval_status": "owner_approved",
+  "privacy": "real sources, manifests, packets, approvals and grants stay outside tracked git",
+  "generic_cli_help_evidence": {
+    "version": "1.2.3",
+    "source": "higgsfield generate create --help",
+    "model_specific_schema_verified": false
+  },
+  "authorization": "local preparation never grants upload, generation, spending or publication"
+}

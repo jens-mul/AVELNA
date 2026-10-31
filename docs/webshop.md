@@ -80,9 +80,9 @@ Post-purchase: een orderbevestiging en leveringsupdates vanuit de webshop. Een r
 De startertests in #9 dekken slechts een deel van deze matrix. Providercontracttests, security-isolatietests en echte account-readbacks zijn nog nodig. De in #9 weergegeven `aware_time`-helper moet bij productie-integratie errors uit `datetime.fromisoformat` generiek afvangen voordat ze gelogd worden, omdat Python anders de ongeldige input kan echoën.
 
 ## 6. Veilige uitrolvolgorde
-1. Lees actuele repositoryref, afspraken en operatorrechten. Nog steeds leeg? Eerst expliciete toestemming voor minimale initialisatie; geen fictieve SHA/branch. Na geldige basis een aparte featurebranch maken.
-2. Materialiseer het dossier en implementatiepakket via de aangesloten GitHub-connector. Werk in kleine coherente commits; actuele content/SHA vóór updates. Voeg complete ontbrekende adapters/ledger/schemas toe op basis van ontdekte contracts.
-3. Laat remote CI of een expliciet toegestane deploymentomgeving tests uitvoeren. Geen lokale GitHub-workspace als stil alternatief voor de connector. Rapporteer echte logs/status; geen badge op basis van verwachtingen.
+1. Lees actuele repositoryref, afspraken en operatorrechten. De repo is geïnitialiseerd; werk op de opgedragen featurebranch, zonder impliciete main-write of deployment.
+2. Gebruik bestaande code en centrale contracten; wijzig alleen de opgedragen scope. Ontbrekende adapters/integraties apart implementeren en testen volgens geverifieerde providercontracten. Commit/push alleen na opdracht.
+3. Draai lokale tests binnen de toegestane workspace; gebruik remote CI alleen binnen de opdracht. Rapporteer echte logs/status, geen badge op basis van verwachtingen.
 4. Deploy uitsluitend een goedgekeurde ref naar een nieuwe dedicated release-directory/service. Productiecredentials nog niet beschikbaar tijdens build/test. Bewaar laatste werkende release en private state met passende rechten.
 5. Start eerst shadow/no-spend: echte read-only metingen, stubbed paid actions, geen klantenmail en geen advertentie-activering. Test fouten, herstarts en idempotency.
 6. Bundel productreferentie, creativemaster, prijs/levering, accountscopes, tijdsvenster, credit/cashcaps en bewijs van tests in één operatorreview. Native platformbevestigingen blijven gelden.
@@ -97,11 +97,5 @@ Het commando moet de interactieve SSH-shell behouden; fouten worden binnen de fu
 ## 8. Wat de eigenaar in de praktijk overhoudt
 Na onboarding en bewezen uitvoering: webshopontwikkeling, voorraad/fulfillment en een kort uitzonderingenbericht. De paar niet-automatische punten zijn echte SKU/sample-goedkeuring, account/OAuth/MFA of bedrijfsverificatie, eenmalige stijl/aanbod/budgetvrijgave en zeldzame veiligheids-/betaalgeschillen. Dit is een operationeel ontwerp, geen garantie dat elke provider 100% headless werkt.
 
-## 9. Status bij oplevering van dit dossier
-- Ontwerp, prompts, workflow, budgetregels, interfaces en startercode: vastgelegd in GitHub-issues.
-- Codebestanden/branches/commit-SHA/PR: niet aangemaakt; repo-init geblokkeerd door lege repo en default-branchregel.
-- Unit-/integratietests: niet uitgevoerd.
-- Hermes/Higgsfield/Meta/Vaultwarden/webshopaccounts: niet op de host aangesloten in deze sessie.
-- Live ads, kosten, mails, voorraadorders: niet uitgevoerd.
-
-Hermes houdt deze statusregels actueel op basis van bewijs, niet op basis van hoeveel documentatie er is geschreven.
+## 9. Actuele bewijsgrens
+Repo, lokale code/tests, centrale prompts/contracten en no-spend controlservice bestaan. Zie [runbook](runbook.md) voor demo, private packet en huidige blockers. De voorgestelde webshopinterfaces zijn geen live endpoints. Meta Ads MCP blijft ongewijzigd; CLI-only geldt alleen Higgsfield. CLI-help bewijst geen live auth, upload, modelschema, quote, grant, job-readback of 4K. Geen externe/paid actie of leverancierscontact door deze migratie.
