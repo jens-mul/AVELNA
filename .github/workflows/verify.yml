@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile Python source
-        run: python -m compileall -q scripts tests
+        run: python -m compileall -q scripts tests creative-tools
       - name: Test offline preflight, alias integrity and budget ledger
         run: python -m unittest discover -s tests -v
       - name: Check JSON templates
@@ -32,3 +32,16 @@ jobs:
               assert isinstance(data, dict), path
               print(f"{path}: valid JSON")
           PY
+
+  visual-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install only optional offline image processing dependencies
+        run: python -m pip install -r creative-tools/requirements.txt
+      - name: Test image masking, pixel preservation and deterministic callout layout on synthetic data
+        run: python -m unittest discover -s creative-tools/tests -v

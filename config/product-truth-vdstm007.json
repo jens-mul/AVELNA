@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "product_code": "BATH-STONE-01",
+  "supplier": "Longyan Yongye trade co., LTD",
+  "supplier_model": "VDSTM-007",
+  "supplier_listing": "https://www.alibaba.com/product-detail/Fast-Drying-Hard-Bath-Mat-Super_1601587124238.html",
+  "source": {
+    "type": "user_supplied_supplier_listing_image",
+    "sha256": "ec6f885073d2b6c42da269a27e5d8272da0a61881b33b97f8634bb38d97e1299",
+    "published_in_public_repo": false,
+    "license_status": "unverified",
+    "original_dimensions_px": [
+      800,
+      800
+    ],
+    "segmentation_bbox_px": [
+      25,
+      173,
+      773,
+      646
+    ],
+    "extracted_sha256": "fdaea9e5463dadb5124fc360ae87657047087133391f76f00c1878890e87e48b"
+  },
+  "product_facts": {
+    "long_side_mm": 600,
+    "short_side_mm": 390,
+    "thickness_mm": null,
+    "net_weight_grams": null,
+    "package_gross_weight_grams": 8000,
+    "color_label": "white",
+    "edge_profile": "rounded corners visually observed",
+    "wave_pattern": "asymmetric left-origin arcs as user-submitted photograph",
+    "backing_type": null,
+    "composition_verified": false
+  },
+  "state": {
+    "category": "rigid_diatomite_candidate",
+    "source_image_used_for_geometry": true,
+    "exact_sku_identity_verified": false,
+    "supplier_checkout_verified": false,
+    "sample_verified": false,
+    "image_rights_cleared": false,
+    "commercial_master_approved": false,
+    "creative_stage": "internal_product_truth"
+  },
+  "derived_internal_files": {
+    "02_locked-top-reference-transparent.png": "1dd431da95ee067b2ac3853def01d297f51ab07f01b35e88c366537188dab1c9",
+    "04_verified-dimensions-reference.png": "8240ffdafa251fc1c2064539018606348ec91e7c60913de22cea7826b2eee115",
+    "05_surface-groove-truth-board.png": "ab4bd653c5db486cc9c761195cd3cc4d7f1d012a9d71a12f4eedc9d228d68f74"
+  },
+  "mode": "no_spend_no_commercial_publication"
+}
