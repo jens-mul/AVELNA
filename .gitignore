@@ -1,0 +1,29 @@
+# Secrets and personal data
+.env
+.env.*
+!.env.example
+private/
+runtime/
+state/
+outputs/
+*.pem
+*.key
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Generated media (use private asset library)
+*.mp4
+*.mov
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.webp
+# Avoid inadvertently committing downloaded providers' originals
+downloads/

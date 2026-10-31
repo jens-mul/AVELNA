@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "execution": "prepare_only",
+  "timezone": "Europe/Amsterdam",
+  "currency": "EUR",
+  "total_cap_cents": 20000,
+  "bucket_caps_cents": {
+    "product": 9000,
+    "ai": 2000,
+    "media": 6000,
+    "reserve": 3000
+  },
+  "supplier_outreach": false,
+  "auto_reinvest": false,
+  "auto_raise_budget": false,
+  "paid_execution_enabled": false,
+  "require_operator_grant": true,
+  "require_native_provider_confirmation": true,
+  "unknown_provider_cost_action": "block",
+  "repo_visibility": "public"
+}

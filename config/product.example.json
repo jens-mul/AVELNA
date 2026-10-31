@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "sku": null,
+  "product_url": null,
+  "supplier": null,
+  "product_construction": null,
+  "dimensions_mm": null,
+  "actual_color": null,
+  "weight_grams": null,
+  "landed_cost_cents_ex_recoverable_vat": null,
+  "published_moq": null,
+  "proof": {
+    "material": null,
+    "slip_test": null,
+    "import_compliance": null,
+    "rights": null
+  },
+  "reference_media": [],
+  "safety_review_status": "not_completed",
+  "rights_verified": false,
+  "approved_claims": [],
+  "verified_at": null,
+  "saleable_stock": null
+}

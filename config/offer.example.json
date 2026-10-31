@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "currency": "EUR",
+  "vat_basis_points": 2100,
+  "price_incl_cents": 4995,
+  "shipping_charged_incl_cents": 0,
+  "landed_cents": 1200,
+  "outbound_and_pack_cents": 800,
+  "payment_cents": 50,
+  "expected_returns_cents": 200,
+  "variable_labour_cents": 0,
+  "target_contribution_cents": 500,
+  "stock_status": "unknown",
+  "verified": false,
+  "note": "FICTIONAL ECONOMIC SCENARIO; NOT AN APPROVED OFFER"
+}

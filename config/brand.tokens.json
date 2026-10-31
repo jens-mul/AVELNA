@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "brand": "AVELNA",
+  "positioning": "Objects for considered living.",
+  "nl_campaign_line": "Rust, tot in het detail.",
+  "direction": "Quiet Architecture",
+  "colors": {
+    "chalk": "#F3F0E9",
+    "sand": "#D3C6B6",
+    "charcoal": "#292A27",
+    "warm_grey": "#8B877F",
+    "olive_grey": "#858B7C"
+  },
+  "lighting": "soft side light from upper left",
+  "typography": {
+    "primary": "licensed readable sans",
+    "accent": "licensed restrained serif, headings only"
+  },
+  "composition": {
+    "hero_object": "clearly recognisable",
+    "approx_product_frame_share": "30–45%, creative guideline not a rule",
+    "static": "4:5",
+    "motion": "9:16",
+    "motion_seconds": 12
+  },
+  "claims": {
+    "unverified_disallowed": [
+      "mold-free",
+      "anti-bacterial",
+      "never slips",
+      "60 second drying",
+      "5 years lifespan"
+    ],
+    "owner_review_required": true
+  },
+  "version": "1.0.0"
+}
