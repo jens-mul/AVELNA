@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "shot_id": "AVELNA-HERO-SHOT-02",
+  "revision": "v1",
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "creative_authority": "ChatGPT and AVELNA founders",
+  "runtime": "Hermes using installed official Higgsfield CLI skills",
+  "sku": "BATH-STONE-01_candidate",
+  "sku_locked": false,
+  "concept_only": true,
+  "commercial_release_allowed": false,
+  "references": {
+    "environment": {
+      "alias": "@AVELNA_Bathroom_01",
+      "creative_scope": "environment_only",
+      "file_sha256": null
+    },
+    "product": {
+      "alias": "@AVELNA_Stone_Top_01",
+      "creative_scope": "internal_only",
+      "file_sha256": null
+    },
+    "character": [
+      {
+        "alias": "@AVELNA_StepWoman_Front_01",
+        "file_sha256": null
+      },
+      {
+        "alias": "@AVELNA_StepWoman_Lower_01",
+        "file_sha256": null
+      }
+    ],
+    "start_frame": {
+      "media_id": null,
+      "sha256": null
+    },
+    "end_frame": {
+      "media_id": null,
+      "sha256": null
+    }
+  },
+  "prompt": {
+    "repository_path": "prompts/shot-02-step-out-v1.md",
+    "sha256": null,
+    "owner_approved": false
+  },
+  "camera": {
+    "duration_seconds_proposal": 4,
+    "leading_foot": "TBD",
+    "world_axis": "TBD",
+    "floor_outside_shower": "dry"
+  },
+  "provider": {
+    "model_id": null,
+    "accepted_params": null,
+    "cost_quote_credits": null,
+    "job_id": null
+  },
+  "grant": {
+    "authorized": false,
+    "id": null,
+    "max_credit_cost": null
+  },
+  "qa": {
+    "product_geometry": "pending",
+    "character_identity": "pending",
+    "room_continuity": "pending",
+    "wetness": "pending",
+    "anatomy": "pending"
+  },
+  "next_step": "STILL_REVIEW_ONLY"
+}

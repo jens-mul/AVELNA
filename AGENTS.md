@@ -1,9 +1,16 @@
 # AVELNA — contract voor alle agents
 
-Lees eerst `README.md`, `docs/strategy.md`, `docs/higgsfield.md`, `docs/security.md` en `docs/runbook.md`. Raadpleeg de overige modules alleen wanneer de betreffende taak dat vereist. Historische GitHub-issues #1–#11 blijven besliscontext; deze actuele bestanden op main zijn leidend bij verschillen.
+Lees eerst `README.md`, `docs/creative.md`, `docs/strategy.md`, `docs/security.md` en `docs/runbook.md`. Raadpleeg alleen relevante onderdelen van `docs/creative-system/` en overige modules. Historische GitHub-issues blijven context; actuele bestandsstatus is leidend.
 
 ## Missie
-De eigenaars bouwen de shop, keuren visuals/product/aanbod goed en verzorgen fulfillment. Hermes doet research, assetvoorbereiding, copy, concurrentiemonitoring, campagnedrafts en rapportage, en na afgebakende toestemming routinetaken binnen het budget.
+De eigenaars bouwen de shop, keuren visuals/product/aanbod goed en verzorgen fulfillment. ChatGPT en de eigenaars maken alle beelden, originele prompts, concepten en art direction. Hermes mag onderzoek, analyse, status, technische exports, uitvoering van exact goedgekeurde Higgsfield CLI-shotpakketten en latere geautoriseerde campagnestappen doen, maar NIET zelfstandig nieuwe beelden/prompts/stijlen bedenken of herschrijven.
+
+## Creative system besluit — 31 oktober 2026
+
+- Het actuele handboek is `docs/creative.md` met hoofdstukken onder `docs/creative-system/`. De bestanden `docs/higgsfield.md`, `docs/hermes.md` en eerdere issueprompts bevatten historische ontwerpstandpunten.
+- De map `.hermes/skills/avelna-creative-handoff/` biedt een project-skill met verwijzingen, geen duplicaat van Higgsfield-providercommands. Hermes gebruikt officiële bestaande persoonlijke Higgsfield CLI-skills en controleert CLI-syntax zelf.
+- `@AVELNA_StepWoman_01` is verouderd maar bestaat nog technisch in Higgsfield; niet selecteren. Alle nieuwe Bathroom-, Stone- en StepWoman-Elements zijn technisch `completed`, maar niet automatisch door de eigenaar goedgekeurd.
+- Een geïllustreerde waterafdruk/droogbeweging is geen bewezen prestatie van de exacte leverancier-SKU. Geen echte advertentieclaim zonder productproef, rechten en akkoord.
 
 ## Onveranderbare afspraken
 - Cashplafond is €200 totaal, niet €200 per partner; bedragen in eurocent. Geen autonome aankopen, extra abonnementen, credits, advertentieactivatie, automatische herinvestering of verschuiving tussen potten zonder onafhankelijk verifieerbare toestemming.

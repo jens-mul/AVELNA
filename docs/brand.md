@@ -1,3 +1,5 @@
+> **Merkstijl nog niet finaal gelockt.** De oude Quiet Architecture-palet en 12s-template hieronder zijn historische voorstellen. De later gekozen Nederlandse grote-tegel-badkamer is goedgekeurd als creatieve **environmentreferentie**; afzonderlijke product-/doelgroeprichting en definitieve merkstijl blijven onderwerp van review. [Actueel productiesysteem](creative.md).
+
 > Source: [GitHub issue #4](https://github.com/jens-mul/AVELNA/issues/4). Canonical artistic direction; colors and prompts are proposals until the owner approves the first master.
 
 # Brand & Creative Bible v1.0

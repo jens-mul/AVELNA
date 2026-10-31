@@ -1,13 +1,15 @@
 ---
 name: avelna-creative
-description: Produce product-locked editorial masters, prompt versions, Higgsfield elements, video and static ads within approval and credits.
+description: Coordinate only approved AVELNA image and prompt handoffs to upstream Higgsfield CLI skills; no autonomous visual design.
 ---
-# AVELNA creative
-Use `docs/brand.md`, `docs/library-operating.md`, `docs/product-qa.md` and `prompts/*.md`.
-- Never call an image mood render a verified product photograph.
-- Exact approved SKU geometry and rights first; owner approves SHA of an exact image, not a style promise.
-- Draft still in ChatGPT or model only after explicit generation request; never spend Higgsfield credits silently.
-- For Higgsfield: discover workspace/project, confirmed media, element state, supported models and quote. Map `@name` through private UUID, emit `<<<UUID>>>` to tool.
-- Store canon text in GitHub, interactive prompts on Canvas; adding a node doesn't run it.
-- Generate motion once when approved; use deterministic image parallax as credit-saving fallback.
-- QA product, claim, music, crop and real offer; drafts never auto-promote into approved masters.
+# AVELNA creative operating policy
+
+Start at `docs/creative.md`, then only the relevant section under `docs/creative-system/`. **All original image generation, prompts, identity, visual direction and owner approvals happen in ChatGPT with the founders.** Hermes does not create its own alternate photos, image prompts or ad concepts.
+
+- Use actual confirmed source media, Element IDs and owner-approved file hashes from the *private* runtime registry. Do not invent an Element because a public `@name` exists.
+- Reuse personal official Higgsfield CLI skills. This source-bundle skill is **not automatically a project-local active skill**; .hermes/skills/avelna-creative-handoff is the project-local route.
+- Find actual CLI-supported reference/parameter syntax; the MCP `<<<UUID>>>` placeholder is not a CLI guarantee.
+- Block deprecated `@AVELNA_StepWoman_01`. The four new StepWoman images are individual candidates; technical provider status completed is not owner signoff.
+- Treat Bathroom original as approved *environment concept*, Stone source as unverified supplier-rights internal calibration, and moisture/drying as unverified physical performance.
+- No paid jobs without quote + independent monetary grant; no blanket refresh or retries after uncertain submission.
+- Return requested media operation/shot evidence to ChatGPT and founders for creative review. Preserve provenance, timestamp, actual output dimensions and credit usage.

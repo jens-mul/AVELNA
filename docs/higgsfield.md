@@ -1,3 +1,5 @@
+> **ACTUELE UPDATE 31-10-2026:** de hieronder opgenomen tekst bevat een historisch voorstel uit de periode vóórdat de Higgsfield-library en 14 Elements daadwerkelijk zijn aangemaakt. De actuele, geverifieerde operationele waarheid en CLI-first rolverdeling staan in [docs/creative.md](creative.md) en [docs/creative-system/02-higgsfield-elements.md](creative-system/02-higgsfield-elements.md). Gebruik de oude '0 elements / geen project' vermeldingen **niet** meer als actuele status. Geen native Element-delete actie beschikbaar via deze connector.
+
 > Source: [GitHub issue #11](https://github.com/jens-mul/AVELNA/issues/11). This is the chosen and tool-discovered workflow. **No Higgsfield project/Elements or generation was created by this repository commit.**
 
 # AVELNA — Approved Assets & Prompts Pipeline v1.0

@@ -1,3 +1,5 @@
+> **CREATIVE WORKFLOW ACTUALISATIE:** dit is een oudere architectuur-/installatietekst. Sinds 31-10-2026 geldt: alle nieuwe beelden en prompts worden door ChatGPT + eigenaars geschreven en beoordeeld; Hermes voert exact goedgekeurde pakketten via de **bestaande Higgsfield CLI-skills** uit. Begin bij [docs/creative.md](creative.md) en [docs/creative-system/06-hermes-cli-handoff.md](creative-system/06-hermes-cli-handoff.md); historische creative-worker-instructies hieronder mogen geen zelfstandig ontwerpen autoriseren.
+
 > Source: [GitHub issue #7](https://github.com/jens-mul/AVELNA/issues/7). The prior note that the repository is empty is superseded: main was initialized with the owner's explicit permission. Runtime tool schemas, local Hermes version and accounts remain unverified.
 
 # Hermes Execution System v1.0
