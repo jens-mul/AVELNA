@@ -62,12 +62,12 @@ Dependencies: [\`creative-tools/requirements.txt\`](../creative-tools/requiremen
 ~~~bash
 python3 -m pip install -r creative-tools/requirements.txt
 python3 creative-tools/render_truth.py \
-  --source /PRIVATE/PATH/vdstm007-original.png \
+  --source /PRIVATE/PATH/avelna_product_truth_v01/00_internal-source-photograph.png \
   --manifest config/product-truth-vdstm007.json \
   --out /PRIVATE/PATH/avelna-vdstm007-output
 ~~~
 
-The expected source hash in the manifest protects against silently switching to another Alibaba image. A hash mismatch blocks output. \`creative-tools\` is a separate optional toolkit and intentionally **not** part of the standard-library-only deployment service or CI unit suite. The owner should treat the first run on the target host as untested until a matching real source is available.
+The expected source hash is for the normalized `00_internal-source-photograph.png` **included in the private ZIP**. The same visible image exported again as another PNG may have a different file hash; do not bypass this validation silently. The expected source hash in the manifest protects against switching to another Alibaba image. A hash mismatch blocks output. \`creative-tools\` is a separate optional toolkit and intentionally **not** part of the standard-library-only deployment service or CI unit suite. The owner should treat the first run on the target host as untested until a matching real source is available.
 
 ## Future professional six-image gallery
 
