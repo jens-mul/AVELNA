@@ -1,3 +1,5 @@
+> **ACTUELE UPDATE:** deze tekst is een vroege ontwerpnotitie. De vijf folders zijn inmiddels aangemaakt; 14 Higgsfield Elements bestaan. Voor bestaande assets, goedkeuringsniveaus, bronrechten, echte uploadstappen en CLI-handoff geldt [het actuele Creative Production System](creative.md). De eerdere uitspraak dat de uploadroute 'niet end-to-end getest' is, geldt niet meer voor de inmiddels bevestigde losse chatbeelden en cloud-sandbox uploads. Dat bewijst geen universele beschikbaarheid voor iedere bestandsreferentie.
+
 # Asset approval & library — uitvoeringscontract
 
 ## Twee soorten beeld (niet verwisselen)

@@ -23,13 +23,15 @@ AVELNA is an architecturally minimal, premium bathroom essentials brand. The fir
 
 Configuration examples are under `config/`; prompt templates under `prompts/`; pure, no-network validation library under `scripts/` with tests under `tests/`. All examples are dry-run only.
 
-## Current status
+## Current status — checked 31 October 2026
 
-- Earlier research and decision history remain in [GitHub issues #1–#11](https://github.com/jens-mul/AVELNA/issues).
-- Exact manufacturer SKU, approved rights, actual cost and regulatory readiness have **not** been confirmed.
-- ChatGPT can ideate masters; uploading a ChatGPT-generated file into Higgsfield and attaching it to a project is **not yet tested end to end**.
-- Higgsfield library, Elements and prompt canvas are supported by the connected tool surface but are **not created merely by this commit**.
-- No Meta campaign, live spend, Hermes deployment, checkout integration or external communication is performed by repository changes.
+- **Read [Creative Production System](docs/creative.md) first** for the exact proven image → Higgsfield Elements → Hermes CLI process, actual asset states, old/deprecated references, water physics and review gates.
+- Higgsfield private project **AVELNA Creative Studio** exists, including five folders and **14 technically completed Elements**. The original bathroom is approved for **environment style only**; derived rooms, individual characters, and Stone references remain **candidates / internal product calibration**. The old `@AVELNA_StepWoman_01` Element still exists but is deprecated.
+- Four **standalone StepWoman** studio images (Front, Back, Upper and Lower) are uploaded individually. Bathroom/Stone derived images are separately uploaded and registered.
+- One **5.04-second** camera-motion technical proof was actually generated and placed in Higgsfield; this is neither the full hero ad nor proof of product water performance. Its exact prompt and results are in [PR #14](https://github.com/jens-mul/AVELNA/pull/14), still under review.
+- Exact manufacturer SKU, source-photo rights, product physical test and commercial permission are **not confirmed**. No video has been approved as a water-absorption demonstration.
+- **ChatGPT + founders author and approve the creative images/prompts; Hermes is CLI-first execution-only.** Existing upstream official Higgsfield skills are reused. A project-local router is in `.hermes/skills/avelna-creative-handoff/` after repository trust.
+- No Meta ad or checkout integration has been activated by this documentation. The existing upgrade script deploys only the no-spend health service.
 
 ## Owner workflow
 

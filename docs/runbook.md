@@ -1,3 +1,5 @@
+> **Creative handoff actualisatie:** [docs/creative.md](creative.md) beschrijft nu de werkelijk aangemaakte Higgsfield-projectstructuur, 14 Elements, individuele StepWoman-beelden en de eerste vijfseconden-video; eerdere ontbrekende-koppelingzinnen in dit runbook beschrijven pre-implementatiestatus. De aparte betaalexecutor blijft wel NIET geïmplementeerd.
+
 # AVELNA Runbook — van main naar autonome marketing
 
 ## Feitelijke status 31 oktober 2026

@@ -1,3 +1,5 @@
+> **Observatie vervangt oude inventaris:** nieuwe referentiebeelden en 14 Elements bestaan in Higgsfield; de bron-/CLI-onderzoeksfeiten hieronder zijn waar relevant gedateerd. Zie [docs/creative.md](creative.md) voor werkelijke status en geldende uitvoeringsregels.
+
 # Onderzoeksupdate — 31 oktober 2026
 
 Deze aanvullende bevindingen zijn gecontroleerd via publieke primaire documentatie én de werkelijk geadverteerde capabilities van de gekoppelde Higgsfield-tools. Er zijn geen campagnes of generaties gestart. Mogelijkheden kunnen per account verschillen; bij uitvoering opnieuw ontdekken.
