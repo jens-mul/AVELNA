@@ -47,3 +47,7 @@ GitHub main is door de eigenaar geautoriseerd en geïnitialiseerd. Onderzoeksdoc
 De repo is een **plan+offline toolkit**; er is bewust nog geen bestaande AVELNA-productieservice om af te schalen. Een werkend 'download -> build -> old off -> new on'-blok wordt pas hostspecifiek wanneer service, runtime, persistente state en healthchecks bekend zijn. Geen willekeurige `docker compose down`, reboot, globale Hermes-gateway-stop of SSH-afsluitende `exit 1`. Bouw eerst staging; verifieer health; switch alleen de gerichte AVELNA-service; behoud laatste werkende release en rollback.
 
 Wanneer de eigenaar later een daadwerkelijke dienst implementeert, moet het bijbehorende deploymentcommit een **bestaand** `deploy/upgrade` entrypoint met geteste rollback opnemen; pas dan één commando publiceren. GitHub zelf online betekent niet dat er een marketingdaemon draait.
+
+## Implemented no-spend control service
+
+`scripts/control_server.py` is a loopback-only health endpoint. `deploy/upgrade.sh` downloads and verifies main, replaces ONLY the dedicated AVELNA control user-service after tests, and attempts rollback on health failure. Full Hermes/Higgsfield/Meta runtime remains separate and uninstalled. See `deploy/README.md`.

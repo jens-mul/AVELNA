@@ -40,3 +40,7 @@ You build the webshop and fulfill orders. Together with ChatGPT you choose/appro
 ## Research notes
 
 See [source register](research/sources.md). Primary documentation, especially Higgsfield and Hermes, changes over time; reread actual remote tool schemas before implementation.
+
+## One-command control-service upgrade
+
+See [deploy/README.md](deploy/README.md) for the GitHub-main downloader, build/tests, old dedicated AVELNA service replacement, health and rollback. This only runs the **no-spend control health service**, not paid Hermes automation.
