@@ -1,0 +1,34 @@
+name: Verify AVELNA plan and offline safety tools
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile Python source
+        run: python -m compileall -q scripts tests
+      - name: Test offline preflight, alias integrity and budget ledger
+        run: python -m unittest discover -s tests -v
+      - name: Check JSON templates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          paths = sorted(Path("config").glob("*.json"))
+          assert paths
+          for path in paths:
+              data = json.loads(path.read_text(encoding="utf8"))
+              assert isinstance(data, dict), path
+              print(f"{path}: valid JSON")
+          PY
