@@ -1,15 +1,43 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "brand": "AVELNA",
   "positioning": "Objects for considered living.",
   "nl_campaign_line": "Rust, tot in het detail.",
   "direction": "Quiet Architecture",
+  "palette_lock": {
+    "id": "olive-mineral-04",
+    "name": "Olive Mineral",
+    "status": "locked",
+    "approved_date": "2026-11-01",
+    "approval_scope": "brand colors and color role hierarchy only",
+    "color_space": "sRGB",
+    "source": "explicit founder decision in AVELNA ChatGPT project",
+    "specification": "docs/brand-palette.md",
+    "existing_environment_reference": "assets/approved/avelna-dutch-bathroom-approved-v1.webp"
+  },
   "colors": {
-    "chalk": "#F3F0E9",
-    "sand": "#D3C6B6",
-    "charcoal": "#292A27",
-    "warm_grey": "#8B877F",
-    "olive_grey": "#858B7C"
+    "alabaster": "#F5F2EC",
+    "stone": "#D4C9BC",
+    "sage_grey": "#9DA08E",
+    "olive_smoke": "#7C806E",
+    "deep_mineral": "#31332F"
+  },
+  "semantic_colors": {
+    "page_background": "alabaster",
+    "section_surface": "stone",
+    "text_primary": "deep_mineral",
+    "text_on_dark": "alabaster",
+    "primary_cta_background": "deep_mineral",
+    "primary_cta_text": "alabaster",
+    "soft_accent": "sage_grey",
+    "identity_accent": "olive_smoke"
+  },
+  "photography": {
+    "direction": "Sand & Linen (Palette 03)",
+    "status": "supporting_environment_mood_only",
+    "not_brand_palette": true,
+    "environment_reference": "assets/approved/avelna-dutch-bathroom-approved-v1.webp",
+    "actual_product_color": "verify_exact_supplier_sku"
   },
   "lighting": "soft side light from upper left",
   "typography": {
@@ -33,5 +61,5 @@
     ],
     "owner_review_required": true
   },
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
