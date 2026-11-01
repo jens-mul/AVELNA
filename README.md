@@ -11,7 +11,8 @@ AVELNA is an architecturally minimal, premium bathroom essentials brand. The fir
 
 1. **[Agent operating agreement](AGENTS.md)** — permissions, safety, boundaries.
 2. **[Strategy and rollout](docs/strategy.md)** — business positioning, product validation, operating roadmap.
-3. **[Brand bible](docs/brand.md)** — Quiet Architecture visual system, tone, palette.
+3. **[Brand bible](docs/brand.md)** — Quiet Architecture creative direction, tone and approved visual roles.
+   - **[Locked brand palette: 04 Olive Mineral](docs/brand-palette.md)** — approved HEX tokens, Palette 03 photography split, WCAG pairings, webshop/print/creative usage and revision rules.
 4. **[Creative production](docs/creative.md)** — approved ChatGPT → Higgsfield → Hermes pipeline and production QA.
 5. **[Higgsfield library handoff](docs/higgsfield.md)** — asset folders, Elements, alias resolution and prompt persistence.
 6. **[Competitor intelligence](docs/competitors.md)** — source-backed research, repeatable competitor sweep, creative hypotheses.
