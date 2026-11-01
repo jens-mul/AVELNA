@@ -1,6 +1,6 @@
-> Source: [GitHub issue #4](https://github.com/jens-mul/AVELNA/issues/4). Canonical artistic direction; colors and prompts are proposals until the owner approves the first master.
+> Source: [GitHub issue #4](https://github.com/jens-mul/AVELNA/issues/4). **Override 2026-11-01:** the five brand HEX colors of **Palette 04 — Olive Mineral** were explicitly locked by the owner. See [the complete palette decision and implementation guide](brand-palette.md). The actual product, final logo, individual prompts and commercial masters require separate approvals.
 
-# Brand & Creative Bible v1.0
+# Brand & Creative Bible v1.1
 
 Onderdeel van #3. Bouw voort op #1: **Objects for considered living.** Dit is het creatieve besluitvoorstel, geen claim dat er al assets, een definitieve SKU of een geregistreerd merk zijn. De bredere Collection 01 / Bath blijft bestaan; het eerste betaalde experiment concentreert zich op één hero-product. Accessoires pas adverteren wanneer hun eigen feiten en beschikbaarheid zijn bevestigd.
 
@@ -12,13 +12,16 @@ Werknaam hero: `Bath Stone / 01`. De productnaam en prijs zijn voorstelvelden to
 Nederlandse campagnezin: **Rust, tot in het detail.** Alternatief voor een latere test: **De finishing touch voor je badkamer.** Engels blijft de merksignatuur, niet de taal van alle verkoopinformatie.
 
 ## 2. Vast stijlsysteem
+
+**Locked identity: Palette 04 — Olive Mineral, 2026-11-01.** [Gedetailleerde kleuren-, contrast-, toepassing- en governance-specificatie](brand-palette.md); exact machineleesbaar in [`config/brand.tokens.json`](../config/brand.tokens.json). Palette 03 — Sand & Linen is **uitsluitend de ondersteunende fotografische richting**, geen alternatief logo-/UI-palet.
+
 | Onderdeel | Specificatie |
 |---|---|
-| Achtergrond | Chalk `#F3F0E9` |
-| Tweede vlak | Sand `#D3C6B6` |
-| Hoofdtekst | Charcoal `#292A27` |
-| Steunkleur | Warm grey `#8B877F` |
-| Spaarzaam accent | Olive grey `#858B7C`, maximaal circa 5% van een compositie |
+| Primaire achtergrond | Alabaster `#F5F2EC` — lichte, warme basis |
+| Tweede vlak | Stone `#D4C9BC` — rustige panelen/oppervlakken |
+| Zacht accent | Sage Grey `#9DA08E` — decoratieve, natuurlijke nuances |
+| Herkenningsaccent | Olive Smoke `#7C806E` — klein, consequent terugkerend element; geen standaard kleine tekst |
+| Logo, tekst, primaire CTA | Deep Mineral `#31332F` — donker contrast; op donkere vlakken Alabaster als tekst |
 | Materialen van de SET | Matte kalkpleister, licht natuursteen, geborsteld metaal, geweven katoen; maximaal twee dominante texturen |
 | Productmateriaal | Uitsluitend het echte gekozen materiaal; de set mag natuursteen zijn zonder te zeggen dat de mat dat is |
 | Licht | Groot zacht zijlicht, consistente richting linksboven, diepe maar niet dichtgelopen schaduwen |
@@ -26,7 +29,7 @@ Nederlandse campagnezin: **Rust, tot in het detail.** Alternatief voor een later
 | Typografie | Eén goed leesbare sans voor UI/copy; eventueel één contrasterende editorial serif voor korte headings. Alleen correct gelicentieerde bestanden; licentie vastleggen |
 | Logo | Eenvoudig AVELNA-woordmerk; niet in de video laten genereren maar deterministisch overleggen |
 
-Kleuren zijn merkkleuren, **geen bevestigde productkleuren**. Een lichte AI-kleur mag nooit een niet-bestaande bestelvariant suggereren. Voor langere tekst contrast in de echte component controleren; de steunkleur is niet automatisch toegankelijk op chalk.
+De vijf exacte HEX-waarden zijn nu **goedgekeurde merkkleuren**, maar **geen bevestigde productkleuren**. De bestaande [goedgekeurde badkameromgeving](../assets/approved/README.md) verandert hierdoor niet, evenmin als de nog onbekende echte SKU. Een AI-kleur mag nooit een niet-bestaande bestelvariant suggereren. Voor gewone tekst: gebruik Deep Mineral op Alabaster/Stone of Alabaster op Deep Mineral. Sage Grey en Olive Smoke zijn **niet automatisch toegankelijk als kleine tekst op lichte vlakken**; zie de berekende contrasttabel in [brand-palette.md](brand-palette.md).
 
 ## 3. Wat 'premium' hier betekent
 Geen generieke mansion, goudkranen, eindeloze slow motion of overdadige rook. Kies één geloofwaardige badkamer: rustige wand, normale douche of badrand, één handdoek. Werk met perspectief en schaduwen zodat de mat daadwerkelijk op de vloer ligt. Geen zwevend product, verbogen rechthoek, extra ribbels, verkeerde dikte of fictieve gravering.
