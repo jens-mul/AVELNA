@@ -12,6 +12,10 @@
 - Product-lock: pending exact SKU and product image reference
 - Higgsfield Element creation: separate step, not automatically done by this GitHub commit
 
+## Relationship to locked brand colors (2026-11-01)
+
+The owner later locked **Palette 04 — Olive Mineral** for brand identity ([full specification](../../docs/brand-palette.md)); **Palette 03 — Sand & Linen** supplies photography/room-styling inspiration. Neither palette approval changes this exact approved environment image, its pixels, the approval scope, or the product-verification status. Do not claim this scene is already color-correct for a real supplier SKU. Logo assets, campaign masters and new scene renders require separate approvals.
+
 ## Creative direction captured
 
 Realistic contemporary Dutch bathroom with large warm greige stone-look tiles and subtle grout, black trim and shower fittings, floating oak vanity, warm recessed light, glass walk-in shower, visually calm storage, minimal accessories and a prominent off-white rigid stone-looking bath mat outside the shower. Realistic scale and residential layout; not an exaggerated villa or hotel lobby.
