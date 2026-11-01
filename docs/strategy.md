@@ -2,6 +2,13 @@
 
 Source of truth: project context [#1](https://github.com/jens-mul/AVELNA/issues/1), backlog [#2](https://github.com/jens-mul/AVELNA/issues/2), master plan [#3](https://github.com/jens-mul/AVELNA/issues/3).
 
+## 2026-11-01 brand color decision — Palette 04 locked
+- The founder explicitly approved **Palette 04 — Olive Mineral** as AVELNA's one **brand identity palette**: Alabaster `#F5F2EC`, Stone `#D4C9BC`, Sage Grey `#9DA08E`, Olive Smoke `#7C806E`, Deep Mineral `#31332F`.
+- **Palette 03 — Sand & Linen** remains a **photographic/room-styling direction only**, not a second website, logo or packaging color system.
+- Canonical specification: [brand-palette.md](brand-palette.md); canonical machine tokens: [brand.tokens.json](../config/brand.tokens.json). Earlier proposed Chalk/Sand/Charcoal/Warm Grey/Olive Grey token HEX values are superseded.
+- The approved 2026-10-31 [bathroom environment](../assets/approved/README.md) remains unchanged. The palette lock does **not** confirm real product colors, an exact SKU, a final logo, print colors, a paid master, or legal clearance.
+- Dark Deep Mineral on Alabaster/Stone is the readable default; muted olives are mainly accents. See the WCAG contrast pairs in the palette specification. This is a founder's creative decision, **not evidence that a palette outperforms another in consumer testing**.
+
 ## 2026-10-31 decision update
 - **main is now explicitly authorized and initialized** with commit `adf4a588173f7fc149a2341bc5e6f534ce2a7d88`; this repo file set supersedes the earlier "empty repository" blocker in the issues.
 - ChatGPT + founder co-create and approve *master* visuals; Hermes consumes versioned approved masters from a private Higgsfield project as Elements and generates the permitted derivatives. See [Higgsfield](higgsfield.md).
