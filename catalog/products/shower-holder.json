@@ -3,6 +3,7 @@
   "product_id": "shower-holder",
   "updated_on": "2026-11-08",
   "research_file": "research/shower-holder.md",
+  "status_checkpoint_file": "checkpoint.json",
   "selection": {"status": "user_selected_listing", "selected_on": "2026-11-08", "source_ids": ["USER-20261108"], "purchase_authorized": false},
   "identity": {
     "internal_name": "Crèmekleurige douchehouder",
@@ -31,9 +32,9 @@
     "published_moq": {"value": 1, "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"}
   },
   "commercial_observations": {
-    "source_ids": ["SHOWER-LISTING"],
+    "source_ids": ["SHOWER-LISTING", "QIMU-SHIPPING-SCREENSHOT"],
     "observed_on": "2026-11-08",
-    "status": "published_price_range_not_selected_variant_quote",
+    "status": "published_price_range_and_screenshot_shipping_not_final_checkout",
     "currency": "USD",
     "published_order_unit": "piece",
     "published_price_range_minor": {"min": 190, "max": 290},
@@ -42,14 +43,38 @@
     "customization_moq": null,
     "one_unit_checkout_verified": false,
     "listed_production_lead_time": {"min_quantity": 1, "max_quantity": 20, "days": 7},
-    "netherlands_shipping_price_minor": null,
-    "shipping_currency": null,
+    "netherlands_shipping_price_minor": 0,
+    "shipping_currency": "EUR",
+    "shipping_observation": {
+      "source_ids": ["QIMU-SHIPPING-SCREENSHOT"],
+      "observed_on": "2026-11-08",
+      "status": "user_screenshot_shipping_selector_not_paid_order",
+      "ship_from": "CN",
+      "destination_country": "NL",
+      "quantity": 1,
+      "order_unit": "piece",
+      "currency": "EUR",
+      "total_minor": 0,
+      "services": [
+        {"name": "Premium Alibaba.com Logistics", "total_minor": 0, "displayed_struck_through_total_minor": 1532},
+        {"name": "Standard Alibaba.com Logistics", "total_minor": 0, "displayed_struck_through_total_minor": 1150}
+      ],
+      "discount_conditions": null,
+      "discount_valid_until": null,
+      "repeat_order_eligibility": null,
+      "five_unit_shipping_total_minor": null,
+      "tax_and_import_cost_inclusion": "unknown",
+      "inherited_for_other_quantities": false,
+      "final_checkout_verified": false,
+      "variant_note": "De screenshot toont de bestemming en één stuk; geen definitieve variantprijs of volledig afrekenbedrag."
+    },
     "inbound_lead_time_days": null,
     "landed_cost_eur_minor_ex_recoverable_vat": null,
     "cash_cost_eur_minor_including_taxes": null
   },
   "planning_assumptions": [
-    {"id": "SHOWER-SAMPLE-QTY", "value": 1, "meaning": "Beoogd één sample in de gekozen crème richting; exacte vorm/variant nog vastleggen.", "source_ids": ["USER-20261108"], "allowed_in_public_copy": false}
+    {"id": "SHOWER-SAMPLE-QTY", "value": 1, "meaning": "Beoogd één sample in de gekozen crème richting; exacte vorm/variant nog vastleggen.", "source_ids": ["USER-20261108"], "allowed_in_public_copy": false},
+    {"id": "SHOWER-PRODUCT-ALLOWANCE", "value": {"currency": "EUR", "product_allowance_minor": 300}, "meaning": "Eerder besproken reserve voor de artikelprijs in het proefmandje; geen bevestigde europrijs en geen valutaomrekening.", "source_ids": ["PLAN-PROPOSALS-20261108"], "allowed_in_public_copy": false}
   ],
   "content_draft": {
     "language": "nl-NL",
@@ -73,7 +98,7 @@
     "approved_on": null
   },
   "open_items": [
-    {"id": "SHOWER-01", "required": "Hoek- of rechte variant, exacte afmetingen en actuele checkoutkosten", "method": "variant_and_checkout_review", "blocks": "purchase_budget_and_product_page"},
+    {"id": "SHOWER-01", "required": "Hoek- of rechte variant, exacte afmetingen, gekozen artikelprijs, gratis-verzendvoorwaarden en volledig eindbedrag", "method": "variant_and_checkout_review", "blocks": "purchase_budget_and_product_page"},
     {"id": "SHOWER-02", "required": "Bevestigingsmateriaal, meegeleverde onderdelen, uitharding, draaglast en geschikte ondergronden", "method": "product_document_review", "blocks": "installation_copy_and_sale"},
     {"id": "SHOWER-03", "required": "Afwerking, afwatering, randen, coating, hechting en gedrag bij normaal nat gebruik", "method": "documented_sample_review", "blocks": "claims_and_sale"},
     {"id": "SHOWER-04", "required": "Verantwoordelijke fabrikant, traceerbaarheid en relevante productveiligheidsinformatie", "method": "product_document_review", "blocks": "sale"},

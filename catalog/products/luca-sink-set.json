@@ -3,6 +3,7 @@
   "product_id": "luca-sink-set",
   "updated_on": "2026-11-08",
   "research_file": "research/luca-sink-set.md",
+  "status_checkpoint_file": "checkpoint.json",
   "selection": {"status": "preferred_candidate", "selected_on": "2026-11-08", "source_ids": ["USER-20261108"], "purchase_authorized": false},
   "identity": {
     "internal_name": "Luca beige travertin-wastafelset",
@@ -11,6 +12,16 @@
     "supplier_profile_url": "https://lucasilu.en.alibaba.com/",
     "exact_variant_id": null,
     "manufacturer_sku": null
+  },
+  "supplier_contact": {
+    "status": "awaiting_manager_quote_and_documents",
+    "source_ids": ["LUCA-CHAT-20261108"],
+    "inquiry_sent_by": "user_as_reported_in_project_conversation",
+    "response_type": "ai_response_as_identified_by_user",
+    "human_confirmation_received": false,
+    "binding_quote_received": false,
+    "record_location": "checkpoint.json#/luca_contact",
+    "note": "De AI-reactie en gevraagde onderdelen zijn afzonderlijk vastgelegd; geen automatische promotie naar productfeit, certificering, goedgekeurde claim of order."
   },
   "facts": {
     "supplier_name": {"value": "Luca Silk Road (Xiamen) Building Materials Co., Ltd.", "status": "supplier_reported", "source_ids": ["LUCA-LISTING", "LUCA-TRUSTPASS"], "observed_on": "2026-11-08"},
@@ -44,6 +55,19 @@
       {"min_quantity": 20, "max_quantity": 99, "unit_price_minor": 1790},
       {"min_quantity": 100, "max_quantity": null, "unit_price_minor": 1590}
     ],
+    "eur_listing_observation": {
+      "source_ids": ["LUCA-EUR-SCREENSHOT"],
+      "observed_on": "2026-11-08",
+      "currency": "EUR",
+      "status": "user_screenshot_listing_not_sample_quote",
+      "price_tiers": [
+        {"min_quantity": 1, "max_quantity": 19, "unit_price_minor": 1756},
+        {"min_quantity": 20, "max_quantity": 99, "unit_price_minor": 1613},
+        {"min_quantity": 100, "max_quantity": null, "unit_price_minor": 1433}
+      ],
+      "is_currency_conversion_performed_by_us": false,
+      "final_checkout_verified": false
+    },
     "sample_price_minor": null,
     "customization_moq": 5,
     "customization_scope": "Product Dimension; niet automatisch logo of verpakking",
@@ -67,7 +91,7 @@
     "copy_status": "draft_not_approved",
     "use_case_hypothesis": "Dagelijkse wastafelaccessoires vervangen door één rustig geheel.",
     "approved_claims": [],
-    "do_not_publish_without_evidence": ["handgemaakt", "door ons ontworpen", "uit eigen atelier", "100% natuursteen voor alle onderdelen", "waterdicht", "vlekvrij", "antibacterieel", "duurzaam gecertificeerd", "RoHS als algemene productveiligheidsgarantie"]
+    "do_not_publish_without_evidence": ["handgemaakt", "door ons ontworpen", "uit eigen atelier", "100% natuursteen voor alle onderdelen", "waterdicht", "vlekvrij", "antibacterieel", "duurzaam gecertificeerd", "RoHS als algemene productveiligheidsgarantie", "drop-test gecertificeerde verpakking"]
   },
   "media": {"approved_product_images": [], "rights_verified": false, "exact_product_match_verified": false},
   "publication": {
@@ -82,11 +106,12 @@
     "approved_on": null
   },
   "open_items": [
-    {"id": "LUCA-01", "required": "Exacte variant en geselecteerd orderoverzicht inclusief Nederlandse bezorgkosten en heffingen", "method": "checkout_without_purchase", "blocks": "purchase_budget"},
-    {"id": "LUCA-02", "required": "Exacte vijf onderdelen, afmetingen, inhoud dispenser en werkelijk setgewicht", "method": "sample_inventory_and_measurement", "blocks": "final_product_page"},
+    {"id": "LUCA-01", "required": "Manageroffertes voor één en vijf complete sets: uitvoering, valuta, artikel/verpakking/vracht, inbegrepen en afzonderlijke kosten, termijn en geldigheid", "method": "supplier_reply_and_order_review_by_owner", "blocks": "purchase_budget"},
+    {"id": "LUCA-02", "required": "Gevraagde vijf onderdelen in offerte/order bevestigen; afmetingen, dispenserinhoud en verpakte setmassa controleren", "method": "supplier_reply_then_sample_inventory", "blocks": "final_product_page"},
     {"id": "LUCA-03", "required": "Materiaalbevestiging, afdichting/liner, pomponderdelen, gebruiksinstructies en traceerbaarheid", "method": "product_document_review", "blocks": "sale"},
-    {"id": "LUCA-04", "required": "Pompwerking, lekken, vlekken, onderzijde, verpakking, kleurvariatie en schoonmaakbaarheid", "method": "documented_sample_review", "blocks": "claims_and_sale"},
-    {"id": "LUCA-05", "required": "Eigen productbeelden of aantoonbaar toegestane exacte leveranciersbeelden", "method": "asset_review", "blocks": "publication"},
-    {"id": "LUCA-06", "required": "Definitieve verkoopprijs, voorraad, vervangonderdelenbeleid en leverbelofte", "method": "founder_commercial_approval", "blocks": "checkout"}
+    {"id": "LUCA-04", "required": "Pompwerking, lekken, vlekken, onderzijde, verpakking, kleurvariatie en schoonmaakbaarheid; verpakkingstest niet als bewezen behandelen zonder rapport", "method": "documented_sample_and_evidence_review", "blocks": "claims_and_sale"},
+    {"id": "LUCA-05", "required": "Actuele beelden van alle vijf daadwerkelijke onderdelen; daarna eigen beelden of rechten op exact leveranciersmateriaal", "method": "asset_review", "blocks": "publication"},
+    {"id": "LUCA-06", "required": "Definitieve verkoopprijs, voorraad, vervangonderdelenbeleid en leverbelofte", "method": "founder_commercial_approval", "blocks": "checkout"},
+    {"id": "LUCA-07", "required": "Gevraagde bedrijfsvergunning, Chinese juridische naam/code en orderverkoper vergelijken; eigen productie of partnerfabriek verduidelijken", "method": "private_document_and_legal_entity_review", "blocks": "supplier_purchase_decision"}
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "compiled_on": "2026-11-08",
-  "method": "Samenvoeging van daadwerkelijk zichtbare connectorobservaties in dit projectgesprek, vastgelegde repositorygegevens, aangeleverde screenshots en openbare broncontroles. Eerdere assistentconclusies zijn geen zelfstandig bewijs.",
+  "method": "Samenvoeging van daadwerkelijk zichtbare connectorobservaties in dit projectgesprek, vastgelegde repositorygegevens, aangeleverde screenshots en openbare broncontroles. Eerdere assistentconclusies zijn geen zelfstandig bewijs. Nieuwe contactstatus is een geredigeerde samenvatting, geen live Alibaba-uitlezing.",
   "sources": [
     {
       "id": "USER-20261108",
@@ -10,7 +10,7 @@
       "observed_on": "2026-11-08",
       "retrieval_status": "conversation_available",
       "supports": "Expliciete listingkeuze badmat en douchehouder; Luca als voorkeur; MOQ laag; lang inkomend transport acceptabel; één piece als complete-setrekenaanname; productdossiers vóór investerings- en advertentieplan.",
-      "limitations": "Geen koopbewijs, samplecontrole, nieuwe concrete budgetvrijgave of toestemming voor leverancierscontact. Voor de gewijzigde badmatkeuze is USER-ZOSO-LOCK leidend."
+      "limitations": "Geen koopbewijs, samplecontrole, nieuwe concrete budgetvrijgave of algemene toestemming voor autonoom leverancierscontact. Voor de gewijzigde badmatkeuze is USER-ZOSO-LOCK leidend; later door eigenaar gestart Luca-contact staat apart."
     },
     {
       "id": "REPO-STRATEGY",
@@ -19,7 +19,7 @@
       "observed_on": "2026-11-08",
       "original_record_date": "2026-10-31",
       "retrieval_status": "read_via_github_connector",
-      "supports": "Historische bedragen, EUR 200-plafond, geen leverancierscontact, eigen fulfillment en bestaande strategie.",
+      "supports": "Historische bedragen, EUR 200-plafond, geen autonoom leverancierscontact, eigen fulfillment en bestaande strategie.",
       "limitations": "Oude assortimentsscope wordt voor de huidige selectie vervangen door collection-01.json; kosten waren scenario's."
     },
     {
@@ -81,6 +81,16 @@
       "limitations": "De volledige inhoud is eerder in dit gesprek zichtbaar uitgelezen. De laatste fetch toont alleen metadata; niet voorgesteld als nieuwe volledige validatie. Geen geselecteerde Nederlandse checkout."
     },
     {
+      "id": "QIMU-SHIPPING-SCREENSHOT",
+      "url": "https://www.alibaba.com/product-detail/Milky-White-square-Basket-Single-Cream_1601668928506.html",
+      "type": "user_supplied_screenshot",
+      "observed_on": "2026-11-08",
+      "received_at": "2026-11-08T16:06:06Z",
+      "retrieval_status": "visually_read_user_attachment_no_new_checkout",
+      "supports": "China-Nederland, quantity 1 piece; Premium en Standard tonen gratis verzending. Doorgestreepte bedragen EUR 15,32 en EUR 11,50.",
+      "limitations": "Alleen die getoonde selectie. Geen definitieve artikel-/variantprijs, order, belastinginclusie, promotievoorwaarden of herhaalbare gratis verzending. Screenshot blijft buiten openbare repo."
+    },
+    {
       "id": "LUCA-LISTING",
       "url": "https://www.alibaba.com/product-detail/Luca-Modern-Polished-Calcite-Marble-Tumbler_1601885257929.html",
       "type": "supplier_listing",
@@ -88,6 +98,35 @@
       "retrieval_status": "earlier_full_tool_observation_in_conversation_current_refresh_metadata_only",
       "supports": "Vijfdelig in titel; travertin; honed; USD 19.49/17.90/15.90-prijstrappen; maatwerk vanaf 5; 8 x 8 x 18 en 1 kg in listing; productietermijn 9 dagen.",
       "limitations": "Volledige eerdere tooluitlezing is bron; actuele herleesactie leverde alleen metadata. Maten/gewicht zijn niet aan alle vijf onderdelen gekoppeld. Geen aantoonbare kwaliteits- of beeldrechtenvrijgave."
+    },
+    {
+      "id": "LUCA-EUR-SCREENSHOT",
+      "url": "https://www.alibaba.com/product-detail/Luca-Modern-Polished-Calcite-Marble-Tumbler_1601885257929.html",
+      "type": "user_supplied_screenshot",
+      "observed_on": "2026-11-08",
+      "received_at": "2026-11-08T16:55:57Z",
+      "retrieval_status": "visually_read_user_attachment_no_new_checkout",
+      "supports": "EUR 17,56 bij 1-19, EUR 16,13 bij 20-99 en EUR 14,33 vanaf 100; vijfdelige titel; algemene zeevrachtindicatie en contactknoppen, geen samplebezorgquote.",
+      "limitations": "Listingprijzen, geen managerofferte of bevestigde all-in kosten. Exacte variant en volledige setprijs nog in order vastleggen. Geen eigen valutaomrekening uitgevoerd."
+    },
+    {
+      "id": "LUCA-CHAT-20261108",
+      "url": null,
+      "type": "user_supplied_supplier_ai_response",
+      "observed_on": "2026-11-08",
+      "received_at": "2026-11-08T19:02:11Z",
+      "retrieval_status": "user_provided_text_and_screenshot_summarized_not_live_chat_access",
+      "supports": "Eigenaar deelt verzonden sampleaanvraag en noemt antwoord AI. Reactie noemt complete vijfdelige sample, natuursteen, beschermende verpakking, testclaim en mogelijke vervolgorder van vijf; offerte/DDP-DAP/bedrijfsstukken wachten op manager.",
+      "limitations": "Geen onafhankelijk vastgestelde AI-afzender, menselijke bevestiging, productinspectie, testcertificaat, volledige offerte, licentie of betaling. Alleen geredigeerde zakelijke samenvatting opgeslagen; geen kopersnaam, postcode, ruwe chat of screenshot."
+    },
+    {
+      "id": "PLAN-PROPOSALS-20261108",
+      "url": null,
+      "type": "assistant_planning_proposals_in_conversation",
+      "observed_on": "2026-11-08",
+      "retrieval_status": "conversation_available_not_external_evidence",
+      "supports": "Eerdere voorstellen: EUR 3 productreserve Qimu; EUR 150 samples + EUR 50 reserve; EUR 1.100 als gefaseerde verkooptestbegroting; conceptadvertenties voor de wastafelset afhankelijk van sample en marge.",
+      "limitations": "Geen leverancierprijs, bewezen vraag, goedgekeurd nieuw budget, betaalmachtiging of koersconversie. Alleen plannen; ontbrekende kosten blijven open."
     },
     {
       "id": "LUCA-TRUSTPASS",

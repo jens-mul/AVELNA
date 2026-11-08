@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "updated_on": "2026-11-08",
+  "status": "awaiting_luca_manager_quote",
+  "readme": "STATUS.md",
+  "source_ids": ["USER-ZOSO-LOCK", "ZOSO-SCREENSHOT", "ZOSO-BROWSER", "LUCA-EUR-SCREENSHOT", "QIMU-SHIPPING-SCREENSHOT", "LUCA-CHAT-20261108", "PLAN-PROPOSALS-20261108"],
+  "privacy": {
+    "public_summary_only": true,
+    "raw_chat_stored": false,
+    "screenshot_stored": false,
+    "buyer_name_stored": false,
+    "destination_postcode_stored": false,
+    "destination_country": "NL",
+    "note": "De volledige aanvraag, exacte postcode, chatbeelden, bedrijfsdocumenten en latere ordergegevens blijven buiten deze openbare repository."
+  },
+  "luca_contact": {
+    "product_id": "luca-sink-set",
+    "listing_id": "1601885257929",
+    "channel": "Alibaba supplier chat",
+    "inquiry_status": "user_reported_sent_with_response_shared",
+    "sent_by_assistant": false,
+    "response_received_in_conversation_at": "2026-11-08T19:02:11Z",
+    "response_actor": "ai_response_as_identified_by_user",
+    "actor_independently_verified": false,
+    "human_response_received": false,
+    "manager_confirmation_received": false,
+    "source_ids": ["LUCA-CHAT-20261108"],
+    "request": {
+      "sample_complete_sets": 1,
+      "separate_follow_up_quote_complete_sets": 5,
+      "requested_components": [
+        {"item": "Rechthoekige stenen tray", "quantity": 1},
+        {"item": "Open cilindrische beker", "quantity": 2},
+        {"item": "Zeepdispenser", "quantity": 1},
+        {"item": "Rond zeepbakje", "quantity": 1}
+      ],
+      "existing_beige_design": true,
+      "custom_logo": false,
+      "gift_packaging": false,
+      "protective_packaging_requested": true,
+      "slow_inbound_delivery_acceptable": true,
+      "itemized_quote_requested": true,
+      "ddp_or_dap_and_inclusions_requested": true,
+      "actual_product_media_requested": true,
+      "business_license_and_legal_seller_requested": true,
+      "manufacturer_or_partner_factory_question_requested": true,
+      "trade_assurance_order_requested_after_approval": true,
+      "order_confirmation_given": false
+    },
+    "response_claims": [
+      {"topic": "sample", "summary": "Een complete vijfdelige beige set zou als sample beschikbaar zijn.", "status": "ai_claim_unverified", "human_confirmed": false, "publishable": false},
+      {"topic": "material", "summary": "De reactie noemt natuursteen en sluit resin en keramiek uit.", "status": "ai_claim_unverified", "human_confirmed": false, "publishable": false},
+      {"topic": "configuration", "summary": "Geen logo of cadeauverpakking; de reactie verwijst naar een afbeelding met vijf onderdelen.", "status": "ai_claim_unverified", "human_confirmed": false, "publishable": false},
+      {"topic": "packaging", "summary": "Vormgegeven schuim met hoge dichtheid in vijflaags exportkarton wordt genoemd.", "status": "ai_claim_unverified", "human_confirmed": false, "publishable": false},
+      {"topic": "drop_test", "summary": "Een verpakkingstestcertificering wordt genoemd; rapport, norm, datum en toepasselijke verpakking zijn niet aangeleverd.", "status": "ai_claim_unverified", "human_confirmed": false, "publishable": false},
+      {"topic": "follow_up_quantity", "summary": "Een eventuele vervolgorder van vijf complete sets zou mogelijk zijn.", "status": "ai_claim_unverified", "human_confirmed": false, "publishable": false}
+    ],
+    "pending_manager_items": ["offerte voor één complete set", "afzonderlijke offerte voor vijf complete sets", "Nederlandse verzending en inbegrepen/niet-inbegrepen kosten", "DDP/DAP-afspraak en verzendtermijnen", "bedrijfsdocumenten en juridische verkoper"],
+    "still_unverified": ["actuele onbewerkte beelden van de daadwerkelijke uitvoering", "exacte setinhoud in offerte/order", "eigen productie of partnerfabriek", "maten/gewicht van de compleet verpakte set", "onderbouwing verpakkingstest", "materiaaldocumentatie en gebruiksinstructies"],
+    "follow_up_acknowledgement": {"status": "draft_seen_send_not_verified", "note": "Een beleefd bedankantwoord stond in de gedeelde conceptinvoer; verzenden is niet bevestigd."},
+    "sample_quote": {"complete_sets": 1, "status": "not_received", "currency": null, "product_total_minor": null, "packaging_minor": null, "shipping_minor": null, "included_taxes_and_fees_minor": null, "separately_payable_costs_minor": null, "confirmed_delivered_total_minor": null},
+    "five_set_quote": {"complete_sets": 5, "status": "not_received", "currency": null, "product_total_minor": null, "packaging_minor": null, "shipping_minor": null, "included_taxes_and_fees_minor": null, "separately_payable_costs_minor": null, "confirmed_delivered_total_minor": null}
+  },
+  "sample_basket": {
+    "status": "proposal_not_ordered",
+    "items": [
+      {"product_id": "bath-stone", "product_file": "products/bath-stone.json", "quantity": 2, "unit": "mat", "currency": "EUR", "unit_product_minor": 343, "product_price_status": "earlier_browser_observation_not_final_variant_quote", "shipping_total_minor": 2692, "shipping_quantity": 2, "provisional_subtotal_minor": 3378, "source_ids": ["ZOSO-BROWSER", "ZOSO-SCREENSHOT", "USER-ZOSO-LOCK"]},
+      {"product_id": "luca-sink-set", "product_file": "products/luca-sink-set.json", "quantity": 1, "unit": "complete_set", "currency": "EUR", "unit_product_minor": 1756, "product_price_status": "user_screenshot_listing_price_not_sample_quote", "shipping_total_minor": null, "shipping_quantity": 1, "provisional_subtotal_minor": null, "source_ids": ["LUCA-EUR-SCREENSHOT"]},
+      {"product_id": "shower-holder", "product_file": "products/shower-holder.json", "quantity": 1, "unit": "holder", "currency": "EUR", "unit_product_minor": null, "planning_product_allowance_minor": 300, "product_price_status": "three_euro_planning_allowance_not_confirmed_price_or_currency_conversion", "shipping_total_minor": 0, "shipping_quantity": 1, "provisional_subtotal_minor": null, "source_ids": ["QIMU-SHIPPING-SCREENSHOT", "PLAN-PROPOSALS-20261108"]}
+    ],
+    "provisional_base_eur_minor": 5434,
+    "base_formula": "2 * 343 + 2692 + 1756 + 300 + 0 = 5434 eurocent",
+    "base_excludes": ["Luca-verzending", "eventuele nog niet inbegrepen belastingen/invoer/afhandeling", "afwijkende echte Qimu-artikelprijs", "eventuele vervallen verzendkortingen of variantprijswijzigingen"],
+    "confirmed_delivered_total_eur_minor": null,
+    "all_in_quote_complete": false,
+    "purchase_authorized": false,
+    "payment_recorded": false,
+    "used_samples_count_as_new_saleable_stock": false
+  },
+  "budget_status": {
+    "historic_cash_ceiling_eur_minor": 20000,
+    "proposed_first_stage_sample_spend_eur_minor": 15000,
+    "proposed_first_stage_reserve_eur_minor": 5000,
+    "proposed_total_test_capital_eur_minor": 110000,
+    "new_budget_approved": false,
+    "bucket_reallocation_approved": false,
+    "paid_ads_authorized": false,
+    "source_ids": ["REPO-STRATEGY", "PLAN-PROPOSALS-20261108"],
+    "note": "EUR 1.100 en de nieuwe verdeling EUR 150 + EUR 50 zijn eerder besproken assistentvoorstellen. Geen offerte, nieuwe cap of bestedingsmachtiging."
+  },
+  "after_response": {
+    "owner": "founders",
+    "steps": [
+      "Beoordeel of het antwoord van een medewerker/manager komt en welke vragen nog onbeantwoord zijn.",
+      "Vergelijk één en vijf complete sets op afzonderlijke artikel-, verpakkings-, vracht- en bijkomende kosten; ontbrekende kosten blijven onbekend.",
+      "Vergelijk de juridische verkoper, Chinese bedrijfsnaam en registratiecode; bewaar documenten privé. Een licentie bewijst geen eigen fabriek of productkwaliteit.",
+      "Controleer actuele beelden, onderdelen, materiaalopgave, maten, pakketgewicht, verpakking en onderbouwing van de geclaimde test.",
+      "Vraag alleen de resterende ontbrekende informatie in één gerichte vervolgvraag; geen herhaling van de hele aanvraag.",
+      "Vervang rekenaannames door de concrete offerte en leg een koopvoorstel met volledige kosten aan de eigenaars voor.",
+      "Controleer na expliciete goedkeuring de exacte Trade Assurance-order en betaalroute; bestel eerst het sample, niet automatisch vijf sets.",
+      "Beoordeel de ontvangen samples en sluit productdossiers; verkoopvoorraad en advertenties vragen een afzonderlijk besluit."
+    ],
+    "hold_conditions": ["onduidelijke setinhoud of materiaalafwijking", "geen verklaarde match tussen bedrijfsdocumenten en orderverkoper", "onbekende verplichte kosten", "betaling buiten de afgesproken platformorder", "geen passend productbewijs of onhaalbare kostprijs"],
+    "reopen_sourcing_only_if": "Luca kan de vereiste uitvoering of kleine hoeveelheid niet leveren, bewijs blijft onvoldoende, of de onderbouwde totaalprijs past niet bij het goed te keuren plan.",
+    "automatic_follow_up_or_monitoring_created": false,
+    "assistant_supplier_contact_authorized": false
+  },
+  "work_that_can_continue": [
+    {"priority": 1, "task": "Advertentiebrief op conceptniveau", "deliverable": "Doelklant, één aanbod, twee koopreden-hypothesen, benodigde echte beelden en meet-/stopregels; bedrag en activatie nog niet goedgekeurd."},
+    {"priority": 2, "task": "Mobiele webshopstructuur en klantreis", "deliverable": "Wireframe voor collectie, productpagina, winkelmand en checkout; afgeschermde conceptdata, geen openbare verkoop."},
+    {"priority": 3, "task": "Samplecontrole en contentchecklist", "deliverable": "Meetstaat, testvragen en fotolijst voor 2 matten, 1 set en 1 houder; geen nieuwe betaalde tools of generatie."}
+  ]
+}

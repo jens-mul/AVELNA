@@ -1,10 +1,16 @@
 # Onderzoeksnotitie — crème douchehouder
 
-Datum: 8 november 2026. [Machineleesbaar dossier](../products/shower-holder.json) · [bronregister](../sources.json).
+Datum: 8 november 2026. [Machineleesbaar dossier](../products/shower-holder.json) · [bronregister](../sources.json) · [actuele stand](../STATUS.md).
 
 ## Vastgelegde selectie
 
-Listing **1601668928506**, Wenzhou Qimu Trading Co., LTD., is expliciet door de gebruiker gekozen. De eerdere volledige tooluitlezing in dit gesprek vermeldt aluminiumlegering, crèmewit, één niveau, USD 1,90-2,90 en MOQ 1. De huidige herleesactie gaf alleen metadata terug; de eerdere bronobservatie blijft herkenbaar bewaard. [USER-20261108, SHOWER-LISTING]
+Listing **1601668928506**, Wenzhou Qimu Trading Co., LTD., is expliciet door de gebruiker gekozen. De eerdere volledige tooluitlezing vermeldt aluminiumlegering, crèmewit, één niveau, USD 1,90-2,90 en MOQ 1. De latere herleesactie gaf alleen metadata terug; de eerdere bronobservatie blijft herkenbaar bewaard. [USER-20261108, SHOWER-LISTING]
+
+## Verzendwaarneming toegevoegd
+
+De gebruiker deelde op 8 november een screenshot van de verzendselector voor **China naar Nederland, quantity 1 piece**. Zowel Premium als Standard Alibaba.com Logistics tonen gratis verzending, met respectievelijk EUR 15,32 en EUR 11,50 doorgestreept. Dit is als EUR 0 vastgelegd voor die ene besteleenheid; geen nieuwe live checkout is uitgevoerd. [QIMU-SHIPPING-SCREENSHOT]
+
+De promotievoorwaarden, herhaalbaarheid, juiste variantprijs en belastinginclusie zijn onbekend. Geen gratis vracht aannemen voor vijf stuks of latere orders. **EUR 3 voor de artikelprijs is uitsluitend een rekenreserve in het proefmandje**, niet een bevestigde europrijs of omgerekend USD-bedrag. [PLAN-PROPOSALS-20261108]
 
 ## Belangrijkste inconsistentie: vorm en maat
 
@@ -18,6 +24,6 @@ Controleer bij het sample: naden/randen, coating, afwatering, ruimte voor gangba
 
 ## Levering en collectie
 
-De genoemde zeven dagen voor 1-20 stuks zijn de opgegeven productietermijn, niet bezorging in Nederland en zeker geen AVELNA-klantbelofte. Verzendkosten en gekozen variantprijs zijn nog onbekend. [SHOWER-LISTING]
+De genoemde zeven dagen voor 1-20 stuks zijn de opgegeven productietermijn, niet bezorging in Nederland en zeker geen AVELNA-klantbelofte. Verzendkosten zijn alleen voor de afgebeelde ene houder waargenomen; het volledige bestelbedrag blijft open. [SHOWER-LISTING, QIMU-SHIPPING-SCREENSHOT]
 
 De houder verdient zijn plek pas als afwerking en kleur naast badmat en Luca-set passen. We voegen hem niet uitsluitend toe om drie productkaarten te vullen. Nodige beelden: front/hoekprofiel, onderzijde, bevestiging, maatbeeld en echte flessen voor schaal. Geen gegenereerde montage of draaglast als bewijs.
