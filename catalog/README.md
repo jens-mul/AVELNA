@@ -4,6 +4,8 @@
 
 **Begin bij [STATUS.md](STATUS.md): huidige keuzes, proefmandje, Luca-contact en wat we na het managerantwoord doen.** De machineleesbare momentopname staat in [checkpoint.json](checkpoint.json).
 
+**Doelgroep en probleem:** [De badkamer afmaken zonder het beeld te verstoren](research/customer-and-problem.md). De op 8 november, 20:13 UTC vastgelegde onderzoeksrichting bevat de koopsituatie, koopreden per product, prijsbezwaren en de vertaling naar beelden en webshop. Richting gekozen; consumentenvraag en EUR 120 betaalbereidheid nog niet bewezen.
+
 Dit is het centrale overdrachtspunt voor de drie huidige productkandidaten. Het consolideert de keuzes uit het projectgesprek en de beschikbare bronobservaties. Voor de huidige productselectie heeft dit dossier voorrang op de oudere, uitsluitend op de badmat gerichte scope in `docs/strategy.md`. Budget-, veiligheids- en toestemmingsregels uit `AGENTS.md` blijven gelden.
 
 ## Leesvolgorde
