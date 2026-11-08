@@ -4,7 +4,9 @@ Afgesproken volgorde: eerst feiten, dan investeringsplan, dan advertentieplan. D
 
 ## 1. Investeringsplan
 
-Gebruik de drie dossiers en maak afzonderlijk een cashflow- en een economische-margeberekening. Behoud USD als bronvaluta totdat een concrete eurokoers, koersdatum en betaalopslag zijn gekozen. Bij Luca geldt de gebruikersaanname: één piece = één complete set.
+Gebruik de drie dossiers en maak afzonderlijk een cashflow- en een economische-margeberekening. Behoud de bronvaluta: Luca/Qimu zijn in USD vastgelegd, de actuele Zoso-observatie is in EUR. Zet USD pas om met een concrete koers, koersdatum en betaalopslag. Bij Luca geldt de gebruikersaanname: één piece = één complete set.
+
+**Badmatbesluit 8 november, 16:27 UTC:** Zoso vervangt Yongye. De minimale testbestelling is twee stuks. Leg EUR 26,92 totale Standard-verzending naar Nederland vast, niet EUR 26,92 per stuk; EUR 13,46 per mat geldt alleen voor deze bestelling van twee. De eerder uitgelezen artikelprijs EUR 3,43 geeft voorwaardelijk EUR 33,78 artikelen + verzending. Belastingen, uiteindelijke variant en checkout blijven open. Voor vijf stuks is een aparte verzendquote nodig; de huidige korting niet automatisch hergebruiken. Zie product-JSON en onderzoeksnotitie.
 
 Benodigde inputs per product: sampleaantal, actuele gekozen prijs, inkomend transport, eventuele invoerheffingen/inklaring, belastingbehandeling, verpakking, uitgaande verzending, betaling, retour-/schadereserve en afhandeling. Leg kosten voor sample, verkoopvoorraad en kwaliteitscontrole afzonderlijk vast. Een gebruikt sample is geen nieuwe verkoopvoorraad.
 
@@ -32,7 +34,7 @@ Campagnes pas live met verkoopgereed product, voorraad/leverbelofte, werkende ch
 
 ## 3. Aanbevolen aanvullende stap: sample- en bewijsronde
 
-Dit is geen herstart van algemene productresearch. Gebruik één gericht sample per gekozen uitvoering waar bestelbaar om de open dossierpunten te sluiten. Bestel alleen na goedkeuring van concrete totale kosten. Houd het bestaande verbod op leverancierscontact aan; als een essentieel document niet openbaar verkrijgbaar blijkt, registreer de blokkade en laat de eigenaar kiezen of contact alsnog mag.
+Dit is geen herstart van algemene productresearch. Gebruik één gericht sample per gekozen uitvoering waar bestelbaar om de open dossierpunten te sluiten; **voor Zoso betekent de gekozen MOQ een bestelling van twee matten**. De tweede mat is niet automatisch verkoopbare voorraad: eerst inhoud, ongebruikte staat en kwaliteit beoordelen. Bestel alleen na goedkeuring van concrete totale kosten. Houd het bestaande verbod op leverancierscontact aan; als een essentieel document niet openbaar verkrijgbaar blijkt, registreer de blokkade en laat de eigenaar kiezen of contact alsnog mag.
 
 Uitkomst: invulbare onderdelenlijst, meetstaat, materiaal-/veiligheidsdossier, praktisch kwaliteitsrapport, eigen productfoto's en definitieve kostprijs. Vergelijk alle drie naast elkaar in dezelfde badkamer. Een product mag afvallen op kwaliteit zonder de hele collectie opnieuw uit te vinden.
 

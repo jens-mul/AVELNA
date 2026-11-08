@@ -14,9 +14,11 @@ Dit is het centrale overdrachtspunt voor de drie huidige productkandidaten. Het 
 
 | Product | Gegevens voor de bouwer | Onderzoek en controles | Selectiestatus |
 |---|---|---|---|
-| Harde lichte badmat, Yongye | [bath-stone.json](products/bath-stone.json) | [bath-stone.md](research/bath-stone.md) | Listing expliciet gekozen door gebruiker |
+| Harde badmat, Zoso | [bath-stone.json](products/bath-stone.json) | [bath-stone.md](research/bath-stone.md) | Listing gelockt door gebruiker; MOQ 2; vervangt Yongye |
 | Crèmekleurige douchehouder, Qimu | [shower-holder.json](products/shower-holder.json) | [shower-holder.md](research/shower-holder.md) | Listing expliciet gekozen door gebruiker |
 | Beige Luca-wastafelset | [luca-sink-set.json](products/luca-sink-set.json) | [luca-sink-set.md](research/luca-sink-set.md) | Voorkeurskandidaat; geen inkoop- of verkoopvrijgave |
+
+**Badmat-update 8 november, 16:27 UTC:** Zoso-listing 1601426633204 is gekozen. De aangeleverde screenshot toont EUR 26,92 Standard-verzending voor twee stuks naar Nederland, oftewel EUR 13,46 per mat bij dat aantal. Korting, btw en andere aantallen niet extrapoleren. Exacte bestelvariant blijft open; oude Yongye-conceptbeelden zijn geen Zoso-referentie.
 
 [Markt, Marmoree en positionering](research/market-and-positioning.md) bevat aanvullend onderzoek. Concurrentgegevens zijn nooit automatisch eigenschappen van ons product.
 
@@ -37,8 +39,9 @@ Selecties staan onder `selection`; aannames onder `planning_assumptions`; market
 
 ## Datacontract
 
-- Geld: gehele minor units met expliciete valuta, bijvoorbeeld `1949` in USD = US$19,49. Geen stilzwijgende omzetting naar euro's.
+- Geld: gehele minor units met expliciete bronvaluta, bijvoorbeeld `1949` in USD = US$19,49 en `2692` in EUR = EUR 26,92. Geen stilzwijgende valutaomzetting.
 - Leveranciersprijs, samplekosten, landed cost, verkoopprijs en advertentiekosten zijn afzonderlijke velden.
+- Verzendbedragen horen bij een vastgelegd aantal, bestemming, dienst en waarneming. Een bedrag per stuk niet gebruiken voor een andere ordergrootte zonder nieuwe quote.
 - `observed_on` is de datum van de inhoudelijke waarneming, niet automatisch de datum waarop deze dossiers zijn geschreven.
 - `null` betekent onbekend; een lege `approved_claims`-lijst betekent dat nog geen verkoopclaims zijn vrijgegeven.
 - Bestel-MOQ is niet hetzelfde als maatwerk-MOQ. Productietijd is niet de Nederlandse bezorgtijd. Bruto verpakkingsgewicht is niet nettogewicht.

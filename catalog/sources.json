@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "compiled_on": "2026-11-08",
-  "method": "Samenvoeging van daadwerkelijk zichtbare connectorobservaties in dit projectgesprek, vastgelegde repositorygegevens en nieuwe openbare broncontroles. Eerdere assistentconclusies zijn geen zelfstandig bewijs.",
+  "method": "Samenvoeging van daadwerkelijk zichtbare connectorobservaties in dit projectgesprek, vastgelegde repositorygegevens, aangeleverde screenshots en openbare broncontroles. Eerdere assistentconclusies zijn geen zelfstandig bewijs.",
   "sources": [
     {
       "id": "USER-20261108",
@@ -10,7 +10,7 @@
       "observed_on": "2026-11-08",
       "retrieval_status": "conversation_available",
       "supports": "Expliciete listingkeuze badmat en douchehouder; Luca als voorkeur; MOQ laag; lang inkomend transport acceptabel; één piece als complete-setrekenaanname; productdossiers vóór investerings- en advertentieplan.",
-      "limitations": "Geen koopbewijs, samplecontrole, nieuwe concrete budgetvrijgave of toestemming voor leverancierscontact."
+      "limitations": "Geen koopbewijs, samplecontrole, nieuwe concrete budgetvrijgave of toestemming voor leverancierscontact. Voor de gewijzigde badmatkeuze is USER-ZOSO-LOCK leidend."
     },
     {
       "id": "REPO-STRATEGY",
@@ -30,7 +30,7 @@
       "reread_on": "2026-11-08",
       "retrieval_status": "read_via_github_connector",
       "supports": "Yongye, model VDSTM-007, wit, 39 x 60 cm, USD 4.60 bij 1-99 sets, conflicterende MOQ 100, beelden concept_only.",
-      "limitations": "Historische leveranciersobservatie, geen nieuw checkoutbewijs."
+      "limitations": "Historische leveranciersobservatie van de vervangen Yongye-kandidaat; geen Zoso-productbewijs of actuele offerte."
     },
     {
       "id": "BATH-LISTING",
@@ -39,8 +39,37 @@
       "observed_on": null,
       "refresh_attempt_on": "2026-11-08",
       "retrieval_status": "current_full_content_unavailable",
-      "supports": "Door gebruiker gekozen listing-ID 1601587124238; een andere titel in de URL wijzigt dit ID niet.",
-      "limitations": "Nieuwe volledige uitlezing niet gelukt. Gebruik BATH-REPO voor historische attributen, niet als actuele offerte."
+      "supports": "Historische Yongye-listing-ID 1601587124238; een andere titel in de URL wijzigt dit ID niet.",
+      "limitations": "Vervangen als actieve selectie door Zoso. Nieuwe volledige uitlezing in de oorspronkelijke dossierbouw niet gelukt. Gebruik BATH-REPO voor historische attributen, niet als actuele offerte."
+    },
+    {
+      "id": "USER-ZOSO-LOCK",
+      "url": null,
+      "type": "user_instruction",
+      "observed_on": "2026-11-08",
+      "received_at": "2026-11-08T16:27:00Z",
+      "retrieval_status": "conversation_available",
+      "supports": "Gebruiker kiest Zoso-listing 1601426633204, MOQ 2 en EUR 13,46 verzending per stuk bij twee stuks; vervangt de eerdere Yongye-keuze.",
+      "limitations": "Geen bestelling, betaalmachtiging, bevestiging van exacte kleur/maat of kwaliteits-/verkoopvrijgave."
+    },
+    {
+      "id": "ZOSO-SCREENSHOT",
+      "url": "https://www.alibaba.com/product-detail/Square-Hard-Diatom-Mud-Bathroom-Foot_1601426633204.html",
+      "type": "user_supplied_screenshot",
+      "observed_on": "2026-11-08",
+      "received_at": "2026-11-08T16:27:00Z",
+      "retrieval_status": "visually_read_user_attachment",
+      "supports": "Zoso-identiteit; modelveld tianwen-xin; materiaalveld Diatom mud; China-Nederland, quantity 2 pieces; Standard verzending EUR 26,92 totaal / EUR 13,46 per piece, doorgestreept EUR 46,92.",
+      "limitations": "Datum betreft ontvangst/uitlezing, niet onafhankelijk vastgestelde screenshotopname. Geen artikelprijs, gekozen kleur/maat, btw-inclusie, kortingvoorwaarden, vijfstuksquote of definitieve checkout zichtbaar. Screenshot niet in openbare repo geüpload."
+    },
+    {
+      "id": "ZOSO-BROWSER",
+      "url": "https://www.alibaba.com/product-detail/Square-Hard-Diatom-Mud-Bathroom-Foot_1601426633204.html",
+      "type": "supplier_listing_browser_observation",
+      "observed_on": "2026-11-08",
+      "retrieval_status": "earlier_browser_tool_result_in_conversation_not_refreshed_in_lock_update",
+      "supports": "Eerdere browsercontrole bij Nederlandse bestemming en EUR: harde mat, beschikbare 60 x 39 cm en neutrale golfkleuren, MOQ 2, EUR 3,43 bij 2-119 stuks. Verzendquote bij vijf niet verkregen.",
+      "limitations": "Bron is de eerdere TinyFish-browseruitlezing, geen nieuwe checkoutcontrole. Artikelprijs en exacte variant opnieuw controleren bij bestellen. Geen zelfstandige materiaal- of veiligheidskeuring; onjuiste algemene conclusies uit het browserrapport niet overgenomen."
     },
     {
       "id": "SHOWER-LISTING",
