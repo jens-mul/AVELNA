@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "product_id": "shower-holder",
+  "updated_on": "2026-11-08",
+  "research_file": "research/shower-holder.md",
+  "selection": {"status": "user_selected_listing", "selected_on": "2026-11-08", "source_ids": ["USER-20261108"], "purchase_authorized": false},
+  "identity": {
+    "internal_name": "Crèmekleurige douchehouder",
+    "listing_id": "1601668928506",
+    "product_url": "https://www.alibaba.com/product-detail/Milky-White-square-Basket-Single-Cream_1601668928506.html",
+    "exact_variant_id": null,
+    "manufacturer_sku": null
+  },
+  "facts": {
+    "supplier_name": {"value": "Wenzhou Qimu Trading Co., LTD.", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "supplier_type": {"value": "Multispecialty Supplier", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "material": {"value": "Aluminum Alloy", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "listed_color": {"value": "Cream White", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "displayed_variant_label": {"value": "Cream White Diamond Basket", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "shape_and_mounting": {"value": {"title": "square", "shape_field": ["Triangular", "Square"], "mounted_field": "Corner"}, "status": "conflicted", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "listed_size_cm_raw": {"value": "31 x 23.5 x 4.5", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "package_size_cm_raw": {"value": "28.5 x 8.0 x 28.0", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "gross_package_weight_grams": {"value": 603, "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "tiers": {"value": 1, "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "surface_finish_raw": {"value": "Oxidized", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "mounting_claim": {"value": "No-drill, wall-mounted", "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "supplier_load_claim_lb": {"value": 22, "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"},
+    "adhesive_and_installation_instructions": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "compatible_wall_surfaces": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "box_contents": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "published_moq": {"value": 1, "status": "supplier_reported", "source_ids": ["SHOWER-LISTING"], "observed_on": "2026-11-08"}
+  },
+  "commercial_observations": {
+    "source_ids": ["SHOWER-LISTING"],
+    "observed_on": "2026-11-08",
+    "status": "published_price_range_not_selected_variant_quote",
+    "currency": "USD",
+    "published_order_unit": "piece",
+    "published_price_range_minor": {"min": 190, "max": 290},
+    "selected_variant_unit_price_minor": null,
+    "sample_price_minor": null,
+    "customization_moq": null,
+    "one_unit_checkout_verified": false,
+    "listed_production_lead_time": {"min_quantity": 1, "max_quantity": 20, "days": 7},
+    "netherlands_shipping_price_minor": null,
+    "shipping_currency": null,
+    "inbound_lead_time_days": null,
+    "landed_cost_eur_minor_ex_recoverable_vat": null,
+    "cash_cost_eur_minor_including_taxes": null
+  },
+  "planning_assumptions": [
+    {"id": "SHOWER-SAMPLE-QTY", "value": 1, "meaning": "Beoogd één sample in de gekozen crème richting; exacte vorm/variant nog vastleggen.", "source_ids": ["USER-20261108"], "allowed_in_public_copy": false}
+  ],
+  "content_draft": {
+    "language": "nl-NL",
+    "title": "Douchehouder — crème",
+    "collection_role": "Praktische aanvulling voor doucheproducten; opname afhankelijk van samplekwaliteit.",
+    "copy_status": "draft_not_approved",
+    "use_case_hypothesis": "Dagelijkse doucheflessen overzichtelijk opbergen in een verzorgde douche.",
+    "approved_claims": [],
+    "do_not_publish_without_evidence": ["draagt 10 kg", "geschikt voor iedere tegel", "beschadigingsvrij verwijderbaar", "roestvrij", "levenslang", "geen boren nodig bij iedere ondergrond", "lijm inbegrepen"]
+  },
+  "media": {"approved_product_images": [], "rights_verified": false, "exact_product_match_verified": false},
+  "publication": {
+    "ready": false,
+    "checkout_enabled": false,
+    "sample_review_status": "not_completed",
+    "safety_review_status": "not_completed",
+    "approved_retail_price_eur_minor_including_vat": null,
+    "saleable_stock": null,
+    "customer_delivery_promise": null,
+    "approved_by": null,
+    "approved_on": null
+  },
+  "open_items": [
+    {"id": "SHOWER-01", "required": "Hoek- of rechte variant, exacte afmetingen en actuele checkoutkosten", "method": "variant_and_checkout_review", "blocks": "purchase_budget_and_product_page"},
+    {"id": "SHOWER-02", "required": "Bevestigingsmateriaal, meegeleverde onderdelen, uitharding, draaglast en geschikte ondergronden", "method": "product_document_review", "blocks": "installation_copy_and_sale"},
+    {"id": "SHOWER-03", "required": "Afwerking, afwatering, randen, coating, hechting en gedrag bij normaal nat gebruik", "method": "documented_sample_review", "blocks": "claims_and_sale"},
+    {"id": "SHOWER-04", "required": "Verantwoordelijke fabrikant, traceerbaarheid en relevante productveiligheidsinformatie", "method": "product_document_review", "blocks": "sale"},
+    {"id": "SHOWER-05", "required": "Echte beelden, kleurmatch, kostprijs, prijs, voorraad en leverinformatie", "method": "asset_and_commercial_review", "blocks": "publication_and_checkout"}
+  ]
+}

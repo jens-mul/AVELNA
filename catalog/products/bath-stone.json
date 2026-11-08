@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "product_id": "bath-stone",
+  "updated_on": "2026-11-08",
+  "research_file": "research/bath-stone.md",
+  "selection": {"status": "user_selected_listing", "selected_on": "2026-11-08", "source_ids": ["USER-20261108"], "purchase_authorized": false},
+  "identity": {
+    "internal_name": "Harde lichte badmat",
+    "listing_id": "1601587124238",
+    "product_url": "https://www.alibaba.com/product-detail/Custom-Fast-Drying-Hard-Bath-Mat_1601587124238.html",
+    "alternative_url_same_listing": "https://www.alibaba.com/product-detail/Fast-Drying-Hard-Bath-Mat-Super_1601587124238.html",
+    "exact_variant_id": null,
+    "manufacturer_sku": null
+  },
+  "facts": {
+    "supplier_name": {"value": "Longyan Yongye trade co., LTD", "status": "repository_record", "source_ids": ["BATH-REPO"], "observed_on": "2026-10-31"},
+    "supplier_model": {"value": "VDSTM-007", "status": "repository_record", "source_ids": ["BATH-REPO"], "observed_on": "2026-10-31"},
+    "construction": {"value": "Harde diatomietbadmat", "status": "repository_record", "source_ids": ["BATH-REPO"], "observed_on": "2026-10-31"},
+    "material_composition": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "listed_color": {"value": "White", "status": "repository_record", "source_ids": ["BATH-REPO"], "observed_on": "2026-10-31"},
+    "listed_dimensions_mm": {"value": {"length": 600, "width": 390, "thickness": null}, "status": "repository_record", "source_ids": ["BATH-REPO"], "observed_on": "2026-10-31"},
+    "net_weight_grams": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "box_contents": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "anti_slip_construction": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "cleaning_and_maintenance": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "published_moq": {"value": {"price_tier_starts_at": 1, "separate_moq_field": 100}, "status": "conflicted", "source_ids": ["BATH-REPO"], "observed_on": "2026-10-31"}
+  },
+  "commercial_observations": {
+    "source_ids": ["BATH-REPO"],
+    "observed_on": "2026-10-31",
+    "status": "historical_published_price_not_quote",
+    "currency": "USD",
+    "published_order_unit": "sets",
+    "price_tiers": [{"min_quantity": 1, "max_quantity": 99, "unit_price_minor": 460}],
+    "sample_price_minor": null,
+    "customization_moq": null,
+    "one_unit_checkout_verified": false,
+    "netherlands_shipping_price_minor": null,
+    "shipping_currency": null,
+    "inbound_lead_time_days": null,
+    "landed_cost_eur_minor_ex_recoverable_vat": null,
+    "cash_cost_eur_minor_including_taxes": null
+  },
+  "planning_assumptions": [
+    {"id": "BATH-SAMPLE-QTY", "value": 1, "meaning": "Beoogd aantal sample-eenheden, geen bewezen bestelbaarheid.", "source_ids": ["USER-20261108"], "allowed_in_public_copy": false},
+    {"id": "BATH-PRICE-HYPOTHESIS", "value": {"currency": "EUR", "retail_price_minor_including_vat": 4995, "shipping_included": true}, "meaning": "Historisch voorstel uit het growth/strategiedossier, opnieuw doorrekenen; niet goedgekeurd.", "source_ids": ["REPO-STRATEGY"], "allowed_in_public_copy": false}
+  ],
+  "content_draft": {
+    "language": "nl-NL",
+    "title": "Bath Stone — lichte badmat",
+    "collection_role": "Zelfstandig hoofdproduct voor de vloer naast de wastafelcollectie.",
+    "copy_status": "draft_not_approved",
+    "use_case_hypothesis": "Een verzorgde badkamer met een bewust gekozen alternatief voor een bestaande badmat.",
+    "approved_claims": [],
+    "do_not_publish_without_evidence": ["droog binnen 60 seconden", "100% diatomiet", "antibacterieel", "schimmelvrij", "nooit uitglijden", "vaste levensduur", "onderhoudsvrij", "handgemaakt", "eigen ontwerp"]
+  },
+  "media": {
+    "approved_product_images": [],
+    "reference_note": "assets/concepts bevat conceptbeelden, geen geverifieerde productfotografie.",
+    "rights_verified": false,
+    "exact_product_match_verified": false
+  },
+  "publication": {
+    "ready": false,
+    "checkout_enabled": false,
+    "sample_review_status": "not_completed",
+    "safety_review_status": "not_completed",
+    "approved_retail_price_eur_minor_including_vat": null,
+    "saleable_stock": null,
+    "customer_delivery_promise": null,
+    "approved_by": null,
+    "approved_on": null
+  },
+  "open_items": [
+    {"id": "BATH-01", "required": "Exacte variant, actuele minimumorder en totaalbedrag naar Nederland", "method": "checkout_without_purchase", "blocks": "purchase_budget"},
+    {"id": "BATH-02", "required": "Samenstelling inclusief bindmiddelen, herkomst en passende veiligheidsdocumentatie", "method": "product_document_review", "blocks": "sale"},
+    {"id": "BATH-03", "required": "Dikte, gewicht, inhoud verpakking, onderzijde en antislipoplossing", "method": "sample_measurement", "blocks": "final_product_page"},
+    {"id": "BATH-04", "required": "Praktische werking, stabiliteit, breuk, vlekken, drooggedrag en veilig onderhoud", "method": "documented_sample_review", "blocks": "claims_and_sale"},
+    {"id": "BATH-05", "required": "Eigen of gelicentieerde exacte productbeelden en verpakking", "method": "asset_review", "blocks": "publication"},
+    {"id": "BATH-06", "required": "Verkoopprijs, voorraad, retourinformatie en leverbelofte", "method": "founder_commercial_approval", "blocks": "checkout"}
+  ]
+}
