@@ -7,6 +7,10 @@
 
 AVELNA is an architecturally minimal, premium bathroom essentials brand. The first validated sale is a single real, hard diatomite Bath Stone SKU; subsequent accessories remain in the catalogue research pipeline.
 
+## Collection 01 — actuele geselecteerde productlinks (12 november 2026)
+
+De actuele collectiebronnen zijn vastgelegd in **[Collection 01: badmat, goudkleurige douchehoektray en frosted Longan-flessen](docs/collection-01-supplier-selection.md)**. De gouden tray is specifiek [Homedec HD-4590 / Alibaba #62481855179](https://www.alibaba.com/product-detail/Space-Aluminum-Wall-Mounted-Bathroom-Accessories_62481855179.html), niet GAIA of Tranjoy. Dit is een productselectie voor verdere validatie, geen bevestigde bestelklare SKU of veiligheidscertificatie. Oudere catalogusschema's zijn historische context.
+
 ## Start here
 
 1. **[Agent operating agreement](AGENTS.md)** — permissions, safety, boundaries.
