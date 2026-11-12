@@ -2,6 +2,10 @@
 
 Source of truth: project context [#1](https://github.com/jens-mul/AVELNA/issues/1), backlog [#2](https://github.com/jens-mul/AVELNA/issues/2), master plan [#3](https://github.com/jens-mul/AVELNA/issues/3).
 
+## 2026-11-12 — actuele eigenaarselectie voor productresearch
+
+De oprichters hebben drie productrichtingen aangehouden: **diatomietbadmat**, **goudkleurige aluminium douchehoektray** en **drie-kleurige frosted glazen doucheflessen**. De exacte door de eigenaar aangeleverde hoektraylink is [Guangzhou Homedec, HD-4590, Alibaba #62481855179](https://www.alibaba.com/product-detail/Space-Aluminum-Wall-Mounted-Bathroom-Accessories_62481855179.html). De historisch in AVELNA vastgelegde badmatreferentie is Yongye VDSTM-007; de flessenreferentie is Longan 500 ml. **Alle drie de links, bewijsstatus en openstaande variant-/veiligheidsvragen** staan in [het actuele collectie- en leveranciersdossier](collection-01-supplier-selection.md). Dat dossier heeft voor productlinks voorrang op eerdere GAIA-/Tranjoy-traykandidaten en de oude Bath Stone / Sink Tray / Soap Dish-scopes hieronder. Exacte commerciële SKU's, samples, compatibiliteit en landed costs zijn nog niet goedgekeurd; geen bestelling uitgevoerd. Oudere budget- en uitvoeringsnotities hieronder blijven historische documenten en geven geen uitgavemachtiging.
+
 ## 2026-10-31 decision update
 - **main is now explicitly authorized and initialized** with commit `adf4a588173f7fc149a2341bc5e6f534ce2a7d88`; this repo file set supersedes the earlier "empty repository" blocker in the issues.
 - ChatGPT + founder co-create and approve *master* visuals; Hermes consumes versioned approved masters from a private Higgsfield project as Elements and generates the permitted derivatives. See [Higgsfield](higgsfield.md).
