@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "collection-01-bathroom",
+  "updated_on": "2026-11-08",
+  "language": "nl-NL",
+  "working_brand_name": "AVELNA",
+  "brand_name_legally_cleared": false,
+  "working_collection_title": "Collection 01 — Bathroom Essentials",
+  "status": "documented_prelaunch_candidates",
+  "source_ids": ["USER-20261108", "REPO-STRATEGY"],
+  "positioning_proposal": {
+    "headline": "Je badkamer, af tot in de details.",
+    "promise": "Dagelijkse accessoires voor wastafel, douche en vloer die passen bij de zorgvuldig gekozen badkamer, zonder het beeld te verstoren.",
+    "audience_hypothesis": "Nederlandse consumenten met een mooie nieuwe of vernieuwde badkamer die nog passende dagelijkse accessoires zoeken. Een bestaande verzorgde badkamer is een secundaire onderzoekshypothese; geen vastgesteld leeftijds-, gender- of inkomensprofiel.",
+    "problem_hypothesis": "Losse gebruiksaccessoires passen niet bij de bewust gekozen tegels, kraan, wastafel en meubels; functioneel voldoen ze mogelijk al, maar het geheel voelt nog niet af.",
+    "value_hypothesis": "Samenhang, passende afmetingen en afwerking, prettig dagelijks gebruik en minder zoekwerk naar bijpassende onderdelen; niet simpelweg meer spullen.",
+    "avoid_argument": "Eerdere badkameruitgaven zijn context, geen bewijs dat iemand EUR 120 voor onze set wil betalen en geen reden om druk uit te oefenen.",
+    "decision_basis": {
+      "type": "user_confirmed_research_direction",
+      "recorded_at": "2026-11-08T20:13:43Z",
+      "source_description": "Projectgesprek: instemming met de set als eerste advertentierichting om 20:01 UTC, doelgroepgedachte om 20:10 UTC en opdracht tot vastlegging om 20:13 UTC.",
+      "research_file": "research/customer-and-problem.md",
+      "consumer_research_completed": false,
+      "willingness_to_pay_validated": false
+    },
+    "not_claimed": ["bewezen marktvraag naar deze exacte producten", "bewezen betaalbereidheid van EUR 120", "eigen ontwerp", "eigen fabriek", "alle producten van natuursteen", "goedkoper dan iedere concurrent"]
+  },
+  "product_files": [
+    "products/bath-stone.json",
+    "products/shower-holder.json",
+    "products/luca-sink-set.json"
+  ],
+  "research_files": [
+    "research/bath-stone.md",
+    "research/shower-holder.md",
+    "research/luca-sink-set.md",
+    "research/market-and-positioning.md",
+    "research/customer-and-problem.md"
+  ],
+  "assortment_proposal": {
+    "launch_sellable_units": 3,
+    "explanation": "Eén badmat, één douchehouder en één complete wastafelset; niet het aantal fysieke onderdelen in de set.",
+    "initial_color_directions": ["licht/wit voor badmat", "crème voor douchehouder", "beige travertinrichting voor wastafelset"],
+    "exact_variant_ids": null,
+    "loose_sink_components_at_launch": false,
+    "bundle": {
+      "status": "proposal_not_approved",
+      "components": [{"product_id": "luca-sink-set", "quantity": 1}, {"product_id": "bath-stone", "quantity": 1}],
+      "price_eur_minor": null,
+      "independent_stock": false,
+      "inventory_rule": "Indien later ingevoerd: een bundelorder trekt voorraad van beide onderdelen af; geen dubbeltelling."
+    },
+    "paid_ad_hero_product": null,
+    "preferred_paid_ad_hero_product": "luca-sink-set",
+    "hero_preference_status": "user_agreed_direction_pending_sample_and_margin",
+    "hero_selection_rule": "De set is de gekozen eerste advertentierichting. Definitieve advertentievrijgave pas na sample-, veiligheids-, rechten- en margebesluit; geen campagne- of budgetmachtiging."
+  },
+  "retained_constraints": {
+    "supplier_contact_allowed": false,
+    "purchases_authorized": false,
+    "paid_ads_authorized": false,
+    "long_inbound_shipping_time_acceptable": true,
+    "long_consumer_delivery_time_approved": false,
+    "historic_cash_ceiling_eur_minor": 20000,
+    "new_investment_budget_eur_minor": null,
+    "note": "Gebruiker noemde investeringsruimte, maar keurde geen nieuw exact budget of uitgavenmandaat goed. Het bestaande plafond is geen machtiging."
+  },
+  "release": {
+    "ready_for_design_handoff": true,
+    "ready_for_product_publication": false,
+    "ready_for_checkout": false,
+    "ready_for_paid_ads": false,
+    "approved_by": null,
+    "approved_on": null
+  },
+  "next_documents_in_order": ["investeringsplan", "advertentieplan", "sample- en kwaliteitsrapport", "definitieve content- en launchcheck"],
+  "governance": "AGENTS.md en wettelijke productverplichtingen blijven gelden. Geen generieke nieuwe leveranciersronde nodig; sluit uitsluitend concrete open gegevens."
+}

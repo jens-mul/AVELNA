@@ -1,11 +1,21 @@
 # AVELNA — AI-Native Brand & Growth System
 
-**Version:** 1.0 — 31 October 2026  
+**Version:** 1.0 — 31 October 2026; product dossier update 8 November 2026  
 **Owners:** two founders, Netherlands  
 **Status:** documentation and code prepared; no live campaign or paid integration implied.  
 **Launch cash ceiling:** **€200 total** (not an authorization to spend).
 
-AVELNA is an architecturally minimal, premium bathroom essentials brand. The first validated sale is a single real, hard diatomite Bath Stone SKU; subsequent accessories remain in the catalogue research pipeline.
+AVELNA is an architecturally minimal, premium bathroom essentials brand. The current pre-launch selection comprises the chosen hard Bath Stone and cream shower-holder listings, with the Luca travertine sink set as the preferred third candidate. Product selection is not approval for sale.
+
+## Product facts — webshop handoff, 8 November 2026
+
+**Start with [Collection 01 product dossiers](catalog/README.md).** Each product has a JSON record and an adjacent research note, supported by an evidence register. For the current assortment this supersedes the older bath-mat-only scope; all safety, spending and approval rules remain unchanged.
+
+- [Collection decisions](catalog/collection-01.json) and [sources](catalog/sources.json).
+- [Bath Stone](catalog/products/bath-stone.json), [shower holder](catalog/products/shower-holder.json), [Luca sink set](catalog/products/luca-sink-set.json).
+- [Webshop build handoff](catalog/BUILD-HANDOFF.md) and [next investment/advertising steps](catalog/NEXT-STEPS.md).
+
+Supplier observations, planning assumptions, unknowns and public claims remain separate. Catalog integrity checks are in `tests/test_catalog_dossiers.py`; passing them does not certify products or approve checkout.
 
 ## Collection 01 — actuele geselecteerde productlinks (12 november 2026)
 
@@ -30,7 +40,7 @@ Configuration examples are under `config/`; prompt templates under `prompts/`; p
 ## Current status
 
 - Earlier research and decision history remain in [GitHub issues #1–#11](https://github.com/jens-mul/AVELNA/issues).
-- Exact manufacturer SKU, approved rights, actual cost and regulatory readiness have **not** been confirmed.
+- Exact ordered variants, approved rights, actual landed costs and regulatory readiness have **not** been confirmed.
 - ChatGPT can ideate masters; uploading a ChatGPT-generated file into Higgsfield and attaching it to a project is **not yet tested end to end**.
 - Higgsfield library, Elements and prompt canvas are supported by the connected tool surface but are **not created merely by this commit**.
 - No Meta campaign, live spend, Hermes deployment, checkout integration or external communication is performed by repository changes.
@@ -43,8 +53,8 @@ You build the webshop and fulfill orders. Together with ChatGPT you choose/appro
 
 ## Research notes
 
-See [source register](research/sources.md). Primary documentation, especially Higgsfield and Hermes, changes over time; reread actual remote tool schemas before implementation.
+See the [current product evidence register](catalog/sources.json) and historical [source register](research/sources.md). Primary documentation, especially Higgsfield and Hermes, changes over time; reread actual remote tool schemas before implementation.
 
 ## One-command control-service upgrade
 
-See [deploy/README.md](deploy/README.md) for the GitHub-main downloader, build/tests, old dedicated AVELNA service replacement, health and rollback. This only runs the **no-spend control health service**, not paid Hermes automation.
+See [deploy/README.md](deploy/README.md) for the GitHub-main downloader, build/tests, old dedicated AVELNA service replacement, health and rollback. This only runs the **no-spend control health service**, not paid Hermes automation. A documentation branch must be reviewed and merged before the main-based updater includes it; catalog changes do not themselves require a service restart.

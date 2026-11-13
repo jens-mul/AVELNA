@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "product_id": "bath-stone",
+  "updated_on": "2026-11-08",
+  "research_file": "research/bath-stone.md",
+  "selection": {"status": "user_selected_listing", "selected_on": "2026-11-08", "selected_at": "2026-11-08T16:27:00Z", "source_ids": ["USER-ZOSO-LOCK"], "purchase_authorized": false},
+  "identity": {
+    "internal_name": "Zoso harde badmat",
+    "listing_id": "1601426633204",
+    "product_url": "https://www.alibaba.com/product-detail/Square-Hard-Diatom-Mud-Bathroom-Foot_1601426633204.html",
+    "exact_variant_id": null,
+    "manufacturer_sku": null
+  },
+  "superseded_listing": {
+    "listing_id": "1601587124238",
+    "supplier_name": "Longyan Yongye trade co., LTD",
+    "product_url": "https://www.alibaba.com/product-detail/Custom-Fast-Drying-Hard-Bath-Mat_1601587124238.html",
+    "status": "historical_not_selected",
+    "superseded_on": "2026-11-08",
+    "reason": "Gebruiker kiest Zoso na vergelijking van minimumaantal en verzendkosten. Oude Yongye-specificaties en conceptbeelden zijn geen Zoso-productbewijs.",
+    "source_ids": ["BATH-REPO", "USER-ZOSO-LOCK"]
+  },
+  "facts": {
+    "supplier_name": {"value": "Yiwu Zoso Craft Co., Ltd.", "status": "supplier_reported", "source_ids": ["ZOSO-SCREENSHOT"], "observed_on": "2026-11-08"},
+    "supplier_model": {"value": "tianwen-xin", "status": "supplier_reported", "source_ids": ["ZOSO-SCREENSHOT"], "observed_on": "2026-11-08"},
+    "construction": {"value": "Harde diatomietbadmat volgens listing en eerdere browseruitlezing", "status": "supplier_reported", "source_ids": ["ZOSO-BROWSER"], "observed_on": "2026-11-08"},
+    "material_label": {"value": "Diatom mud", "status": "supplier_reported", "source_ids": ["ZOSO-SCREENSHOT"], "observed_on": "2026-11-08"},
+    "material_composition": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "listed_color": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "reported_available_colors": {"value": ["Dark gray wave", "Light gray wave", "White waves"], "status": "supplier_reported", "source_ids": ["ZOSO-BROWSER"], "observed_on": "2026-11-08"},
+    "listed_dimensions_mm": {"value": {"length": 600, "width": 390, "thickness": null}, "status": "supplier_reported", "source_ids": ["ZOSO-BROWSER"], "observed_on": "2026-11-08"},
+    "net_weight_grams": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "box_contents": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "anti_slip_construction": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "cleaning_and_maintenance": {"value": null, "status": "unknown", "source_ids": [], "observed_on": null},
+    "published_moq": {"value": 2, "status": "supplier_reported", "source_ids": ["ZOSO-BROWSER", "USER-ZOSO-LOCK"], "observed_on": "2026-11-08"}
+  },
+  "commercial_observations": {
+    "source_ids": ["ZOSO-BROWSER", "ZOSO-SCREENSHOT"],
+    "observed_on": "2026-11-08",
+    "status": "earlier_browser_item_price_and_user_screenshot_shipping_not_final_checkout",
+    "currency": "EUR",
+    "published_order_unit": "piece",
+    "price_tiers": [{"min_quantity": 2, "max_quantity": 119, "unit_price_minor": 343}],
+    "item_price_source_ids": ["ZOSO-BROWSER"],
+    "item_price_visible_in_latest_screenshot": false,
+    "sample_price_minor": null,
+    "customization_moq": null,
+    "one_unit_checkout_verified": false,
+    "netherlands_shipping_price_minor": 2692,
+    "shipping_currency": "EUR",
+    "shipping_observation": {
+      "source_ids": ["ZOSO-SCREENSHOT"],
+      "status": "user_screenshot_shipping_selector_not_paid_order",
+      "observed_on": "2026-11-08",
+      "ship_from": "CN",
+      "destination_country": "NL",
+      "quantity": 2,
+      "order_unit": "piece",
+      "service": "Standard Alibaba.com Logistics",
+      "currency": "EUR",
+      "total_minor": 2692,
+      "per_unit_minor": 1346,
+      "displayed_struck_through_total_minor": 4692,
+      "displayed_discount_minor": 2000,
+      "discount_conditions": null,
+      "discount_valid_until": null,
+      "repeat_order_eligibility": null,
+      "tax_and_import_cost_inclusion": "unknown",
+      "final_checkout_verified": false,
+      "five_unit_shipping_total_minor": null,
+      "inherited_for_other_quantities": false,
+      "variant_note": "De screenshot bevestigt land, hoeveelheid en verzenddienst; kleur- en maatselectie zijn niet zichtbaar. Een donkere galerijfoto bewijst geen geselecteerde variant."
+    },
+    "inbound_lead_time_days": null,
+    "landed_cost_eur_minor_ex_recoverable_vat": null,
+    "cash_cost_eur_minor_including_taxes": null
+  },
+  "planning_assumptions": [
+    {"id": "BATH-SAMPLE-QTY", "value": 2, "meaning": "Kleinste beoogde testbestelling volgt de gekozen MOQ 2. Geen koopmachtiging en geen automatische verkoopvoorraad.", "source_ids": ["USER-ZOSO-LOCK"], "allowed_in_public_copy": false},
+    {"id": "BATH-TARGET-VARIANT", "value": "60 x 39 cm, lichte/witte golfuitvoering", "meaning": "Bestaande collectierichting. Exacte bestelvariant en bijbehorende productprijs nog vastleggen; de lock geldt voor de listing.", "source_ids": ["USER-20261108", "ZOSO-BROWSER"], "allowed_in_public_copy": false},
+    {"id": "BATH-TWO-UNIT-SUBTOTAL", "value": {"currency": "EUR", "quantity": 2, "unit_item_price_minor": 343, "items_total_minor": 686, "shipping_total_minor": 2692, "subtotal_minor": 3378, "subtotal_per_unit_minor": 1689}, "meaning": "Voorwaardelijke rekensom met eerder uitgelezen artikelprijs en getoonde verzendkorting. Geen all-in offerte; belastingen/invoer/afhandeling en exacte variant nog bevestigen.", "source_ids": ["ZOSO-BROWSER", "ZOSO-SCREENSHOT"], "allowed_in_public_copy": false},
+    {"id": "BATH-PRICE-HYPOTHESIS", "value": {"currency": "EUR", "retail_price_minor_including_vat": 4995, "shipping_included": true}, "meaning": "Historisch voorstel voor de oude badmat; ook voor Zoso uitsluitend een opnieuw door te rekenen hypothese, niet goedgekeurd.", "source_ids": ["REPO-STRATEGY"], "allowed_in_public_copy": false}
+  ],
+  "content_draft": {
+    "language": "nl-NL",
+    "title": "Bath Stone — harde badmat",
+    "collection_role": "Zelfstandig hoofdproduct voor de vloer naast de wastafelcollectie.",
+    "copy_status": "draft_not_approved",
+    "use_case_hypothesis": "Een verzorgde badkamer met een bewust gekozen alternatief voor een bestaande badmat.",
+    "approved_claims": [],
+    "do_not_publish_without_evidence": ["droog binnen 60 seconden", "100% diatomiet", "antibacterieel", "schimmelvrij", "nooit uitglijden", "vaste levensduur", "onderhoudsvrij", "handgemaakt", "eigen ontwerp"]
+  },
+  "media": {
+    "approved_product_images": [],
+    "reference_note": "assets/concepts/vdstm-007-* betreft de oude Yongye-kandidaat, niet Zoso. Deze geometrie en beelden niet als Zoso-productreferentie of commercieel masterbeeld gebruiken.",
+    "rights_verified": false,
+    "exact_product_match_verified": false
+  },
+  "publication": {
+    "ready": false,
+    "checkout_enabled": false,
+    "sample_review_status": "not_completed",
+    "safety_review_status": "not_completed",
+    "approved_retail_price_eur_minor_including_vat": null,
+    "saleable_stock": null,
+    "customer_delivery_promise": null,
+    "approved_by": null,
+    "approved_on": null
+  },
+  "open_items": [
+    {"id": "BATH-01", "required": "Exacte Zoso-maat/kleur, artikelprijs en eindbedrag voor twee stuks inclusief eventuele heffingen; kortingvoorwaarden en aparte verzendprijs bij vijf", "method": "checkout_without_purchase", "blocks": "purchase_budget"},
+    {"id": "BATH-02", "required": "Zoso-samenstelling inclusief bindmiddelen, herkomst en passende veiligheidsdocumentatie", "method": "product_document_review", "blocks": "sale"},
+    {"id": "BATH-03", "required": "Zoso-dikte, gewicht, inhoud verpakking, onderzijde en antislipoplossing", "method": "sample_measurement", "blocks": "final_product_page"},
+    {"id": "BATH-04", "required": "Praktische werking, stabiliteit, breuk, vlekken, drooggedrag en veilig onderhoud van Zoso", "method": "documented_sample_review", "blocks": "claims_and_sale"},
+    {"id": "BATH-05", "required": "Eigen of gelicentieerde exacte Zoso-productbeelden; geen overdracht van Yongye-concepten", "method": "asset_review", "blocks": "publication"},
+    {"id": "BATH-06", "required": "Verkoopprijs, werkelijk verkoopbare voorraad, retourinformatie en leverbelofte", "method": "founder_commercial_approval", "blocks": "checkout"}
+  ]
+}
